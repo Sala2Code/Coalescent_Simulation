@@ -1,0 +1,68 @@
+% filepath: c:\Users\Le R\Desktop\Code\Python\Coalescent\LaTeX\main.tex
+% ...existing code...
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\geometry{margin=2.5cm}
+
+\title{Titre du rapport}
+\author{Nom de l'auteur}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+DRVJKEL
+
+\appendix
+\chapter{Annexes}
+% ...matériel complémentaire...
+
+\chapter{Déployer ce dossier sur GitHub}
+Voici une procédure minimale pour transformer ce dossier local en dépôt Git suivi sur GitHub :
+
+\begin{enumerate}
+  \item Ouvrir un terminal dans le dossier du projet.
+  \item Initialiser git :
+  \begin{verbatim}
+  git init
+  git add .
+  git commit -m "Initial commit"
+  \end{verbatim}
+  \item Créer le dépôt distant sur GitHub (via le site web) ou avec l'outil gh :
+  \begin{verbatim}
+  gh repo create NOM_UTILISATEUR/NOM_REPO --public --source=. --remote=origin
+  \end{verbatim}
+  (ou créez manuellement sur github.com puis copiez l'URL)
+  \item Lier et pousser :
+  \begin{verbatim}
+  git branch -M main
+  git remote add origin git@github.com:UTILISATEUR/NOM_REPO.git
+  git push -u origin main
+  \end{verbatim}
+  \item Exemple de .gitignore minimal pour LaTeX/Python :
+  \begin{verbatim}
+  *.aux
+  *.log
+  *.out
+  *.toc
+  __pycache__/
+  *.pyc
+  .vscode/
+  .DS_Store
+  \end{verbatim}
+\end{enumerate}
+
+\end{document}
