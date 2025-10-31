@@ -1,19 +1,24 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{geometry}
 \usepackage{graphicx}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
-\usepackage{caption}
-\usepackage{color}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{stmaryrd}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{hyperref} % garder en dernier
+\usepackage{xcolor}
 
 \geometry{margin=1cm}
+
+\newtheorem{theorem}{Théorème}
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
 
 \title{Titre du rapport}
 \author{Nom de l'auteur}
@@ -25,6 +30,7 @@
 
 \section{Introduction à la théorie de la coalescence.}
 
+\subsection{Kingman coalescent est la limite de Wright-Fisher.}
 Nous disposons d'une population haploïde \footnote{Chaque individu porte une seule copie
 du génome, modélisée par un unique parent.}
 de taille $N$. On commence à la génération $m=0$ et nous souhaitons remonter le temps pour
@@ -59,16 +65,16 @@ K_m:=|\Pi_m^{(N)}|
 
 Dans le modèle historique de Wright-Fisher, à chaque génération,
 chaque individu choisit un parent au hasard dans la génération précédente, de manière
-indépendante et uniforme. On a ainsi que
+indépendante et uniforme \cite{Fisher1930,Wright1931}. On a ainsi que
 $(\Pi_m^{(N)})_{m\ge 0}$ est une chaîne de Markov homogène à temps discret sur les
 partitions de $[n]$.
 
 Notons $(\cdot)_k = \prod_{i=\cdot-k+1}^{\cdot} i$.
-On a que la probabilité que $l\geq 2$ lignées de $k$ blocs coalescent en une génération est donnée par,  
+On a que la probabilité que $k\geq 2$ lignées de $b$ blocs coalescent en une génération est donnée par,  
 $$
-\binom{k}{l}\frac{(N)_{k-l+1}}{N^{k}} = \begin{cases}
-  \binom{k}{2}\frac{1}{N} + \mathcal{O} (\frac{1}{N^2}) & \text{ si } l=2 \\
-  \mathcal{O} (\frac{1}{N^2}) & \text{ si } k \geq l \geq 3 \\
+\binom{b}{k}\frac{(N)_{b-k+1}}{N^{b}} = \begin{cases}
+  \binom{b}{2}\frac{1}{N} + \mathcal{O} (\frac{1}{N^2}) & \text{ si } k=2 \\
+  \mathcal{O} (\frac{1}{N^2}) & \text{ si } b \geq k \geq 3 \\
   0 & \text{ sinon }
 
 \end{cases}
@@ -107,7 +113,7 @@ N\biggl( 1 - \binom{k}{2}\tfrac{1}{N} + \mathcal{O}(\tfrac{1}{N^2}) - 1 \biggr) 
 \]
 
 En passant à la limite sur $N$ vers l'infini,
-nous obtenons le coalescent de Kingman. Son générateur est donné par, 
+nous obtenons le coalescent de Kingman \cite{Kingman1982}. Son générateur est donné par, 
 \[
 q : (x,z) \longmapsto \lim_{N \to \infty} q^{(N)}(x,z) =
 \begin{cases}
@@ -117,24 +123,73 @@ q : (x,z) \longmapsto \lim_{N \to \infty} q^{(N)}(x,z) =
 \end{cases}
 \]
 
-
 Ce modèle considère uniquement le fait que deux lignées peuvent coalescer à la fois.
-Nous pourrions envisager des généralisations où plusieurs lignées
-coalescent simultanément. [INTRODUIRE NATURELLEMENT LE LAMBA-COALESCENT]
 
+\subsection{$\Lambda$-Coalescent.}
 
-\textcolor{red}{TODO : 
+Intéressons nous à un cas plus général
+où un certain nombre de lignées peuvent coalescer simultanément.
+Nous restons dans l'esprit d'un modèle limite où $N$ tend vers l'infini
+afin de considérer une proportion $x \in [0,1]$ de la population descendant d'un même individu. 
+La description du générateur infinitésimal de ce processus
+de Markov repose sur le théorème suivant,
+
+\begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
+Il existe un processus de Markov, appelé $\Lambda$-coalescent,
+échangeable à collisions multiples simples si et seulement s'il
+existe une mesure finie $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ blocs,
+pour tout $2\le k\le b$ le taux auquel chaque $k$-uplet fixé de blocs
+fusionne vaut, 
+\[
+\lambda_{b,k}=\int_0^1 x^{k-2}(1-x)^{b-k}\,\Lambda(dx)
+\]
+\end{theorem}
+
+Sous des hypothèses raisonnables telles 
+que l'absence de mémoire (processus de Markov),
+la permutation invariante des blocs (échangeabilité) et 
+qu'à chaque instant il ne peut pas y avoir plusieurs coalescences 
+n'ayant pas le même ancêtre (collisions multiples simples), 
+ce résultat montre que la dynamique 
+d'un processus de coalescence multiple est entièrement caractérisée
+par une mesure finie $\Lambda$ sur $[0,1]$.
+
+Dans ce rapport nous simulons différents $\Lambda$-coalescents
+pour différentes mesures $\Lambda$
+et \textcolor{red}{TODO : dire ce qu'on veut faire réellement que juste faire des plots}.
+
+% On remarque alors qu'afin de satisfaire de raisonnable hypothèses le taux de coalescence
+% doit être de la forme suivante, pour $\Lambda$ une mesure finie sur $[0,1]$,
+% $k$ le nombre de blocs actuels et $l$ le nombre de blocs coalescents,
+% alors le taux de coalescence est,
+% $$
+% \lambda_{k,l} = \int_0^1 x^{l-2}(1-x)^{k-l} \Lambda(dx)
+% $$
+
+\section{\textcolor{red}{??}}
+\textcolor{red}{Je sais pas si on fait une "liste" de mesure qu'on regarde,
+je pensais plutôt renrer dans le vif du sujet avec la problémtique définie
+et au fur et à mesure on montre les différents plot avec les différentes mesures 
+testées.
+}
+
+\textcolor{red}{Parler de Lambda = $\delta_0$ : Kingman (dire que la theorie "généralise") + Parler de beta ?}
+
+\textcolor{red}{TODO :
 \begin{itemize}
   \item Image vulgarisatrice de ce qu'on fait (j'ai une idée donc à voir si c'est utile)
-  \item  Détails des calculs d'Axcel pour différentes mesure : nouvelle section + subsections
-\item Enchainer avec une succession de beau plot 
-\item lancer une problématique
-(à en discuter voir où on veut aller :
-trouver un parametre par simulation
-(temps d'un unique ancetre, pb de coalescence multiple, ... ),
-estimer la distance entre deux modèles (KS, Wasserstein, ...),
-usage détourner de la coalescence pour faire quelquechose
-d'atypiques ) 
+  \item Détails des calculs d'Axcel pour différentes mesure : nouvelle section + subsections
+  \item Enchainer avec une succession de beaux plots
+  \item Lancer une problématique
+  (à en discuter voir où on veut aller :
+  trouver un paramètre par simulation
+  (temps d'un unique ancêtre, pb de coalescence multiple, \ldots),
+  estimer la distance entre deux modèles (KS, Wasserstein, \ldots),
+  usage détourné de la coalescence pour faire quelque chose
+  d'atypique)
 \end{itemize}
 }
+
+\bibliographystyle{unsrtnat} % ou abbrvnat, unsrtnat, etc.
+\bibliography{ref}           % ref.bib dans le projet
 \end{document}
