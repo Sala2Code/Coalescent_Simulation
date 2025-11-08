@@ -1,26 +1,9 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Fisher(1930)]{Fisher1930}
-Ronald~A. Fisher.
-\newblock \emph{The Genetical Theory of Natural Selection}.
-\newblock Clarendon Press, Oxford, 1930.
-
-\bibitem[Wright(1931)]{Wright1931}
-Sewall Wright.
-\newblock Evolution in mendelian populations.
-\newblock \emph{Genetics}, 16\penalty0 (2):\penalty0 97--159, 1931.
-
-\bibitem[Kingman(1982)]{Kingman1982}
-J.~F.~C. Kingman.
-\newblock The coalescent.
-\newblock \emph{Stochastic Processes and their Applications}, 13\penalty0
-  (3):\penalty0 235--248, 1982.
-\newblock \doi{10.1016/0304-4149(82)90011-4}.
 
 \bibitem[Pitman(1999)]{Pitman1999}
 Jim Pitman.

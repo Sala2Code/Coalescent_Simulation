@@ -28,104 +28,11 @@
 
 \maketitle
 
-\section{Introduction à la théorie de la coalescence.}
-
-\subsection{Kingman coalescent est la limite de Wright-Fisher.}
-Nous disposons d'une population haploïde \footnote{Chaque individu porte une seule copie
-du génome, modélisée par un unique parent.}
-de taille $N$. On commence à la génération $m=0$ et nous souhaitons remonter le temps pour
-étudier la généalogie de $n < N$ individus, généralement on considère $n \ll N$.
-On appelle la lignée de $i \in [n]:=\llbracket 1,n \rrbracket$ la suite
-des ancêtres de $i$.
-Lorsque deux, ou plus, lignées choisissent le même parent à un instant donné, on dit qu'elles coalescent.
-
-Formellement, on définit pour la génération $m \in \mathbb{N}$,
-la relation d'équivalence $\sim_m$ pour tout $i,j \in [n]$,
-$$
-i \sim_m j \text{ ssi} \text{ les lignées de } i \text{ et } j \text{ ont le même ancêtre à la génération m} 
-$$
-
-La classe de $i$ à la génération $m$, constituant un bloc, est,
-$$
-C_m^{(N)}(i):=\{ j\in[n], i\sim_m j \}
-$$
-
-Puis, la famille des classes distinctes forme une partition de [n]
-\[
-\Pi_m^{(N)}:=\{C_m^{(N)}(i), i\in[n]\} 
-\qquad
-K_m:=|\Pi_m^{(N)}|
-\]
-
-% En remontant le temps, les partitions ne peuvent que se grossir
-% \[
-% \Pi_0^{(N)}\ \preceq\ \Pi_1^{(N)}\ \preceq\ \Pi_2^{(N)}\ \preceq\ \cdots
-% \]
-% (où $\preceq$ est l’ordre de raffinement).
-
-Dans le modèle historique de Wright-Fisher, à chaque génération,
-chaque individu choisit un parent au hasard dans la génération précédente, de manière
-indépendante et uniforme \cite{Fisher1930,Wright1931}. On a ainsi que
-$(\Pi_m^{(N)})_{m\ge 0}$ est une chaîne de Markov homogène à temps discret sur les
-partitions de $[n]$.
-
-Notons $(\cdot)_k = \prod_{i=\cdot-k+1}^{\cdot} i$.
-On a que la probabilité que $k\geq 2$ lignées de $b$ blocs coalescent en une génération est donnée par,  
-$$
-\binom{b}{k}\frac{(N)_{b-k+1}}{N^{b}} = \begin{cases}
-  \binom{b}{2}\frac{1}{N} + \mathcal{O} (\frac{1}{N^2}) & \text{ si } k=2 \\
-  \mathcal{O} (\frac{1}{N^2}) & \text{ si } b \geq k \geq 3 \\
-  0 & \text{ sinon }
-
-\end{cases}
-$$
-
-On remarque donc que l'évènement d'une coalescence est rare lorsque $N$ est grand.
-On considère ainsi le processus de Markov $(\Pi^{(N)}(t))_{t\geq 0}$ défini par,
-$$
-\Pi^{(N)} : t \in \mathbb{R}^+ \longmapsto \Pi^{(N)}_{\lfloor tN \rfloor}
-$$
-
-Notons le semi-groupe associé
-\[
-P_t^N : (x,y) \mapsto \mathbb{P}( \Pi^{(N)}(t) = y | \Pi^{(N)}(0) = x)
-\]
-
-Considérons $x$ une partition de $[n]$ avec $k$ blocs, 
-$y$ une partition de $[n]$, avec $k-1$ blocs, obtenue en fusionnant deux blocs de $x$, 
-et $y^+$ une partition de $[n]$
-en fusionnant plus de deux blocs de $x$.
-Puisque $t \mapsto P_t^N$ est en escalier, le générateur infinitésimal est donné par,
-\[
-q^{(N)} : (x,z) \longmapsto N(P_{1/N}^N(x,z) - \delta_{x,z}) =
-\left\{
-\begin{array}{rcll}
-N\biggl( \frac{1}{N} + \mathcal{O}(\tfrac{1}{N^2})- 0 \biggr) & = & 1 + \mathcal{O}(\tfrac{1}{N}) & \text{ si } z=y \\
-N\biggl( \mathcal{O}(\tfrac{1}{N^2}) - 0 \biggr) & = & \mathcal{O}(\tfrac{1}{N}) & \text{ si } z=y^+ \\
-N\biggl( 1 - \binom{k}{2}\tfrac{1}{N} + \mathcal{O}(\tfrac{1}{N^2}) - 1 \biggr) & = & - \binom{k}{2} + \mathcal{O}(\tfrac{1}{N}) & \text{ si } z=x
-\end{array}
-\right.
-% \begin{cases}
-%   1 + \mathcal{O}(\frac{1}{N}) & \text{ si } z=y \\
-%   \mathcal{O}(\frac{1}{N}) & \text{ si } z=y^+ \\
-%   - \binom{k}{2} + \mathcal{O}(\frac{1}{N})  & \text{ si } z=x  \\
-% \end{cases}
-\]
-
-En passant à la limite sur $N$ vers l'infini,
-nous obtenons le coalescent de Kingman \cite{Kingman1982}. Son générateur est donné par, 
-\[
-q : (x,z) \longmapsto \lim_{N \to \infty} q^{(N)}(x,z) =
-\begin{cases}
-  1 & \text{ si } z=y \\
-  - \binom{k}{2} & \text{ si } z=x \\
-  0 & \text{ sinon }
-\end{cases}
-\]
-
-Ce modèle considère uniquement le fait que deux lignées peuvent coalescer à la fois.
-
 \subsection{$\Lambda$-Coalescent.}
+
+\textcolor{red}{Vu que la première sous section est supprimée,
+je développerai légrement cette sous-section.  
+Voir la TODO list (TODO.md) afin de savoir faire.}
 
 Intéressons nous à un cas plus général
 où un certain nombre de lignées peuvent coalescer simultanément.
@@ -166,29 +73,29 @@ et \textcolor{red}{TODO : dire ce qu'on veut faire réellement que juste faire d
 % \lambda_{k,l} = \int_0^1 x^{l-2}(1-x)^{k-l} \Lambda(dx)
 % $$
 
-\section{\textcolor{red}{??}}
-\textcolor{red}{Je sais pas si on fait une "liste" de mesure qu'on regarde,
-je pensais plutôt renrer dans le vif du sujet avec la problémtique définie
-et au fur et à mesure on montre les différents plot avec les différentes mesures 
-testées.
-}
+% \section{\textcolor{red}{??}}
+% \textcolor{red}{Je sais pas si on fait une "liste" de mesure qu'on regarde,
+% je pensais plutôt renrer dans le vif du sujet avec la problémtique définie
+% et au fur et à mesure on montre les différents plot avec les différentes mesures 
+% testées.
+% }
 
-\textcolor{red}{Parler de Lambda = $\delta_0$ : Kingman (dire que la theorie "généralise") + Parler de beta ?}
+% \textcolor{red}{Parler de Lambda = $\delta_0$ : Kingman (dire que la theorie "généralise") + Parler de beta ?}
 
-\textcolor{red}{TODO :
-\begin{itemize}
-  \item Image vulgarisatrice de ce qu'on fait (j'ai une idée donc à voir si c'est utile)
-  \item Détails des calculs d'Axcel pour différentes mesure : nouvelle section + subsections
-  \item Enchainer avec une succession de beaux plots
-  \item Lancer une problématique
-  (à en discuter voir où on veut aller :
-  trouver un paramètre par simulation
-  (temps d'un unique ancêtre, pb de coalescence multiple, \ldots),
-  estimer la distance entre deux modèles (KS, Wasserstein, \ldots),
-  usage détourné de la coalescence pour faire quelque chose
-  d'atypique)
-\end{itemize}
-}
+% \textcolor{red}{TODO :
+% \begin{itemize}
+%   \item Image vulgarisatrice de ce qu'on fait (j'ai une idée donc à voir si c'est utile)
+%   \item Détails des calculs d'Axcel pour différentes mesure : nouvelle section + subsections
+%   \item Enchainer avec une succession de beaux plots
+%   \item Lancer une problématique
+%   (à en discuter voir où on veut aller :
+%   trouver un paramètre par simulation
+%   (temps d'un unique ancêtre, pb de coalescence multiple, \ldots),
+%   estimer la distance entre deux modèles (KS, Wasserstein, \ldots),
+%   usage détourné de la coalescence pour faire quelque chose
+%   d'atypique)
+% \end{itemize}
+% }
 
 \bibliographystyle{unsrtnat} % ou abbrvnat, unsrtnat, etc.
 \bibliography{ref}           % ref.bib dans le projet
