@@ -12,91 +12,289 @@
 \usepackage{caption}
 \usepackage{natbib}
 \usepackage{hyperref} % garder en dernier
+% Autoref names (français) — évite les warnings de hyperref lorsque
+% on utilise \autoref sur des environnements non-standards
+\providecommand{\theoremautorefname}{Théorème}
+\providecommand{\lemmaautorefname}{Lemme}
+\providecommand{\propositionautorefname}{Proposition}
+\providecommand{\definitionautorefname}{Définition}
+\providecommand{\sectionautorefname}{Section}
+\providecommand{\subsectionautorefname}{Sous-section}
 \usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{bbm}
 
 \geometry{margin=1cm}
 
 \newtheorem{theorem}{Théorème}
 \newtheorem{definition}{Définition}
 \newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemme}
+
+\newcommand{\Exp}{\mathrm{Exp}}
 
 \title{Titre du rapport}
 \author{Nom de l'auteur}
 \date{\today}
 
+
+
+
 \begin{document}
 
 \maketitle
 
-\subsection{$\Lambda$-Coalescent.}
+    \section{Introduction}
+    \subsection{Fondements du $\Lambda$-coalescent}
 
-\textcolor{red}{Vu que la première sous section est supprimée,
-je développerai légrement cette sous-section.  
-Voir la TODO list (TODO.md) afin de savoir faire.}
+    La théorie de la coalescence modélise le phénomène par lequel des
+    individus d'une population partagent un ancêtre commun. Nous souhaitons 
+    étudier rétrospectivement leur évolution.
 
-Intéressons nous à un cas plus général
-où un certain nombre de lignées peuvent coalescer simultanément.
-Nous restons dans l'esprit d'un modèle limite où $N$ tend vers l'infini
-afin de considérer une proportion $x \in [0,1]$ de la population descendant d'un même individu. 
-La description du générateur infinitésimal de ce processus
-de Markov repose sur le théorème suivant,
+    Historiquement,
+    le modèle de Wright-Fisher étudie une population de taille finie $N$
+    où les individus d'une générations coalescent de manière uniforme entre 
+    eux dans la génération précédente \textcolor{pink}{[Wright-Fisher]}.
+    Ensuite, le modèle de Kingman \textcolor{pink}{[Kingman]} est le modèle
+    limite de Wright-Fisher où l'on s'intéresse à $n<N$ lignées
+    et en considérant $N\to +\infty$.
+    Ce cadre asymptotique permet de
+    simplifier grandement l'étude du phénomène de coalescence. 
+    Le modèle peut à présent être décrit comme un processus de Markov.
 
-\begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
-Il existe un processus de Markov, appelé $\Lambda$-coalescent,
-échangeable à collisions multiples simples si et seulement s'il
-existe une mesure finie $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ blocs,
-pour tout $2\le k\le b$ le taux auquel chaque $k$-uplet fixé de blocs
-fusionne vaut, 
-\[
-\lambda_{b,k}=\int_0^1 x^{k-2}(1-x)^{b-k}\,\Lambda(dx)
-\]
-\end{theorem}
+    En 1999, Pitman et Sagitov
+    généralisent le modèle de Kingman en autorisant la coalescence
+    simultanée de plusieurs lignées. Des individus peuvent engendrer 
+    une proportion non négligeable de la population. 
+    Afin de définir un modèle, nous supposons raisonnablement
+    que les lignées coalescent aléatoirement et indépendamment 
+    de leur histoire passée,
+    c'est-à-dire en supposant l'absence de mémoire (propriété de Markov),
+    que toutes les lignées ont les mêmes chances de coalescer entre elles
+    que l'on appelle l'échangeabilité et enfin que nous ayons 
+    l'absence de collisions multiples signifiant qu'à tout instant donné,
+    il ne peut y avoir qu'un seul événement de fusion en un même ancêtre.
 
-Sous des hypothèses raisonnables telles 
-que l'absence de mémoire (processus de Markov),
-la permutation invariante des blocs (échangeabilité) et 
-qu'à chaque instant il ne peut pas y avoir plusieurs coalescences 
-n'ayant pas le même ancêtre (collisions multiples simples), 
-ce résultat montre que la dynamique 
-d'un processus de coalescence multiple est entièrement caractérisée
-par une mesure finie $\Lambda$ sur $[0,1]$.
 
-Dans ce rapport nous simulons différents $\Lambda$-coalescents
-pour différentes mesures $\Lambda$
-et \textcolor{red}{TODO : dire ce qu'on veut faire réellement que juste faire des plots}.
+    \begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
+    Il existe un processus de Markov, appelé $\Lambda$-coalescent,
+    échangeable à collisions multiples simples si et seulement s'il
+    existe une mesure \textcolor{red}{de probabilité} $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ lignées,
+    pour tout $2\le k\le b$ le taux auquel chaque $k$-uplet fixé de lignées
+    fusionne vaut, 
+    \[
+    \lambda_{b,k}=\int_0^1 x^{k-2}(1-x)^{b-k}\,\Lambda(dx)
+    \]
+    \end{theorem}
 
-% On remarque alors qu'afin de satisfaire de raisonnable hypothèses le taux de coalescence
-% doit être de la forme suivante, pour $\Lambda$ une mesure finie sur $[0,1]$,
-% $k$ le nombre de blocs actuels et $l$ le nombre de blocs coalescents,
-% alors le taux de coalescence est,
-% $$
-% \lambda_{k,l} = \int_0^1 x^{l-2}(1-x)^{k-l} \Lambda(dx)
-% $$
+    Nous ne définissons par formellement les conditions ici et donnons
+    encore moins une preuve car cela est au-delà du cadre de ce rapport.
+    Ce résultat montre que la dynamique est entièrement caractérisée
+    par une mesure de probabilité $\Lambda$ sur $[0,1]$. 
+    Partant de $b$ lignées, le taux total auquel une coalescence se produit,
+    le taux de sortie de l'état $b$, est donné par
 
-% \section{\textcolor{red}{??}}
-% \textcolor{red}{Je sais pas si on fait une "liste" de mesure qu'on regarde,
-% je pensais plutôt renrer dans le vif du sujet avec la problémtique définie
-% et au fur et à mesure on montre les différents plot avec les différentes mesures 
-% testées.
-% }
+    \begin{equation} \label{eq:lambda_b}
+        \lambda_b = \sum_{k=2}^{b} \binom{b}{k} \lambda_{b,k} = \int_0^1 S_b(x) \,\Lambda(dx),
+        \quad 
+        % \text{avec} \quad 
+        S_b(x) \coloneq \sum_{k=2}^{b} \binom{b}{k} x^{k-2}(1-x)^{b-k}
+        = \frac{1-(1-x)^b - b x (1-x)^{b-1}}{x^2}
+    \end{equation}
+    
+    Chaque événement de coalescence correspond alors à
+    une transition de $b$ vers $b-k+1$ lignées avec probabilité 
+    $$\forall b\geq k \geq 2,
+    \quad p_{b,k} \coloneq \frac{\binom{b}{k} \lambda_{b,k}}{\lambda_b}
+    $$
+    Ainsi, le squelette du processus est une chaîne de Markov
+    décroissante sur $\llbracket 1, n \rrbracket$, commençant en $n$ et
+    terminant presque sûrement en $1$.
 
-% \textcolor{red}{Parler de Lambda = $\delta_0$ : Kingman (dire que la theorie "généralise") + Parler de beta ?}
+    \subsection{Exemple (Kingman)} \label{sec:kingman-example}
+    Intéressons nous à un cas connu afin de mieux visualiser le modèle.
+    \textcolor{red}{
+        Là je propose donc (1 page grand max)
+        (le but n'est pas de faire une étude de Kingman mais de présenter les différents 
+        objets du modèle de manière simple et visuelles)
+        \begin{itemize}
+            \item  poser $\Lambda = \delta_0$, 
+            \item l'intuition du modèle : la masse est vers 0 donc
+            pas de grosse fusion. (Inteprétation du modele, du role des termes de l'intégrande)
+            \item Les calculs en 5 lignes maximum ($\lambda_{b,k}$, TMRCA si utile, $\dots$ )
+            \item Les notations : $n$, $N_t$, $(C_t^i)_{0<i<n}$, TMRCA, $T_k$
+        \end{itemize}
+    }
+    
+    \textcolor{red}{
+        Subplots (kingman)
+        \begin{itemize}
+            \item (Une réalisation) Arbre + TMRCA 
+            \item (Sur plusieurs réalisaiton) Distribution des fusions ((C\_t\^{}i))\_\{0<i<n \} (donc uniquement en 2 normalement)
+            \item  (Sur plusieurs réalisation) distribution TMRCA 
+            \item Autres ? 
+        \end{itemize}
+        Le but est de faire un exemple qui montre quasiement tout ce qu'on va étudier 
+        et par la suite quantifier pour beaucoup de mesures.
+    }
 
-% \textcolor{red}{TODO :
-% \begin{itemize}
-%   \item Image vulgarisatrice de ce qu'on fait (j'ai une idée donc à voir si c'est utile)
-%   \item Détails des calculs d'Axcel pour différentes mesure : nouvelle section + subsections
-%   \item Enchainer avec une succession de beaux plots
-%   \item Lancer une problématique
-%   (à en discuter voir où on veut aller :
-%   trouver un paramètre par simulation
-%   (temps d'un unique ancêtre, pb de coalescence multiple, \ldots),
-%   estimer la distance entre deux modèles (KS, Wasserstein, \ldots),
-%   usage détourné de la coalescence pour faire quelque chose
-%   d'atypique)
-% \end{itemize}
-% }
+    \section{Analyse du TMRCA}
+    \subsection{Cas extrêmes}
 
-\bibliographystyle{unsrtnat} % ou abbrvnat, unsrtnat, etc.
-\bibliography{ref}           % ref.bib dans le projet
+    Au vu du précédent exemple, on peut se demander l'influence de la mesure
+    $\Lambda$ sur le TMRCA. Intuitivement, ce temps moyen devrait diminuer lorsque
+    la masse de $\Lambda$ se rapproche de 1 puisqu'on autorise des coalescences
+    multiples plus importantes. En première analyse on va étudier
+    les deux cas extrêmes.
+
+    % \begin{lemma}\label{lem:bounds-Sb}
+    %     Pour tout $b\geq 2$ et $x\in[0,1]$,
+    %     \[
+    %     1 \leq S_b(x) \leq \binom{b}{2}
+    %     \]
+    % \end{lemma}
+    % \begin{proof}
+    %     Soit $(X_i)_{1\geq i \geq k}$
+    %     de loi de Bernouilli de paramètre $x \in [0,1]$ indépendantes.
+
+    %     Posons $X\coloneq\sum_{i=1}^b X_i \sim \mathrm{Bin}(b,x)$. On a,
+    %     \[
+    %     \mathbb{E}(X(X-1))
+    %     = \mathbb{E}(\sum_{i\neq j} X_i X_j)
+    %     \overset{\perp\!\!\!\perp}{=}\sum_{i\neq j} \mathbb{E}(X_i)\mathbb{E}(X_j)  
+    %     = b(b-1)x^2
+    %     \]
+
+    %     En utilisant que $k(k-1) \geq 2 \mathbbm{1}_{k\geq 2}$,
+    %     \[
+    %     \mathbb{E}(X(X-1))
+    %     = \sum_{k=0}^b k(k-1) \binom{b}{k} x^k (1-x)^{b-k}
+    %     \geq \sum_{k=2}^b 2 \binom{b}{k} x^k (1-x)^{b-k}
+    %     = 2 S_b(x)x^2
+    %     \]
+
+    %     D'où,
+    %     \[
+    %     2S_b(x)x^2 \leq b(b-1)x^2 
+    %     \Longleftrightarrow
+    %     S_b(x) \leq \frac{b(b-1)}{2} = \binom{b}{2}
+    %     \]
+
+    %     Pour l'autre inégalité, on remarque que pour tout $x\in]0,1]$,
+    %     \[
+    %     S_b(x) = \frac{1}{x^2}\mathbb P(X\geq 2)
+    %     \geq \frac{1}{x^2} \mathbb{P}(X_1=X_2=1) = \frac{x^2}{x^2} = 1
+    %     \]
+
+    %     Puis $S_b(0) = \binom{b}{2} \geq 1$, d'où le résultat.
+    % \end{proof}
+
+    \begin{proposition}
+        Soit $n$ le nombre de lignées. Notons le TMRCA d'un $\Lambda$-coalescent,
+        \[
+        \tau\coloneq \inf \{ t\geq 0, N_t=1 \}
+        \]
+        Alors, pour toute mesure de probabilité $\Lambda$ sur $[0,1]$, on a
+        condtionnellement à $\{N_0 = n\}$,
+        \[
+        1 = \mathbb{E}_{\delta_1}(\tau) 
+        \leq \mathbb{E}_{\Lambda}(\tau)
+        % \leq\mathbb{E}_{\delta_0}(\tau) = 2\left(1-\frac{1}{n}\right)
+        \]
+    \end{proposition}
+    \begin{proof}
+    % L'égalité de droite a été montrée dans l'exemple de Kingman (voir \autoref{sec:kingman-example}).
+    Prouvons l'égalité. Prenons $\Lambda = \delta_1$, nous avons $\lambda_{n,k} = \delta_{n,k}$ (symbole de Kronecker),
+    donc $\lambda_n = \binom{n}{n} \lambda_{n,n} = 1$ donc
+    $\tau \sim \Exp(1)$ et donc $\mathbb{E}_{\delta_1}(\tau) = 1/1 = 1$.
+    
+    Soit $\Lambda$ une mesure de probabilité sur $[0,1]$.
+    Notons $H(b) \coloneq \mathbb{E}_\Lambda(\tau | N_0 = b)$.
+    % D'après \eqref{eq:lambda_b}, 
+    D'après la propriété de Markov et l'absence de mémoire de l'exponentielle,
+    \[
+    H(b) = \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} H(b-k+1)
+    \]
+    
+    Montrons par récurrence forte l'inégalité, c'est-à-dire $1 \leq H(b)$
+    pour $b\geq 2$.
+    Pour $b=2$, $\lambda_{2,2}=1$ donc $\tau \sim \Exp(1)$
+    donc $H(2) = 1 \geq 1$. Supposons l'inégalité vraie jusqu'à $b-1$. Donc,
+    en remarquant que $\lambda_{b,b} = \int_0^1 x^{b-2}\,\Lambda(dx) \leq 1$,
+    \[
+    H(b) = \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} H(b-k+1)
+    \geq \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} 
+    = \frac{1}{\lambda_b} + 1 - p_{b,b}
+    = 1 + \frac{1 - \lambda_{b,b}}{\lambda_b} \geq 1
+    \]
+    D'où le résultat.
+    \end{proof}
+
+    Cette idée de déplacer la masse de $\Lambda$ vers 1 pour diminuer la moyenne 
+    du TMRCA
+    est intuitive. Pour le problème inverse de maximisation du TMRCA nous
+    souhaiterions déplacer la masse de $\Lambda$ vers 0. C'est-à-dire prouver que 
+    le modèle de Kingman soit celui maximisant le temps moyen du TMRCA. 
+    Toutefois, voila une grande surprise : ce n'est pas le cas !
+
+    \begin{theorem}
+        Il existe $n>1$ et une mesure de probabilité $\Lambda$ sur $[0,1]$
+        telle que, conditionnellement à $\{N_0=n\}$,
+        \[
+        \mathbb{E}_{\Lambda}(\tau)> \mathbb{E}_{\delta_0}(\tau)
+        \]
+    \end{theorem}
+    \begin{proof}
+        Soit $n=8$, dans l'exemple de Kingman (voir \autoref{sec:kingman-example}),
+        nous avons une formule explicite.
+        \[\
+        \mathbb E_{\delta_0}(\tau) = 2\left(1-\frac{1}{8}\right) = \frac{14}{8} = 1.75
+        \]
+        Soit $\Lambda = \delta_{1/4}$, alors d'après \eqref{eq:lambda_b},
+        \[ 
+        \lambda_{n,k} = \left(\frac{1}{4}\right)^{k-2} \left(\frac{3}{4}\right)^{n-k}
+        \quad 
+        \lambda_n = 16\left(1 -\left(\frac34\right)^n - \frac{n}{4}\left(\frac34\right)^{n-1}\right)
+        \] 
+        Ainsi, en calculant nous obtenons,
+        \[ 
+        \mathbb{E}_{\delta_{1/4}}(\tau)
+        = \frac{1}{\lambda_n} + \sum_{k=2}^{n-1} \frac{\binom{n}{k} \lambda_{n,k}}{\lambda_n} \mathbb{E}_{\delta_{1/4}}(\tau | N_0 = n-k+1)
+        = \frac{19954284839411683}{11337879079537330} > 1.7599662\dots > 1.75
+        \]
+    \end{proof}
+    Nous conjecturons que le théorème peut être étendu pour tout $n>6$.
+    A notre connaissance l'étude ce phénomène n'est pas documenté.
+    Seul un article de \textcolor{pink}{Kersting-Wakolbinger} s'intéresse
+    la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
+
+
+    \textcolor{red}{Là on a une belle expérience numérique à faire !!
+    On peut faire un plot de la distribution pour ces 2 mesures et voir qu'en moyenne
+    on a bien delta1/4 devant delta0 ! + intervalle asymtptotique si possible}
+    
+
+
+
+   \textcolor{blue}{L'échelle de temps ici est en unités de $N$ générations, avec $N\gg n$ puisque
+    nous considérons un modèle asymptotique.}
+
+    % TODO : Reformuler !
+    % Une suprise ... À notre connaissance,
+    % la question de déterminer, pour un (n) fixé,
+    % la mesure (\Lambda) qui maximise l’espérance du temps
+    % d’absorption (\mathbb E_\Lambda[\tau]) du (\Lambda)-coalescent
+    % reste ouverte. Les travaux existants se concentrent sur les lois
+    % limites et les constantes asymptotiques de (\tau_n) lorsque
+    % (n\to\infty) (voir p.ex. Kersting–Wakolbinger), sans adresser
+    % l’extrémalité en (\Lambda) pour (n) fini.
+
+
+    \subsection{Effet papillon de $\Lambda$}
+
+
+
+
+\bibliographystyle{unsrtnat} 
+\bibliography{ref}
 \end{document}

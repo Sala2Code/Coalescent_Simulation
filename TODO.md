@@ -1,10 +1,10 @@
 # TODO LIST
 
-*(Faites CTRL K+V (je crois) ou CTRL+SHIFT+V pour voir le rendu Markdown)*
+*(Faites CTRL K+V (je crois) ou CTRL+SHIFT+V pour voir le rendu Markdown sur vsCode)*
 
 Voici une liste non-exhaustive. Je propose, n'hésitez pas à compléter/modfier. L'ordre n'est pas encore décidé. Même si je pense que l'ordre comme tel est plutôt naturel.
 
-Les graphiques ne sont pas la priorité. Ceux-là dépendront des choses à mettre en valeur selon le rapport (format, donées, légendes, etc).
+Les graphiques ne sont pas la priorité. Ceux-là dépendront des choses à mettre en valeur selon le rapport (format, données, légendes, etc).
 
 ## Contexte
 
@@ -83,3 +83,7 @@ Nous devons parler afin de vérifier toutes les consignes de
 
 + A propos du modèle "limite". Le $T_{MRCA}$ est en unité "coalescente". Pour obtenir des unités "réelles" il faut multiplier par une constante dépendant de la population "effective". Or nous sommes dans un modèle limite donc on devra considérer, approximer, que notre nombre de lignées observées $n \ll N_e$ et où on fixera $N_e$ "grand" afin de considérer comme si c'étiat "limite" : $N_e = +\infty$.
 
+
+# Liens 
+
++ Papier regardant le TMRCA pour n asymptotique : https://ar5iv.labs.arxiv.org/html/1712.07553
