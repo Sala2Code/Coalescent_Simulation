@@ -79,7 +79,7 @@
     \begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
     Il existe un processus de Markov, appelé $\Lambda$-coalescent,
     échangeable à collisions multiples simples si et seulement s'il
-    existe une mesure \textcolor{red}{de probabilité} $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ lignées,
+    existe une mesure finie $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ lignées,
     pour tout $2\le k\le b$ le taux auquel chaque $k$-uplet fixé de lignées
     fusionne vaut, 
     \[
@@ -90,26 +90,30 @@
     Nous ne définissons par formellement les conditions ici et donnons
     encore moins une preuve car cela est au-delà du cadre de ce rapport.
     Ce résultat montre que la dynamique est entièrement caractérisée
-    par une mesure de probabilité $\Lambda$ sur $[0,1]$. 
-    Partant de $b$ lignées, le taux total auquel une coalescence se produit,
-    le taux de sortie de l'état $b$, est donné par
-
+    par une mesure finie, sans perte de généralité nous considérons pour la suite
+    une mesure de probabilité, $\Lambda$ sur $[0,1]$. 
+    Partant de $b$ lignées,
+    le taux d'une $k$-coalescence ($2\leq k \leq b$) est 
+    $r_{b,k} \coloneq \binom{b}{k} \lambda_{b,k}$. 
+    Le taux de sortie de l'état $b$ est la somme des taux donc
+    
     \begin{equation} \label{eq:lambda_b}
-        \lambda_b = \sum_{k=2}^{b} \binom{b}{k} \lambda_{b,k} = \int_0^1 S_b(x) \,\Lambda(dx),
+        \lambda_b = \sum_{k=2}^{b} r_{b,k} = \int_0^1 S_b(x) \,\Lambda(dx),
         \quad 
         % \text{avec} \quad 
         S_b(x) \coloneq \sum_{k=2}^{b} \binom{b}{k} x^{k-2}(1-x)^{b-k}
         = \frac{1-(1-x)^b - b x (1-x)^{b-1}}{x^2}
     \end{equation}
     
-    Chaque événement de coalescence correspond alors à
-    une transition de $b$ vers $b-k+1$ lignées avec probabilité 
-    $$\forall b\geq k \geq 2,
-    \quad p_{b,k} \coloneq \frac{\binom{b}{k} \lambda_{b,k}}{\lambda_b}
-    $$
+    D'après le lemme des réveils, à chaque événement de coalescence on passe de $b$ à $b-k+1$ lignées
+    avec probabilité, 
+    \[
+    \forall b\geq k \geq 2,
+    \quad p_{b,k} \coloneq \frac{r_{b,k}}{\sum_{k=2}^b r_{b,k}} = \frac{\binom{b}{k} \lambda_{b,k}}{\lambda_b}
+    \]
     Ainsi, le squelette du processus est une chaîne de Markov
     décroissante sur $\llbracket 1, n \rrbracket$, commençant en $n$ et
-    terminant presque sûrement en $1$.
+    absorbée presque sûrement en $1$.
 
     \subsection{Exemple (Kingman)} \label{sec:kingman-example}
     Intéressons nous à un cas connu afin de mieux visualiser le modèle.
@@ -220,13 +224,14 @@
     pour $b\geq 2$.
     Pour $b=2$, $\lambda_{2,2}=1$ donc $\tau \sim \Exp(1)$
     donc $H(2) = 1 \geq 1$. Supposons l'inégalité vraie jusqu'à $b-1$. Donc,
-    en remarquant que $\lambda_{b,b} = \int_0^1 x^{b-2}\,\Lambda(dx) \leq 1$,
+    en remarquant que $\lambda_{b,b} = \int_0^1 x^{b-2}\,\Lambda(dx) \leq \int_0^1 \Lambda(dx) = 1$,
     \[
     H(b) = \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} H(b-k+1)
     \geq \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} 
     = \frac{1}{\lambda_b} + 1 - p_{b,b}
     = 1 + \frac{1 - \lambda_{b,b}}{\lambda_b} \geq 1
     \]
+
     D'où le résultat.
     \end{proof}
 
@@ -260,11 +265,11 @@
         \[ 
         \mathbb{E}_{\delta_{1/4}}(\tau)
         = \frac{1}{\lambda_n} + \sum_{k=2}^{n-1} \frac{\binom{n}{k} \lambda_{n,k}}{\lambda_n} \mathbb{E}_{\delta_{1/4}}(\tau | N_0 = n-k+1)
-        = \frac{19954284839411683}{11337879079537330} > 1.7599662\dots > 1.75
+        = \frac{19954284839411683}{11337879079537330} > 1.7599662 \dotsc > 1.75
         \]
     \end{proof}
     Nous conjecturons que le théorème peut être étendu pour tout $n>6$.
-    A notre connaissance l'étude ce phénomène n'est pas documenté.
+    A notre connaissance l'étude ce phénomène n'est pas documenté pour $n$ fini.
     Seul un article de \textcolor{pink}{Kersting-Wakolbinger} s'intéresse
     la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
 
