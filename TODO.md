@@ -87,3 +87,4 @@ Nous devons parler afin de vérifier toutes les consignes de
 # Liens 
 
 + Papier regardant le TMRCA pour n asymptotique : https://ar5iv.labs.arxiv.org/html/1712.07553
++ Une compilation de résultat probabiliste : https://www.i2m.univ-amu.fr/perso/etienne.pardoux/_media/moehle.pdf
