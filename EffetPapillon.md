@@ -89,3 +89,48 @@ $$
 $$
 
 Le supremum est atteint en $A$. D'où le résultat.
+
+## Coalescence
+
+Donc maintenant que nous avons tout, utilisons ces objets.
+Supposons que nous observons $n>1$ lignées.
+
+On rappelle que le temps moyen d'atteindre le $TMRCA$ partant
+de $n$ lignées est donnée par le lemme [??], noté $H(n)$.
+Pour tout $b \in \llbracket 2,n \rrbracket$ en multipliant par $\lambda_b$,
+
+$\begin{align}
+\lambda_b H(b) = 1 + \sum_{k=2}^{b-1}\lambda_b p_{b,k}H(b-k+1) 
+& \iff -1 = -\lambda_b H(b) + \sum_{k=2}^{b-1}r_{b,k}H(b-k+1) \\
+& \iff -1 = Q_{b,b}H(b) + \sum_{i=2}^{b-1} Q_b,i H(i) \\
+&\iff -1 = \sum_{i=1}^n Q_{b,i} H(i) = (QH)(b)
+\end{align}
+$
+
+Donc on peut déterminer $H(n)$ en résolvant le système linéaire
+$$
+    H = -Q^{-1}\textbf{1}
+$$
+
+A condition que $Q$ soit inversible. C'est une matrice triangulaire
+afin d'être inversible sa diagonale doit être non nulle et tout $\lambda_b \geq 1>0$
+
+C'est pas si simple. **Petite mise au point !** (15/11/2025)
+
+On oublie cette idée d'effet papillon : le théorème ne peut pas
+exister car la distance de mesure ne capture pas assez d'informations. De plus, les preuves plausbles consistent 
+à construire un couplage entre les 2 processus de coalescence mais
+celu-ici peut faire n'importe quoi donc les bornes sont beaucoup 
+trop conséquentes. Une étude locale peut être intéresant mais 
+le calcul de la borne de l'erreur entre 2 E(TMRCA) devient plus 
+couteux que de simuler, résoudre le systeme lineaire, etc...
+
+
+D'ailleurs bonne nouvelle on sait que TMRCA est une loi à densité
+donc son expression est **TODO**
+
+Pas mal de propriétés qu'on peut étudier mais faut trouver 
+des choses intéressantes et pas juste dériver ou regarder
+sa queue. La fonction de "hazard rate" peut être intéressante.
+
+
