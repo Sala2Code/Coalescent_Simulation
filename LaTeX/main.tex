@@ -387,7 +387,9 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     \lambda_{b,k} = \sum_{r=0}^{n-2} A_{(b,k),r} m_r(\Lambda)
     \]
         
-    Pour $n$ fixé, l'espace
+    Pour $n$ fixé, $Q$ est entièrement déterminée
+    par $(m_r(\Lambda))_{0\leq r \leq n-2}$,
+    l'espace
     des mesures de probabilité sur $[0,1]$ se réduit
     à une projection
     de dimension finie, $\mathbb{R}^{n-1}$, donc un espace bien plus petit.
@@ -401,9 +403,9 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
         Prenons $\Lambda_1$ la mesure uniforme 
         sur $[0,1]$. Pour tout $0<\varepsilon<1$,
         définissons la mesure de probabilité $\Lambda_\varepsilon$
-        de densité 
+        de densité sur $[0,1]$
         \[ 
-        f_\varepsilon(x) = 1 + \varepsilon P_{n-2}(2x-1)
+        f_\varepsilon(x) = 1 + \varepsilon P_{n-1}(2x-1)
         \]
 
         Alors, pour tout $0<\varepsilon<1$, 
@@ -428,11 +430,12 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
         Montrons à présent que le générateur infinitésimal
         de $\Lambda_1$ et $\Lambda_\varepsilon$ sont identiques.
         Soit $r \in \llbracket 0, n-2 \rrbracket$,
-        puisque $X^r \in \mathbb{R}_{n-2}[X]$, 
+        puisque $X^r \in \mathbb{R}_{n-2}[X]
+        \subset \mathbb{R}_{n-1}[X]$,
         \[
         m_r(\Lambda_\varepsilon)
         = \int_0^1 x^r f_\varepsilon(x) dx
-        = \int_0^1 x^r dx + \varepsilon \int_0^1 x^r P_{n-2}(2x-1) dx
+        = \int_0^1 x^r dx + \varepsilon \int_0^1 x^r P_{n-1}(2x-1) dx
         = \frac{1}{r+1} + \varepsilon \cdot 0
         = m_r(\Lambda_1)
         \]
