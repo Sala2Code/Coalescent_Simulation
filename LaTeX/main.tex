@@ -121,7 +121,58 @@
     absorbée presque sûrement en $1$.
 
     \subsection{Exemple (Kingman)} \label{sec:kingman-example}
-    Intéressons nous à un cas connu afin de mieux visualiser le modèle.
+        Intéressons-nous à un cas bien connu afin de mieux visualiser le modèle. 
+    Le modèle de Kingman s’y prête particulièrement bien comme introduction: 
+    on pose alors $\Lambda = \delta_0$. 
+    On peut dans ce cas, calculer explicitement les équations, et l’on retrouve les taux 
+    attendus pour avoir $b-1$ coalescences binaires.
+    
+    On considère
+    \[
+    \lambda_{b,k}
+        = \int_0^1 x^{k-2}(1-x)^{b-k}\,\delta_0\, dx
+        = [x^{k-2}(1-x)^{b-k}]_{x=0}.
+    \]
+    
+    On distingue alors deux cas :
+    \[
+    \lambda_{b,k} =
+    \begin{cases}
+    (1-0)^{\,b-2} = 1, & \text{si } k = 2, \\[6pt]
+    0^{\,k-2}(1-0)^{\,b-k} = 0, & \text{si } k > 2.
+    \end{cases}
+    \]
+    Ce qui correspond exactement au comportement attendu du modèle de Kingman.
+    
+    On s’intéresse maintenant au TMRCA ; commençons par calculer $\lambda_b$ :
+    \[
+    \lambda_b = \sum_{k=2}^{b} \binom{b}{k}\, \lambda_{b,k}
+               = \binom{b}{2}\, \lambda_{b,2}
+               = \binom{b}{2}.
+    \]
+    
+    Comme introduit précédemment, on sait que le TMRCA pour $b \in \mathbb{N}$ vérifie
+    \[
+    H(b)
+    = \frac{1}{\lambda_b}
+      + \sum_{k=2}^{b-1} p_{b,k}\, H(b-k+1).
+    \]
+    
+    Or, par récurrence,
+    \[
+    H(b) = \frac{1}{\lambda_b} + H(b-1)
+         = \sum_{k=2}^{b} \frac{1}{\lambda_k}
+         = \sum_{k=2}^{b} \binom{k}{2}
+         = \sum_{k=2}^{b} \frac{2}{k(k-1)}
+         = \sum_{k=2}^{b} 2\left(\frac{1}{k-1} - \frac{1}{k}\right).
+    \]
+    
+    On obtient finalement
+    \[
+    H(b) = 2\left(1 - \frac{1}{b}\right).
+    \]
+
+    
     \textcolor{red}{
         Là je propose donc (1 page grand max)
         (le but n'est pas de faire une étude de Kingman mais de présenter les différents 
