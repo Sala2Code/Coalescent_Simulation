@@ -5,6 +5,11 @@ Ronald~A. Fisher.
 \newblock {\em The Genetical Theory of Natural Selection}.
 \newblock Clarendon Press, Oxford, 1930.
 
+\bibitem[GM05]{goldschmidt-martin-2005}
+Christina Goldschmidt and Jeremy~B. Martin.
+\newblock Random recursive trees and the bolthausen--sznitman coalescent.
+\newblock {\em Electronic Journal of Probability}, 10:718--745, 2005.
+
 \bibitem[Kin82]{Kingman1982}
 J.~F.~C. Kingman.
 \newblock The coalescent.

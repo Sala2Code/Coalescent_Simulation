@@ -78,3 +78,10 @@ Nous devons parler afin de vérifier toutes les consignes de
 
 + Papier regardant le TMRCA pour n asymptotique : https://ar5iv.labs.arxiv.org/html/1712.07553
 + Une compilation de résultat probabiliste : https://www.i2m.univ-amu.fr/perso/etienne.pardoux/_media/moehle.pdf
+
+
+# Conclusion
+Liste des choses qu'on aimerait parler en rapide pour dire "faut voir là bas car on l'a pas fait par manque de temps"
++ Chercher la variance de $T_{MRCA}$ et pas que l'espérance.
++ Chercher, si elle existe, la mesure qui maximise E(TMRCA) pour un n fixé;
++ 
