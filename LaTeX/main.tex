@@ -24,7 +24,12 @@
 \usepackage{mathtools}
 \usepackage{bbm}
 
-\geometry{margin=1cm}
+\geometry{
+    left=1.cm,
+    right=1.cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
 
 \newtheorem{theorem}{Théorème}
 \newtheorem{definition}{Définition}
@@ -54,8 +59,8 @@
     Historiquement,
     le modèle de Wright-Fisher étudie une population de taille finie $N$
     où les individus d'une générations coalescent de manière uniforme entre 
-    eux dans la génération précédente \textcolor{pink}{[Wright-Fisher]}.
-    Ensuite, le modèle de Kingman \textcolor{pink}{[Kingman]} est le modèle
+    eux dans la génération précédente \cite{Fisher1930}.
+    Ensuite, le modèle de Kingman \cite{Kingman1982} est le modèle
     limite de Wright-Fisher où l'on s'intéresse à $n<N$ lignées
     et en considérant $N\to +\infty$.
     Ce cadre asymptotique permet de
@@ -187,7 +192,7 @@
         =\mathbb E_\Lambda(\tau \mid N_{T_1})
         =H(N_{T_1})
     \]
-Ainsi,
+Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     \begin{align*}
         H(b)
         &=\mathbb E_\Lambda(\tau \mid N_0=b)
@@ -322,7 +327,7 @@ Ainsi,
     \end{proof}
     Nous conjecturons que le théorème peut être étendu pour tout $n>6$.
     A notre connaissance l'étude ce phénomène n'est pas documenté pour $n$ fini.
-    Seul un article de \textcolor{pink}{Kersting-Wakolbinger} s'intéresse
+    Seul un article de \cite{kluge2017exchangeable} s'intéresse
     la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
 
 
@@ -347,11 +352,113 @@ Ainsi,
     % l’extrémalité en (\Lambda) pour (n) fini.
 
 
-    \subsection{Effet papillon de $\Lambda$}
+    \subsection{Une forêt pas si grande }
 
+    Un processus de Markov est entièrement déterminé
+    par son générateur infinitésimal.
+    Pour $n$ lignées observées,
+    celui d'un $\Lambda$-coalescent
+    est la matrice triangulaire inférieure
+    $Q \in \mathcal M_n(\mathbb{R})$ définie 
+    pour tout $1\leq b,i\leq n$, par
+    \[
+        Q_{b,i} =
+        \begin{cases}
+        r_{b,k} & \text{si } b\ge 2 \text{ et } i = b-k+1 \text{ pour } 2\le k\le b\\
+        -\lambda_b & \text{si } b\ge 2 \text{ et } i = b\\
+        0 & \text{sinon}
+        \end{cases}
+    \]
 
+    Le premier élément de sa diagonale, $Q_{1,1}$, est nul
+    car l'état $1$ est absorbant donc $Q$ n'est pas inversible.
+    On remarque également que ce processus est défini 
+    par $(\lambda_{b,k})_{I_n}$ avec
+    $I_n \coloneq \{(b,k), 2\leq k \leq b \leq n \}$.
+    Définissons pour $r \in \llbracket 0, n-2 \rrbracket$
+    \[ 
+    m_r : \Lambda \mapsto \int_0^1 x^r \Lambda(dx)
+    \]
 
+    En développant l'intégrande des taux de fusions, 
+    pour tout $(b,k) \in I_n$,
+    il existe $A_n \in \mathcal M_{I_n, n-1}(\mathbb{R})$ tel que, 
+    \[
+    \lambda_{b,k} = \sum_{r=0}^{n-2} A_{(b,k),r} m_r(\Lambda)
+    \]
+        
+    Pour $n$ fixé, $Q$ est entièrement déterminée
+    par $(m_r(\Lambda))_{0\leq r \leq n-2}$,
+    l'espace
+    des mesures de probabilité sur $[0,1]$ se réduit
+    à une projection
+    de dimension finie, $\mathbb{R}^{n-1}$, donc un espace bien plus petit.
+    Autrement dit, 
+    une infinité de mesures différentes
+    deviennent indiscernables pour un processus considéré.
+    
+    \begin{proposition}\label{}
+        Soit $n>1$. Notons $P_k$ le polynôme de 
+        Legendre de degré $k$. 
+        Prenons $\Lambda_1$ la mesure uniforme 
+        sur $[0,1]$. Pour tout $0<\varepsilon<1$,
+        définissons la mesure de probabilité $\Lambda_\varepsilon$
+        de densité sur $[0,1]$
+        \[ 
+        f_\varepsilon(x) = 1 + \varepsilon P_{n-1}(2x-1)
+        \]
 
-\bibliographystyle{unsrtnat} 
+        Alors, pour tout $0<\varepsilon<1$, 
+        \[
+        \tau_{\Lambda_1} \overset{\mathcal{L}}{=} \tau_{\Lambda_\varepsilon}
+        \]
+
+    \end{proposition}
+    \begin{proof}
+        Montrons que pour tout $0<\varepsilon<1$,
+        $f_\varepsilon$ est bien une densité de probabilité.
+        Nous avons, par une analyse élémentaire que
+        pour tout $k\geq 0$
+        $|P_k|\leq 1$ sur $[-1,1]$
+        \cite{WhittakerWatson1920} donc $f_\epsilon \geq 1-1\cdot\varepsilon \geq0 $.
+        De plus, $(P_k)_{0\leq k \leq n}$ est une base orthogonale de 
+        $\mathbb{R}_n[X]$ pour le produit scalaire 
+        $f,g \mapsto \int_{-1}^1 f(x)g(x) dx$
+        donc $\int_0^1 f_\varepsilon(x)dx =
+        1+\frac{\varepsilon}{2} \int_{-1}^1 1\cdot P_n(x) dx = 1+0 = 1$. 
+
+        Montrons à présent que le générateur infinitésimal
+        de $\Lambda_1$ et $\Lambda_\varepsilon$ sont identiques.
+        Soit $r \in \llbracket 0, n-2 \rrbracket$,
+        puisque $X^r \in \mathbb{R}_{n-2}[X]
+        \subset \mathbb{R}_{n-1}[X]$,
+        \[
+        m_r(\Lambda_\varepsilon)
+        = \int_0^1 x^r f_\varepsilon(x) dx
+        = \int_0^1 x^r dx + \varepsilon \int_0^1 x^r P_{n-1}(2x-1) dx
+        = \frac{1}{r+1} + \varepsilon \cdot 0
+        = m_r(\Lambda_1)
+        \]
+
+        Les taux de fusions sont donc égaux entre ces mesures,
+        d'où le résultat.
+    \end{proof}
+
+    Ainsi nous venons de construire une infinité de mesures 
+    différentes qui induisent le même processus de coalescence.
+    On s'attendait à obtenir une infinité d'arbres généalogiques
+    différents mais ceux-ci sont identiques en loi.
+
+    \textcolor{red}{subplots : prendre n=10, epsilon = 0.5 (ou autre)
+    \begin{itemize}
+        \item  densité de $\Lambda_\epsilon$ pour plusieurs $\epsilon$
+        \item  distribution du TMRCA pour ces différentes mesures et loi uniforme
+        (à voir comment bien l'afficher)
+        \item erreur de leur distribution qui devrait être de l'ordre de 
+        l'erreur numérique.
+    \end{itemize}
+    }
+
+\bibliographystyle{alpha}
 \bibliography{ref}
 \end{document}

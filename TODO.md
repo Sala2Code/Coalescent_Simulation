@@ -26,17 +26,7 @@ Il y a encore à définir mais le gros est là.
 
 ## Problématiques
 
-### 1. Min/Max TMRCA
-Pour commencer le sujet tranquillement, se demander les cas extrêmes de TMRCA selon la mesure $\Lambda$. Sauf que de parler de "plus petite/grande" mesure ne veut rien dire donc on s'intéresse plutôt à sa moyenne.
-+ Trouver la mesure $\Lambda$ qui minimise, et qui maximise, respectivement, $\mathbb E (T_{MRCA})$.Normalement on a *(à prouver)*,
 
-$$
-\delta_1 = \argmin_{\Lambda} \mathbb E (T_{MRCA})
-\qquad
-\delta_0 = \argmax_{\Lambda} \mathbb E (T_{MRCA})
-$$
-
-+ Quid de leur variance ? *(Est-ce que ce sont aussi les mesures qui minimisent/maximisent la variance de TMRCA ? Je ne sais pas si c'est pertinent comme question)*
 
 ### 2. Mesures proches - stabilité quantitative du TMRCA et de $\mathbb E(T_{MRCA})$
 

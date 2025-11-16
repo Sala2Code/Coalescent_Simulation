@@ -1,20 +1,37 @@
-\begin{thebibliography}{2}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{KLLS17}
 
-\bibitem[Pitman(1999)]{Pitman1999}
+\bibitem[Fis30]{Fisher1930}
+Ronald~A. Fisher.
+\newblock {\em The Genetical Theory of Natural Selection}.
+\newblock Clarendon Press, Oxford, 1930.
+
+\bibitem[Kin82]{Kingman1982}
+J.~F.~C. Kingman.
+\newblock The coalescent.
+\newblock {\em Stochastic Processes and their Applications}, 13(3):235--248,
+  1982.
+
+\bibitem[KLLS17]{kluge2017exchangeable}
+Tobias Kluge, Koenigs Leckey, Wolfgang L{\"o}hr, and Jason Schweinsberg.
+\newblock Exchangeable coalescents, ultrametrics, and trees.
+\newblock 2017.
+
+\bibitem[Pit99]{Pitman1999}
 Jim Pitman.
 \newblock Coalescents with multiple collisions.
-\newblock \emph{The Annals of Probability}, 27\penalty0 (4):\penalty0
-  1870--1902, 1999.
+\newblock {\em The Annals of Probability}, 27(4):1870--1902, 1999.
 
-\bibitem[Sagitov(1999)]{Sagitov1999}
+\bibitem[Sag99]{Sagitov1999}
 Serik Sagitov.
 \newblock The general coalescent with asynchronous mergers of ancestral lines.
-\newblock \emph{Journal of Applied Probability}, 36\penalty0 (4):\penalty0
-  1116--1125, 1999.
+\newblock {\em Journal of Applied Probability}, 36(4):1116--1125, 1999.
+
+\bibitem[WW20]{WhittakerWatson1920}
+E.~T. Whittaker and G.~N. Watson.
+\newblock {\em A Course of Modern Analysis: An Introduction to the General
+  Theory of Infinite Processes and of Analytic Functions; with an Account of
+  the Principal Transcendental Functions}.
+\newblock Cambridge University Press, Cambridge, 3rd edition, 1920.
+\newblock Chap. 15: Legendre functions.
 
 \end{thebibliography}
