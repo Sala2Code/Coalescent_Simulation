@@ -82,7 +82,7 @@
 
 
     \begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
-    Il existe un processus de Markov, appelé $\Lambda$-coalescent,
+    Il existe un processus de Markov, $(N_t)_{t\geq 0}$, appelé $\Lambda$-coalescent,
     échangeable à collisions multiples simples si et seulement s'il
     existe une mesure finie $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ lignées,
     pour tout $2\le k\le b$ le taux auquel chaque $k$-uplet fixé de lignées
@@ -121,94 +121,33 @@
     absorbée presque sûrement en $1$.
 
     \subsection{Exemple (Kingman)} \label{sec:kingman-example}
-        Intéressons-nous à un cas bien connu afin de mieux visualiser le modèle. 
-    Le modèle de Kingman s’y prête particulièrement bien comme introduction: 
-    on pose alors $\Lambda = \delta_0$. 
-    On peut dans ce cas, calculer explicitement les équations, et l’on retrouve les taux 
-    attendus pour avoir $b-1$ coalescences binaires.
-    
-    On considère
+        Intéressons-nous au modèle de Kingman en guise d'introduction. 
+    On pose $\Lambda = \delta_0$.
+    Pour $2\leq k\leq b $,
     \[
     \lambda_{b,k}
-        = \int_0^1 x^{k-2}(1-x)^{b-k}\,\delta_0\, dx
-        = [x^{k-2}(1-x)^{b-k}]_{x=0}.
-    \]
-    
-    On distingue alors deux cas :
-    \[
-    \lambda_{b,k} =
+        = \int_0^1 x^{k-2}(1-x)^{b-k} \delta_0(x) dx
+        = [x^{k-2}(1-x)^{b-k}]_{x=0} 
+        =
     \begin{cases}
-    (1-0)^{\,b-2} = 1, & \text{si } k = 2, \\[6pt]
-    0^{\,k-2}(1-0)^{\,b-k} = 0, & \text{si } k > 2.
+    (1-0)^{b-2} = 1 & \text{si } k = 2 \\
+    0^{k-2}(1-0)^{b-k} = 0 & \text{si } k > 2
     \end{cases}
     \]
-    Ce qui correspond exactement au comportement attendu du modèle de Kingman.
-    
-    On s’intéresse maintenant au TMRCA ; commençons par calculer $\lambda_b$ :
-    \[
-    \lambda_b = \sum_{k=2}^{b} \binom{b}{k}\, \lambda_{b,k}
-               = \binom{b}{2}\, \lambda_{b,2}
-               = \binom{b}{2}.
-    \]
-    
-    Comme introduit précédemment, on sait que le TMRCA pour $b \in \mathbb{N}$ vérifie
-    \[
-    H(b)
-    = \frac{1}{\lambda_b}
-      + \sum_{k=2}^{b-1} p_{b,k}\, H(b-k+1).
-    \]
-    
-    Or, par récurrence,
-    \[
-    H(b) = \frac{1}{\lambda_b} + H(b-1)
-         = \sum_{k=2}^{b} \frac{1}{\lambda_k}
-         = \sum_{k=2}^{b} \binom{k}{2}
-         = \sum_{k=2}^{b} \frac{2}{k(k-1)}
-         = \sum_{k=2}^{b} 2\left(\frac{1}{k-1} - \frac{1}{k}\right).
-    \]
-    
-    On obtient finalement
-    \[
-    H(b) = 2\left(1 - \frac{1}{b}\right).
-    \]
 
+    Les coalescences se font que par paires. Une caractéristique intéressante
+    du $\Lambda$-coalescent
+    est le TMRCA (Time to the Most Recent Common Ancestor),
+    c'est-à-dire le plus petit temps tel que toutes les lignées
+    ont fusionné en un ancêtre commun. Dans la suite du rapport, nous le notons
+    \[
+    \tau_{\Lambda,n} = \inf \{ t\geq 0, N_t=1, N_0=n \}
+    \]
+    Lorsque le contexte est clair sur $\Lambda$ ou $n$, ceux-ci seront omis 
+    afin de rendre la lecture plus agréable.
     
-    \textcolor{red}{
-        Là je propose donc (1 page grand max)
-        (le but n'est pas de faire une étude de Kingman mais de présenter les différents 
-        objets du modèle de manière simple et visuelles)
-        \begin{itemize}
-            \item  poser $\Lambda = \delta_0$, 
-            \item l'intuition du modèle : la masse est vers 0 donc
-            pas de grosse fusion. (Inteprétation du modele, du role des termes de l'intégrande)
-            \item Les calculs en 5 lignes maximum ($\lambda_{b,k}$, TMRCA si utile, $\dots$ )
-            \item Les notations : $n$, $N_t$, $(C_t^i)_{0<i<n}$, TMRCA, $T_k$
-        \end{itemize}
-    }
-    
-    \textcolor{red}{
-        Subplots (kingman)
-        \begin{itemize}
-            \item (Une réalisation) Arbre + TMRCA 
-            \item (Sur plusieurs réalisaiton) Distribution des fusions ((C\_t\^{}i))\_\{0<i<n \} (donc uniquement en 2 normalement)
-            \item  (Sur plusieurs réalisation) distribution TMRCA 
-            \item Autres ? 
-        \end{itemize}
-        Le but est de faire un exemple qui montre quasiement tout ce qu'on va étudier 
-        et par la suite quantifier pour beaucoup de mesures.
-    }
-
-    \section{Analyse du TMRCA}
-    \subsection{Cas extrêmes}
-
-    Au vu du précédent exemple, on peut se demander l'influence de la mesure
-    $\Lambda$ sur le TMRCA. Intuitivement, ce temps moyen devrait diminuer lorsque
-    la masse de $\Lambda$ se rapproche de 1 puisqu'on autorise des coalescences
-    multiples plus importantes. En première analyse on va étudier
-    les deux cas extrêmes.
-
     \begin{lemma}\label{lem:recurrence-TMRCA}
-        Notons le TMRCA d'un $\Lambda$-coalescent $\tau\coloneq \inf \{ t\geq 0, N_t=1 \}$.
+        % Notons le TMRCA d'un $\Lambda$-coalescent $\tau\coloneq \inf \{ t\geq 0, N_t=1 \}$.
         Soit $\Lambda$ une mesure de probabilité sur $[0,1]$. Notons
         $H: b \in \mathbb N^* \longmapsto \mathbb{E}_\Lambda(\tau \mid N_0 = b)$.
         Alors $H(1)=0$, $H(2)=1$ et pour $b\geq 3$,
@@ -258,6 +197,63 @@
 
     Or $H(1)=0$, donc le terme $k=b$ s'annule. D'où le résultat.
     \end{proof}
+
+    
+    
+    
+    Pour $b$ lignées observées, on a
+    $ \lambda_b = \sum_{k=2}^{b} \binom{b}{k} \lambda_{b,k}
+               = \binom{b}{2} \lambda_{b,2}
+               = \binom{b}{2}
+        $
+    donc, d'après le \autoref{lem:recurrence-TMRCA}, la taille moyenne d'un arbre pour
+    le modèle de Kingman est donné par,
+    \[
+    H(b) = \frac{1}{\lambda_b} + p_{b,2}\,H(b-1)
+    = \frac{1}{\binom{b}{2}} + H(b-1)
+    \]
+    
+    Ainsi par récurrence,
+    \[
+    H(b)=\sum_{k=2}^{b}\frac{1}{\binom{k}{2}}
+    = \sum_{k=2}^{b}\frac{2}{k(k-1)}
+    = \sum_{k=2}^{b}2\Big(\frac{1}{k-1}-\frac{1}{k}\Big)
+    =2\Big(1-\frac{1}{b}\Big)
+    \]
+    
+    \textcolor{red}{
+        Là je propose donc (1 page grand max)
+        (le but n'est pas de faire une étude de Kingman mais de présenter les différents 
+        objets du modèle de manière simple et visuelles)
+        \begin{itemize}
+            \item  poser $\Lambda = \delta_0$, 
+            \item l'intuition du modèle : la masse est vers 0 donc
+            pas de grosse fusion. (Inteprétation du modele, du role des termes de l'intégrande)
+            \item Les calculs en 5 lignes maximum ($\lambda_{b,k}$, TMRCA si utile, $\dots$ )
+            \item Les notations : $n$, $N_t$, $(C_t^i)_{0<i<n}$, TMRCA, $T_k$
+        \end{itemize}
+    }
+    
+    \textcolor{red}{
+        Subplots (kingman)
+        \begin{itemize}
+            \item (Une réalisation) Arbre + TMRCA 
+            \item (Sur plusieurs réalisaiton) Distribution des fusions ((C\_t\^{}i))\_\{0<i<n \} (donc uniquement en 2 normalement)
+            \item  (Sur plusieurs réalisation) distribution TMRCA 
+            \item Autres ? 
+        \end{itemize}
+        Le but est de faire un exemple qui montre quasiement tout ce qu'on va étudier 
+        et par la suite quantifier pour beaucoup de mesures.
+    }
+
+    \section{Analyse du TMRCA}
+    \subsection{Cas extrêmes}
+
+    Au vu du précédent exemple, on peut se demander l'influence de la mesure
+    $\Lambda$ sur le TMRCA. Intuitivement, ce temps moyen devrait diminuer lorsque
+    la masse de $\Lambda$ se rapproche de 1 puisqu'on autorise des coalescences
+    multiples plus importantes. En première analyse on va étudier
+    les deux cas extrêmes.
 
     % \begin{lemma}\label{lem:bounds-Sb}
     %     Pour tout $b\geq 2$ et $x\in[0,1]$,
