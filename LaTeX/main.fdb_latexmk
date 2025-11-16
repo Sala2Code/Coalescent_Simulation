@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1763297270.56123 "main.aux" "main.bbl" "main" 1763297279.40493 0
-  "./ref.bib" 1763294743 2364 02da85e274158eb7b332062cf5f302a4 ""
+["bibtex main"] 1763328281.03071 "main.aux" "main.bbl" "main" 1763328408.12735 0
+  "./ref.bib" 1763297396 2287 02da85e274158eb7b332062cf5f302a4 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1763297277 2076 61f064be3415ce5baf444c27f265fd1d "pdflatex"
+  "main.aux" 1763328405 2076 851f4120abaa6b79e44fcdde10d8f338 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763297276.04553 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763297279.40609 0
+["pdflatex"] 1763328399.64541 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763328408.12892 0
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762817766 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1761760250 848 068dd119e13b75777e62821af7d4f2a6 ""
@@ -148,11 +148,11 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763297274 20695 f677b528c74b480486bb88794cac5e82 ""
-  "main.aux" 1763297277 2076 61f064be3415ce5baf444c27f265fd1d "pdflatex"
-  "main.bbl" 1763297270 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
-  "main.out" 1763297277 1045 d2e75656ee68b62204b08a3f8b8ac027 "pdflatex"
-  "main.tex" 1763297274 20695 f677b528c74b480486bb88794cac5e82 ""
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763328394 22196 6689a6c9e47306d478873f460b313991 ""
+  "main.aux" 1763328405 2076 851f4120abaa6b79e44fcdde10d8f338 "pdflatex"
+  "main.bbl" 1763328282 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
+  "main.out" 1763328405 1045 d2e75656ee68b62204b08a3f8b8ac027 "pdflatex"
+  "main.tex" 1763328394 22196 6689a6c9e47306d478873f460b313991 ""
   (generated)
   "main.aux"
   "main.log"
