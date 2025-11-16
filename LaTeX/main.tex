@@ -226,6 +226,7 @@
     \[
     T_1:=\inf\{t\geq0, N_t\neq b\}
     \]
+
     $(N_t)_{t\geq 0}$ est un processus de Markov avec un taux de saut $\lambda_b$,
     donc $T_1\sim \Exp(\lambda_b)$
     et donc $\mathbb{E}_\Lambda(T_1 \mid N_0 = b)=\frac{1}{\lambda_b}$.
@@ -243,7 +244,8 @@
         =\mathbb E_\Lambda(\tau \mid N_{T_1})
         =H(N_{T_1})
     \]
-Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
+    
+    Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     \begin{align*}
         H(b)
         &=\mathbb E_\Lambda(\tau \mid N_0=b)
@@ -304,6 +306,7 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
         \[
         \tau\coloneq \inf \{ t\geq 0, N_t=1 \}
         \]
+
         Alors, pour toute mesure de probabilité $\Lambda$ sur $[0,1]$, on a
         condtionnellement à $\{N_0 = n\}$,
         \[
@@ -331,8 +334,8 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     % Pour $b=2$, $\lambda_{2,2}=1$ donc $\tau \sim \Exp(1)$
     % donc $H(2) = 1 \geq 1$. 
     L'initialisation a été prouvée dans le lemme \ref{lem:recurrence-TMRCA}.
-    Supposons l'inégalité vraie jusqu'à $b-1$. Donc,
-    en remarquant que $\lambda_{b,b} = \int_0^1 x^{b-2}\,\Lambda(dx) \leq \int_0^1 \Lambda(dx) = 1$,
+    Supposons l'inégalité vraie jusqu'à $b-1$. 
+    Remarquons que $\lambda_{b,b} = \int_0^1 x^{b-2}\,\Lambda(dx) \leq \int_0^1 \Lambda(dx) = 1$,
     \[
     H(b) = \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} H(b-k+1)
     \geq \frac{1}{\lambda_b} + \sum_{k=2}^{b-1} p_{b,k} 
@@ -350,25 +353,27 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     le modèle de Kingman soit celui maximisant le temps moyen du TMRCA. 
     Toutefois, voila une grande surprise : ce n'est pas le cas !
 
-    \begin{theorem}
+    \begin{proposition}\label{prop:surprise-TMRCA}
         Il existe $n>1$ et une mesure de probabilité $\Lambda$ sur $[0,1]$
         telle que, conditionnellement à $\{N_0=n\}$,
         \[
         \mathbb{E}_{\Lambda}(\tau)> \mathbb{E}_{\delta_0}(\tau)
         \]
-    \end{theorem}
+    \end{proposition}
     \begin{proof}
         Soit $n=8$, dans l'exemple de Kingman (voir \autoref{sec:kingman-example}),
         nous avons une formule explicite.
         \[\
         \mathbb E_{\delta_0}(\tau) = 2\left(1-\frac{1}{8}\right) = \frac{14}{8} = 1.75
         \]
+
         Soit $\Lambda = \delta_{1/4}$, alors d'après \eqref{eq:lambda_b},
         \[ 
         \lambda_{n,k} = \left(\frac{1}{4}\right)^{k-2} \left(\frac{3}{4}\right)^{n-k}
         \quad 
         \lambda_n = 16\left(1 -\left(\frac34\right)^n - \frac{n}{4}\left(\frac34\right)^{n-1}\right)
         \] 
+        
         Ainsi, en calculant nous obtenons,
         \[ 
         \mathbb{E}_{\delta_{1/4}}(\tau)
@@ -453,7 +458,8 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
         Legendre de degré $k$. 
         Prenons $\Lambda_1$ la mesure uniforme 
         sur $[0,1]$. Pour tout $0<\varepsilon<1$,
-        définissons la mesure de probabilité $\Lambda_\varepsilon$
+        définissons la mesure de probabilité
+        $\Lambda_\varepsilon \neq \Lambda_1$
         de densité sur $[0,1]$
         \[ 
         f_\varepsilon(x) = 1 + \varepsilon P_{n-1}(2x-1)
@@ -509,6 +515,49 @@ Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
         l'erreur numérique.
     \end{itemize}
     }
+
+    \subsection{Silence, ça pousse}
+    Précedemment nous avons parlé de la mesure uniforme.
+    Ce modèle est connu sous le nom de Bolthausen-Sznitman
+    et décèle un résultat incontournable.
+    % \begin{theorem}[C. Goldschmidt \& J. B. Martin \cite{goldschmidt-martin-2005}]
+    \begin{theorem}[Goldschmidt \& Martin~\cite{goldschmidt-martin-2005}]
+        Soit $(N_t)_{t\geq 0}$ un Bolthausen-Sznitman coalescent
+        Notons, pour $n>0$,
+        $ \tau_n \coloneq \inf\{t\geq 0, N_0 = n, N_t=1\}$. Alors, 
+
+        \[
+            \tau_n - \log(\log(n))  \xrightarrow[n\to\infty]{\mathcal{L}} \mathcal G
+        \]
+        
+    où $\mathcal{G}$ est la loi de Gumbel, de densité $x\mapsto e^{-x - e^{-x}}$.
+
+    \end{theorem}
+    La preuve est omise car elle dépasse le cadre de ce rapport. Toutefois, 
+    ce théorème renforce l'intuition qu'on a pu commencé à avoir
+    à la \autoref{prop:surprise-TMRCA} puisqu'on a que,
+    \[
+    \lim_{n\to \infty}\mathbb{E}(\tau_n)
+    = \lim_{n\to \infty} \log(\log(n)) + \mathbb{E}(\mathcal G)
+    = \lim_{n\to \infty} \log(\log(n)) + \gamma
+    = +\infty 
+    \]
+    où $\gamma$ est la constante d'Euler-Mascheroni.
+    Ainsi, la croissance de la hauteur des arbres généalogiques
+    pour le modèle de Bolthausen-Sznitman est extrêmement lente 
+    mais permet d'obtenir des arbres aussi grand que l'on souhaite 
+    en moyenne.
+    % Par exemple en se plaçant de la cadre asymptotique sur 
+    % le nombre de lignées initiales $n$, 
+    % si on souhaite avoir un arbre
+    % de Bolthausen-Sznitman plus grand que celui de Kingman, dont sa hauteur
+    % est majorée en moyenne par $2$, il faudrait résoudre 
+    % $\log(\log(n))+\gamma \geq 2 \iff n \geq e^{e^{2-\gamma}} \approx 80 $
+
+    \textcolor{red}{Un plot où on affiche $\tau$ qu'on soustrait à loglog(n) 
+    et on comparer avec la densité de Gumbel.
+    On peut aussi faire un autre subplot afin de voir la croissance asymtpoquie en log log n.}
+
 
 \bibliographystyle{alpha}
 \bibliography{ref}
