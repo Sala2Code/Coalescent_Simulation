@@ -6,9 +6,7 @@ import numpy.random as npr
 
 
 
-def simulate_kingman_tree(n, seed=None):
-
-    rng = npr.default_rng(seed)
+def simulate_kingman_tree(n):
     k = n
     t = 0.0
 
@@ -18,11 +16,11 @@ def simulate_kingman_tree(n, seed=None):
 
     while k > 1:
         rate = k * (k - 1) / 2
-        dt = rng.exponential(1.0 / rate)
+        dt = (-1/rate)*np.log(1-npr.rand())
         t += dt
 
         # Choisir 2 lignées au hasard à fusionner
-        children = rng.choice(active, size=2, replace=False)
+        children = npr.choice(active, size=2, replace=False)
         parent = f"node_{node_id}"
         node_id += 1
 
@@ -75,6 +73,47 @@ def plot_tree_optimized(tree, root, n, title="faut bien mettre un titre"):
 
 # ==============================================================
 
-n = 10000
-tree, root = simulate_kingman_tree(n)
-plot_tree_optimized(tree, root, n, title=f"Arbre de coalescence de Kingman (n={n})")
+def simulate_kingman_tree_nonvisual(n):
+    k = n
+    t = 0.0
+
+    active = [f"leaf_{i}" for i in range(n)]
+    tree = []
+    node_id = 0
+
+    while k > 1:
+        rate = k * (k - 1) / 2
+        dt = (-1/rate)*np.log(1-npr.rand())
+        t += dt
+
+        # Choisir 2 lignées au hasard à fusionner
+        children = active[0], active[1]
+        parent = f"node_{node_id}"
+        node_id += 1
+
+        tree.append((parent, list(children), t))
+
+        active = active[2:] + [parent]
+        k -= 1
+
+    root = active[0]
+    return tree, root
+
+
+def distribution(n, n_simulations=1000):
+    total_times = []
+
+    for _ in range(n_simulations):
+        tree, root = simulate_kingman_tree_nonvisual(n)
+        total_time = tree[-1][2]  # Temps du dernier événement de coalescence
+        total_times.append(total_time)
+    
+    plt.hist(total_times, bins=np.linspace(np.min(total_times),6,30), density=True)
+
+    return np.array(total_times)
+
+n = 500
+#tree, root = simulate_kingman_tree(n)
+#plot_tree_optimized(tree, root, n, title=f"Arbre de coalescence de Kingman (n={n})")
+times = distribution(n, n_simulations=5000)
+print(times)
