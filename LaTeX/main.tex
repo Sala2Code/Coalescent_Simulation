@@ -12,6 +12,7 @@
 \usepackage{caption}
 \usepackage{natbib}
 \usepackage{hyperref} % garder en dernier
+\usepackage{svg}
 % Autoref names (français) — évite les warnings de hyperref lorsque
 % on utilise \autoref sur des environnements non-standards
 \providecommand{\theoremautorefname}{Théorème}
@@ -526,15 +527,12 @@
     On s'attendait à obtenir une infinité d'arbres généalogiques
     différents mais ceux-ci sont identiques en loi.
 
-    \textcolor{red}{subplots : prendre n=10, epsilon = 0.5 (ou autre)
-    \begin{itemize}
-        \item  densité de $\Lambda_\epsilon$ pour plusieurs $\epsilon$
-        \item  distribution du TMRCA pour ces différentes mesures et loi uniforme
-        (à voir comment bien l'afficher)
-        \item erreur de leur distribution qui devrait être de l'ordre de 
-        l'erreur numérique.
-    \end{itemize}
-    }
+    \begin{figure}[htbp]
+        \centering
+        \includesvg[width=0.75\textwidth]{photo/plot_foret_pas_grande.svg}
+        \caption{Illustration : comparaisons de réalisations/distributions du TMRCA correspondant à deux mesures indiscernables pour $n$ fixé (voir la section « Une forêt pas si grande »).}
+        \label{fig:foret-pas-grande}
+    \end{figure}
 
     \subsection{Silence, ça pousse}
     Précedemment nous avons parlé de la mesure uniforme.
