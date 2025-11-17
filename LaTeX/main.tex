@@ -212,7 +212,7 @@
     H(b) = \frac{1}{\lambda_b} + p_{b,2}\,H(b-1)
     = \frac{1}{\binom{b}{2}} + H(b-1)
     \]
-    
+
     Ainsi par récurrence,
     \[
     H(b)=\sum_{k=2}^{b}\frac{1}{\binom{k}{2}}
@@ -239,11 +239,10 @@
         \begin{itemize}
             \item (Une réalisation) Arbre + TMRCA 
             \item (Sur plusieurs réalisaiton) Distribution des fusions ((C\_t\^{}i))\_\{0<i<n \} (donc uniquement en 2 normalement)
-            \item  (Sur plusieurs réalisation) distribution TMRCA 
-            \item Autres ? 
+            \item  (Sur plusieurs réalisation) distribution TMRCA + densité avec en légende "densité théorique"
+            dans le caption mettre, ou en footnote, que la densité est explcite dans ce cas dont la formule 
+            n'est pas prouvée, ele peut être écritre matriciellement d'après (citer "une foret pas si grande")
         \end{itemize}
-        Le but est de faire un exemple qui montre quasiement tout ce qu'on va étudier 
-        et par la suite quantifier pour beaucoup de mesures.
     }
 
     \section{Analyse du TMRCA}
@@ -424,6 +423,31 @@
 
     Le premier élément de sa diagonale, $Q_{1,1}$, est nul
     car l'état $1$ est absorbant donc $Q$ n'est pas inversible.
+    En se restreignant à la sous-matrice $R = (Q_{i,j})_{2\leq i,j \leq n}$
+    la matrice devient inversible et nous pouvons exprimer la densité de $\tau$.
+    Posons $p_R(t) = (p_k(t))_{2\leq k \leq n}$
+    où $p_k : t \geq 0 \mapsto \mathbb{P}(N_t = k \mid N_0=n)$. D'après
+    la relation de Chapman-Kolmogorov, $p_R$ vérifie pour tout $t\geq 0$
+    \[
+    \begin{cases}
+        p_R'(t) = p_R(t) R \\
+        p_R(0) = (0,\dots,0,1)
+    \end{cases}
+    \iff p_R(t) = (0,\dots,0,1) e^{tR}
+    \]
+    Définissons la fonction de survie,
+    $S : t \mapsto \mathbb{P}(\tau_n > t) = \mathbb{P}(N_t\neq 1 \mid N_0=n)
+    = \sum_{k=2}^n p_k(t) = p_R(t) \cdot \textbf{1}$.
+    Donc la densité de $\tau_n$ est donnée par, 
+    \begin{equation}\label{eq:density-TMRCA}
+        f_\tau : t\mapsto d_t (1-S(t))
+        = -S'(t) = -p_R'(t) \cdot \textbf{1}
+        = -p_R(t) R \cdot \textbf{1}
+        = - (0,\dots,0,1) e^{tR} R \cdot \textbf{1}
+    \end{equation}
+   
+
+
     On remarque également que ce processus est défini 
     par $(\lambda_{b,k})_{I_n}$ avec
     $I_n \coloneq \{(b,k), 2\leq k \leq b \leq n \}$.
@@ -518,9 +542,10 @@
     et décèle un résultat incontournable.
     % \begin{theorem}[C. Goldschmidt \& J. B. Martin \cite{goldschmidt-martin-2005}]
     \begin{theorem}[Goldschmidt \& Martin~\cite{goldschmidt-martin-2005}]
-        Soit $(N_t)_{t\geq 0}$ un Bolthausen-Sznitman coalescent
-        Notons, pour $n>0$,
-        $ \tau_n \coloneq \inf\{t\geq 0, N_0 = n, N_t=1\}$. Alors, 
+        Soit $(N_t)_{t\geq 0}$ un Bolthausen-Sznitman coalescent.
+        % Pour $n>0$,
+        % $ \tau_n \coloneq \inf\{t\geq 0, N_0 = n, N_t=1\}$. 
+        Alors, 
 
         \[
             \tau_n - \log(\log(n))  \xrightarrow[n\to\infty]{\mathcal{L}} \mathcal G

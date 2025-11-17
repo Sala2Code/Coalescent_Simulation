@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1763328281.03071 "main.aux" "main.bbl" "main" 1763328408.12735 0
+["bibtex main"] 1763403407.80345 "main.aux" "main.bbl" "main" 1763403467.86453 0
   "./ref.bib" 1763297396 2287 02da85e274158eb7b332062cf5f302a4 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1763328405 2076 851f4120abaa6b79e44fcdde10d8f338 "pdflatex"
+  "main.aux" 1763403466 2154 b43286a8de907293cc3be76bf47cef4e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763328399.64541 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763328408.12892 0
+["pdflatex"] 1763403463.76555 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763403467.86567 0
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762817766 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1761760250 848 068dd119e13b75777e62821af7d4f2a6 ""
@@ -26,6 +26,8 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx12.tfm" 1256929440 12088 d750ac78274fa7c9f73ba09914c04f8a ""
+  "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx6.tfm" 1256929440 12060 e1421116ee46f156304f311f9d8331aa ""
+  "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx8.tfm" 1256929440 12076 360d279d01701e9e9f0f2427c1d230fe ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr12.tfm" 1256929440 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr17.tfm" 1256929440 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr6.tfm" 1256929440 12048 c1068d0f4772be9b0ec447692e1d6d82 ""
@@ -148,11 +150,11 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763328394 22196 6689a6c9e47306d478873f460b313991 ""
-  "main.aux" 1763328405 2076 851f4120abaa6b79e44fcdde10d8f338 "pdflatex"
-  "main.bbl" 1763328282 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
-  "main.out" 1763328405 1045 d2e75656ee68b62204b08a3f8b8ac027 "pdflatex"
-  "main.tex" 1763328394 22196 6689a6c9e47306d478873f460b313991 ""
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763403461 23263 b676fb30b332f9a6b74a293f9c646285 ""
+  "main.aux" 1763403466 2154 b43286a8de907293cc3be76bf47cef4e "pdflatex"
+  "main.bbl" 1763403408 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
+  "main.out" 1763403466 1045 d2e75656ee68b62204b08a3f8b8ac027 "pdflatex"
+  "main.tex" 1763403461 23263 b676fb30b332f9a6b74a293f9c646285 ""
   (generated)
   "main.aux"
   "main.log"
