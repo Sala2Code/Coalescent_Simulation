@@ -13,6 +13,11 @@
 \usepackage{natbib}
 \usepackage{hyperref} % garder en dernier
 \usepackage{svg}
+% Configure svg package for Windows + Inkscape
+\svgsetup{
+    inkscapeexe={C:/Program Files/Inkscape/bin/inkscape.exe},
+    inkscapelatex=true
+}
 % Autoref names (français) — évite les warnings de hyperref lorsque
 % on utilise \autoref sur des environnements non-standards
 \providecommand{\theoremautorefname}{Théorème}
@@ -527,12 +532,15 @@
     On s'attendait à obtenir une infinité d'arbres généalogiques
     différents mais ceux-ci sont identiques en loi.
 
+    % afficher iamge svg
+
     \begin{figure}[htbp]
         \centering
-        \includesvg[width=0.75\textwidth]{photo/plot_foret_pas_grande.svg}
-        \caption{Illustration : comparaisons de réalisations/distributions du TMRCA correspondant à deux mesures indiscernables pour $n$ fixé (voir la section « Une forêt pas si grande »).}
-        \label{fig:foret-pas-grande}
+        \includesvg[width=\textwidth]{photo/plot_foret_pas_grande}
+        \caption{TODO}
     \end{figure}
+
+   
 
     \subsection{Silence, ça pousse}
     Précedemment nous avons parlé de la mesure uniforme.

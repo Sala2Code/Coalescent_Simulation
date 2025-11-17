@@ -156,6 +156,14 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspace
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
@@ -208,6 +216,9 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -220,8 +231,14 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT main.out
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
 OUTPUT main.pdf
+INPUT .\main.out
+INPUT .\main.out
+OUTPUT main.out
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
@@ -291,8 +308,8 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symb
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary8.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary6.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
@@ -306,6 +323,19 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx6.t
 INPUT .\photo\plot_foret_pas_grande.svg
 INPUT .\photo\plot_foret_pas_grande.svg
 INPUT .\photo\plot_foret_pas_grande.svg
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT svg-inkscape\plot_foret_pas_grande_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_grande_svg-tex.pdf
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
 INPUT .\main.bbl
 INPUT .\main.bbl
