@@ -390,11 +390,49 @@
     la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
 
 
-    \textcolor{red}{Là on a une belle expérience numérique à faire !!
-    On peut faire un plot de la distribution pour ces 2 mesures et voir qu'en moyenne
-    on a bien delta1/4 devant delta0 ! + intervalle asymtptotique si possible}
-    
+      \begin{figure}[htbp]
+        \centering
+        \includesvg[width=\textwidth]{photo/plot_tmrca_extrema_histograms}
+        \caption{Distribution empirique du TMRCA pour $n=8$
+        de $\Lambda=\delta_0$ (Kingman, histogramme vers le haut en bleu)
+        et $\Lambda=\delta_{1/4}$ (histogramme vers le bas en orange).
+        Les bandes verticales pointillées délimitent les intervalles
+        de confiance (IC) à $95\%$ pour la moyenne de
+        $\tau$ basés sur $M=1e5$ simulations
+        indépendantes. Les lignes pleines indiquent les moyennes
+        empiriques et les lignes pointillées ("-.")
+        les moyennes théoriques.}
+        \label{fig:tmrca-extrema}
+    \end{figure}
 
+    Dans la \autoref{fig:tmrca-extrema} nous utilisons des intervalles
+    de confiances.
+    Soient $(T_i)_{1\leq i \leq M}$ collections de variables 
+    aléatoires i.i.d. de loi $\tau_\Lambda$. Posons la moyenne et
+    l'estimateur de la variance
+    \[
+        \overline T_M \coloneq \frac{1}{M}\sum_{i=1}^M T_i\qquad
+        s_M^2 \coloneq \frac{1}{M-1}\sum_{i=1}^M (T_i - \overline T_M)^2
+    \]
+    
+    Les intervalles de confiances sont construits génériquement.
+    D'après le théorème central limite et le lemme de Slutsky,
+    \[
+        \sqrt{M}\frac{\overline T_M -
+        \mathbb{E}_\Lambda[\tau]}{\sqrt{s^2_M}}
+        \xrightarrow[M\to\infty]{\mathcal{L}} \mathcal N(0,1)
+    \]
+
+    Ainsi, un IC asymptotique de niveau $1-\alpha$ est
+    \[
+        [ \overline T_M \pm q_{1-\alpha/2}
+        \frac{\sqrt{s^2_M}}{\sqrt{M}}]
+    \]
+
+    Dans la \autoref{fig:tmrca-extrema} 
+    le zoom à droite montre les intervalles de confiance à $95\%$ disjoints
+    renforçant l'observation $\mathbb E(\tau_{\delta_0}) \leq
+    \mathbb E(\tau_{\delta_{1/4}})  $.
 
 
    \textcolor{blue}{L'échelle de temps ici est en unités de $N$ générations, avec $N\gg n$ puisque
@@ -484,10 +522,10 @@
     \begin{proposition}\label{}
         Soit $n>1$. Notons $P_k$ le polynôme de 
         Legendre de degré $k$. 
-        Prenons $\Lambda_1$ la mesure uniforme 
+        Prenons $\Lambda_0$ la mesure uniforme 
         sur $[0,1]$. Pour tout $0<\varepsilon<1$,
         définissons la mesure de probabilité
-        $\Lambda_\varepsilon \neq \Lambda_1$
+        $\Lambda_\varepsilon \neq \Lambda_0$
         de densité sur $[0,1]$
         \[ 
         f_\varepsilon(x) = 1 + \varepsilon P_{n-1}(2x-1)
@@ -495,7 +533,7 @@
 
         Alors, pour tout $0<\varepsilon<1$, 
         \[
-        \tau_{\Lambda_1} \overset{\mathcal{L}}{=} \tau_{\Lambda_\varepsilon}
+        \tau_{\Lambda_0} \overset{\mathcal{L}}{=} \tau_{\Lambda_\varepsilon}
         \]
 
     \end{proposition}
@@ -506,14 +544,14 @@
         pour tout $k\geq 0$
         $|P_k|\leq 1$ sur $[-1,1]$
         \cite{WhittakerWatson1920} donc $f_\epsilon \geq 1-1\cdot\varepsilon \geq0 $.
-        De plus, $(P_k)_{0\leq k \leq n}$ est une base orthogonale de 
+        
+        Rappelons que $(P_k)_{0\leq k \leq n}$ est une base orthogonale de 
         $\mathbb{R}_n[X]$ pour le produit scalaire 
         $f,g \mapsto \int_{-1}^1 f(x)g(x) dx$
         donc $\int_0^1 f_\varepsilon(x)dx =
         1+\frac{\varepsilon}{2} \int_{-1}^1 1\cdot P_n(x) dx = 1+0 = 1$. 
-
         Montrons à présent que le générateur infinitésimal
-        de $\Lambda_1$ et $\Lambda_\varepsilon$ sont identiques.
+        de $\Lambda_0$ et $\Lambda_\varepsilon$ sont identiques.
         Soit $r \in \llbracket 0, n-2 \rrbracket$,
         puisque $X^r \in \mathbb{R}_{n-2}[X]
         \subset \mathbb{R}_{n-1}[X]$,
@@ -522,7 +560,7 @@
         = \int_0^1 x^r f_\varepsilon(x) dx
         = \int_0^1 x^r dx + \varepsilon \int_0^1 x^r P_{n-1}(2x-1) dx
         = \frac{1}{r+1} + \varepsilon \cdot 0
-        = m_r(\Lambda_1)
+        = m_r(\Lambda_0)
         \]
 
         Les taux de fusions sont donc égaux entre ces mesures,
