@@ -13,6 +13,8 @@
 \usepackage{natbib}
 \usepackage{hyperref} % garder en dernier
 \usepackage{svg}
+\usepackage{float}
+
 \svgsetup{
   inkscapelatex=true,
   inkscapeexe=inkscape,
@@ -394,7 +396,7 @@
     la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
 
 
-      \begin{figure}[htbp]
+      \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{photo/plot_tmrca_extrema_histograms}
         \caption{Distribution empirique du TMRCA pour $n=8$
@@ -578,7 +580,7 @@
 
     % afficher iamge svg
 
-    \begin{figure}[htbp]
+    \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{photo/plot_foret_pas_grande}
         \caption{(a) \textit{Gauche}~: comparaison des densités remarquablement
@@ -637,7 +639,7 @@
     % est majorée en moyenne par $2$, il faudrait résoudre 
     % $\log(\log(n))+\gamma \geq 2 \iff n \geq e^{e^{2-\gamma}} \approx 80 $
 
-    \begin{figure}[htbp]
+    \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{photo/plot_silence_ca_pousse}
         \caption{(a) \textit{Gauche}~:

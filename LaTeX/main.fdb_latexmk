@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1763571902.41155 "main.aux" "main.bbl" "main" 1763571906.81593 0
+["bibtex main"] 1763572231.5702 "main.aux" "main.bbl" "main" 1763572243.64404 0
   "./ref.bib" 1763297396 2287 02da85e274158eb7b332062cf5f302a4 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1763571905 5280 9ecffda797450afae1a528973c216092 "pdflatex"
+  "main.aux" 1763572241 5280 bf6d0b7ce4b2a2106a3a3046a386518a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763571902.80327 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763571906.81752 0
-  "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763419968 84150 14c6750ec702bb9af7486190a9393f8d ""
+["pdflatex"] 1763572238.83043 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1763572243.64557 0
+  "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763572234 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1761760250 848 068dd119e13b75777e62821af7d4f2a6 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary7.tfm" 1761760246 848 26631fcb3e4cb6757598b9cda7967b63 ""
@@ -126,6 +126,7 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/carlisle/scalefnt.sty" 1522607821 1360 df2086bf924b14b72d6121fe9502fcdb ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601897756 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg" 1578053545 1104 7ac475a4e3466b0b43e138e9356bda83 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg" 1465894292 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
@@ -180,11 +181,11 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763569917 26407 8884c6ac685b1e855925bae01598b29f ""
-  "main.aux" 1763571905 5280 9ecffda797450afae1a528973c216092 "pdflatex"
-  "main.bbl" 1763571902 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
-  "main.out" 1763571905 1119 7daeb84dffd25caa76b5434259199dac "pdflatex"
-  "main.tex" 1763569917 26407 8884c6ac685b1e855925bae01598b29f ""
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1763572235 26418 d931df9a92206a2b15f204da59b368a2 ""
+  "main.aux" 1763572241 5280 bf6d0b7ce4b2a2106a3a3046a386518a "pdflatex"
+  "main.bbl" 1763572232 1549 8ef9f23c53f206d813e3195d8cb56f7c "bibtex main"
+  "main.out" 1763572241 1119 7daeb84dffd25caa76b5434259199dac "pdflatex"
+  "main.tex" 1763572235 26418 d931df9a92206a2b15f204da59b368a2 ""
   "photo/plot_foret_pas_grande.svg" 1763406610 66452 091735901120d9a01dcadde45ea29cb1 ""
   "photo/plot_silence_ca_pousse.svg" 1763489121 76128 61562e366c047d53e1ed7f03031e7cd0 ""
   "photo/plot_tmrca_extrema_histograms.svg" 1763571885 115252 31c80fbdfba1ac8d6eda0b360bb5e3dd ""
