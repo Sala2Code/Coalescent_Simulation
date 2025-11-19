@@ -46,9 +46,13 @@
 
 \newcommand{\Exp}{\mathrm{Exp}}
 
-\title{Titre du rapport}
-\author{Nom de l'auteur}
-\date{\today}
+\title{Analyse du $\Lambda$-coalescent : renouer avec ses racines. }
+\author{SALA Raphaël, MUGISHA Axcel, GARCIA Hugo, COLLIN Thibault}
+\makeatletter
+\newcommand{\monthandyear}{%
+    \ifcase\month\or janvier\or février\or mars\or avril\or mai\or juin\or juillet\or août\or septembre\or octobre\or novembre\or décembre\fi\ \number\year}
+\makeatother
+\date{\monthandyear}
 
 
 
@@ -254,7 +258,7 @@
     }
 
     \section{Analyse du TMRCA}
-    \subsection{Cas extrêmes}
+    \subsection{Aux extrêmes de l'arbre. }
 
     Au vu du précédent exemple, on peut se demander l'influence de la mesure
     $\Lambda$ sur le TMRCA. Intuitivement, ce temps moyen devrait diminuer lorsque
@@ -431,8 +435,8 @@
 
     Dans la \autoref{fig:tmrca-extrema} 
     le zoom à droite montre les intervalles de confiance à $95\%$ disjoints
-    renforçant l'observation $\mathbb E(\tau_{\delta_0}) \leq
-    \mathbb E(\tau_{\delta_{1/4}})  $.
+    renforçant l'observation $\mathbb E(\tau_{\delta_0, 8}) \leq
+    \mathbb E(\tau_{\delta_{1/4}, 8})  $.
 
 
    \textcolor{blue}{L'échelle de temps ici est en unités de $N$ générations, avec $N\gg n$ puisque
