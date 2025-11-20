@@ -142,6 +142,28 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerun
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\svg\svg.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\svg\svg.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrbase.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrbase.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfile-hook.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfile-hook.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlogo.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlogo.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
@@ -150,6 +172,38 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.c
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\transparent\transparent-nometadata.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeyslibraryfiltered.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
@@ -188,25 +242,24 @@ INPUT .\main.out
 INPUT .\main.out
 OUTPUT main.out
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
@@ -219,7 +272,7 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
@@ -228,32 +281,39 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\stmaryrd\ustmry.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\stmaryrd\ustmry.fd
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex\latex\stmaryrd\ustmry.fd
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary7.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary8.tfm
 INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary6.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
@@ -266,6 +326,59 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
+INPUT .\photo\plot_tmrca_extrema_histograms.svg
+INPUT .\photo\plot_tmrca_extrema_histograms.svg
+INPUT .\photo\plot_tmrca_extrema_histograms.svg
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx8.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx6.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri8.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri7.tfm
+INPUT .\photo\plot_foret_pas_gde_beta.svg
+INPUT .\photo\plot_foret_pas_gde_beta.svg
+INPUT .\photo\plot_foret_pas_gde_beta.svg
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\svg-inkscape\plot_foret_pas_gde_beta_svg-tex.pdf
+INPUT .\photo\plot_silence_ca_pousse.svg
+INPUT .\photo\plot_silence_ca_pousse.svg
+INPUT .\photo\plot_silence_ca_pousse.svg
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
+INPUT .\svg-inkscape\plot_silence_ca_pousse_svg-tex.pdf
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -274,6 +387,8 @@ INPUT .\main.out
 INPUT .\main.out
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
