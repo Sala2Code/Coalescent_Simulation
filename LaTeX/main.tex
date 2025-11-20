@@ -52,7 +52,7 @@
 \author{SALA Raphaël, MUGISHA Axcel, GARCIA Hugo, COLLIN Thibault}
 \makeatletter
 \newcommand{\monthandyear}{%
-    \ifcase\month\or janvier\or février\or mars\or avril\or mai\or juin\or juillet\or août\or septembre\or octobre\or novembre\or décembre\fi\ \number\year}
+    \ifcase\month\or janvier\or février\or mars\or avril\or mai\or juin\or juillet\or août\or septembre\or octobre\or Novembre\or Décembre\fi\ \number\year}
 \makeatother
 \date{\monthandyear}
 
@@ -108,8 +108,9 @@
 
     Nous ne définissons par formellement les conditions ici et donnons
     encore moins une preuve car cela est au-delà du cadre de ce rapport.
-    Ce résultat montre que la dynamique est entièrement caractérisée
-    par une mesure finie, sans perte de généralité nous considérons pour la suite
+    Ce résultat montre que la dynamique de $(N_t)_{t\geq 0}$,
+    indiquant le nombre de lignées à l'instant $t$, est entièrement caractérisée
+    par une mesure finie. Sans perte de généralité nous considérons pour la suite
     une mesure de probabilité, $\Lambda$ sur $[0,1]$. 
     Partant de $b$ lignées,
     le taux d'une $k$-coalescence ($2\leq k \leq b$) est 
@@ -525,20 +526,27 @@
     une infinité de mesures différentes
     deviennent indiscernables pour un processus considéré.
  
-    
+    \textcolor{red}{Est-ce possible de modifier les expressions mathématiues pour pas 
+    que ça soit chatGPT ? les ., les $()$ au lieu de $][$, etc... }
 \begin{proposition}\label{prop:beta_indiscernable}
-    Soit $n>1$ et $\Lambda_0=\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha\in(1,2)$,
-    de densité $w_\alpha(x)$ sur $[0,1]$ \footnote{\[
-    w_\alpha(x)
-    = \frac{1}{B(2-\alpha,\alpha)}\, x^{1-\alpha}(1-x)^{\alpha-1},
-    \qquad x\in[0,1]
-\]
-}.
-    Soit $Q_{k}$ un polynôme de Jacobi de degré $k$,
-    orthogonal à tous les polynômes de degré $\le n-2$ pour
+    Soit $n>1$ et $\Lambda_0=\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
+    \textcolor{red}{Ca depend de $\alpha$ mais on l'appelle $\Lambda_0$, etrange... 
+    Peut-être $\Lambda_0^\alpha$. Je précise que j'avais fait la notation 
+    $\Lambda_\varepsilon$ et $\Lambda_0$ car si tu prenais $\varepsilon=0$, cela 
+    correspondait bien. Donc si possible juste mettre des indices n'importe où
+    et trouver une cohérence.}
+    de densité \[
+    w_\alpha : x\in [0,1] \longmapsto
+    \frac{1}{B(2-\alpha,\alpha)} x^{1-\alpha}(1-x)^{\alpha-1}
+    \]
+
+    Soit $Q_{k}$ \textcolor{red}{Q est pris pour la matrice de générateur infinitésimal} un polynôme de Jacobi \textcolor{red}{expression des polynomes ?} de degré $k$,
+    orthogonal à tous les polynômes de degré inférieur à $n-1$ pour
+    le produit scalaire  \textcolor{red}{une citation est nécessaire}
     \[
     \langle f,g\rangle_\alpha=\int_0^1 f(x)g(x) w_\alpha(x)\,dx 
     \]
+
       On pose
   \[
     M:=\sup_{x\in[0,1]}|Q_{n-1}(x)| \in (0,+\infty)
@@ -562,8 +570,13 @@
     \]
 \end{proposition}
 \begin{proof}
-    Montrons que pour $\varepsilon$ assez petit, $f_\varepsilon$ est bien une densité
-    de probabilité.En prenant $\varepsilon<1/M$, on a
+    Montrons que pour $\varepsilon$ assez petit
+    \textcolor{red}{hmm.. pouruqoi pas expliciter les valeurs possibles?},
+     $f_\varepsilon$ est bien une densité
+    de probabilité. \textcolor{red}{Plutot mettre "Montrons que f est une densité", je 
+    trouve ça plsu naturelle mais comme tu veux}
+    
+    En prenant $\varepsilon<1/M$, on a
     \[
         1+\varepsilon Q_{n-1}(x)\ge 1-\varepsilon M \ge 0,
     \]
@@ -656,7 +669,33 @@
     On s'attendait à obtenir une infinité d'arbres généalogiques
     différents mais ceux-ci sont identiques en loi.
 
+    \textcolor{red}{Une phrase pour expliquer tout ça? ou donner des idées.
+    Car là on a 2 paramètres donc ça peut embrouiller l'esprit, qu'est ce qui 
+    fait quoi, pourquoi avoir choisi alpha, 2-alpha alors que la loi beta est 
+    sur alpha,beta>0 ; pourquoi avoir ajouté un epsilon alors qu'on a déjà un parametre
+    qui bouge. Ca vaut la peine d'y consacrer un (petit) paragraphe. (Repond à 
+    cette question sans ChatGPT) }
+
     % afficher iamge svg
+
+        \textcolor{red}{C'est cool la théorie marche mais les 2 premiers subplots sont pas 
+        si différents donc ils sont pas si convaicant. Prend des epsilon plus petit/grand
+        pareil pour les alpha car le premier et le deuxieme c'est les memes à moins
+        que t'aies une remarque à faire.}
+        
+        \textcolor{red}{Je préferais mon historgramme car la ca fait un seul histogramme 
+        marron vu que ça se condond. A moins que t'appréciais pas le mien (c'est possible,
+        on peut  discuter d'autres solution), donne mes codes à chatGPT pour qu'il te
+        fasse un histogramme plein (orange par exemple + alpha) et l'autre uniquement
+        sa bordure, c'est plus visuelle je trouve.
+        Il manque les labels sur les axes. Le troiseme plot je n'apprecie pas le ylim.
+        Il devrait être à (0.5,1.5) pour que ça soit centré. De plus, dans le caption 
+        tu peux dire que cette mesure c'est la loi uniforme (ou dans le parapgrahe avant
+        mais je pense c'est pertinent de dire que la loi beta représente pas mal de loi, 
+        après avoir selon les alphas possibles car ça restreint pas mal tout de meme)}
+
+        \textcolor{red}{dans les plots à droites, la legende devrait indiquer
+        "histogramme empirique" mais pas TMRCA car c'est déjà indiqué dans le titre.}
 
 
     \begin{figure}[H]
