@@ -21,6 +21,12 @@ Tobias Kluge, Koenigs Leckey, Wolfgang L{\"o}hr, and Jason Schweinsberg.
 \newblock Exchangeable coalescents, ultrametrics, and trees.
 \newblock 2017.
 
+\bibitem[NEM94]{nevai1994generalized}
+Paul Nevai, Tam{\'a}s Erd{\'e}lyi, and Alphonse~P Magnus.
+\newblock Generalized jacobi weights, christoffel functions, and jacobi
+  polynomials.
+\newblock {\em SIAM Journal on Mathematical Analysis}, 25(2):602--614, 1994.
+
 \bibitem[Pit99]{Pitman1999}
 Jim Pitman.
 \newblock Coalescents with multiple collisions.

@@ -526,39 +526,39 @@
     une infinité de mesures différentes
     deviennent indiscernables pour un processus considéré.
  
-    \textcolor{red}{Est-ce possible de modifier les expressions mathématiues pour pas 
-    que ça soit chatGPT ? les ., les $()$ au lieu de $][$, etc... }
 \begin{proposition}\label{prop:beta_indiscernable}
-    Soit $n>1$ et $\Lambda_0=\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
-    \textcolor{red}{Ca depend de $\alpha$ mais on l'appelle $\Lambda_0$, etrange... 
-    Peut-être $\Lambda_0^\alpha$. Je précise que j'avais fait la notation 
-    $\Lambda_\varepsilon$ et $\Lambda_0$ car si tu prenais $\varepsilon=0$, cela 
-    correspondait bien. Donc si possible juste mettre des indices n'importe où
-    et trouver une cohérence.}
-    de densité \[
-    w_\alpha : x\in [0,1] \longmapsto
+    Soit $n>1$ et $\Lambda_0^\alpha=\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
+    de densité 
+    $$   
+     w_\alpha : x\in [0,1] \longmapsto
     \frac{1}{B(2-\alpha,\alpha)} x^{1-\alpha}(1-x)^{\alpha-1}
-    \]
+    $$
 
-    Soit $Q_{k}$ \textcolor{red}{Q est pris pour la matrice de générateur infinitésimal} un polynôme de Jacobi \textcolor{red}{expression des polynomes ?} de degré $k$,
-    orthogonal à tous les polynômes de degré inférieur à $n-1$ pour
-    le produit scalaire  \textcolor{red}{une citation est nécessaire}
+    Soit $J_{n}$  un polynôme de Jacobi de degré $n$,
+    $$
+        J_{n}=P_{n}^{(\alpha-1,\,1-\alpha)}(2x-1)=\sum_{k=0}^{n}
+        \binom{n+\alpha-1}{\,n-k+1\,}
+        \binom{n-\alpha+1}{\,k\,}
+        x^{\,n-k}(x-1)^k
+    $$
+     $J_n$ est orthogonal à tous les polynômes de degré inférieur à $n-1$ \cite{nevai1994generalized}pour
+    le produit scalaire  
     \[
     \langle f,g\rangle_\alpha=\int_0^1 f(x)g(x) w_\alpha(x)\,dx 
     \]
 
       On pose
   \[
-    M:=\sup_{x\in[0,1]}|Q_{n-1}(x)| \in (0,+\infty)
+    M:=\sup_{x\in[0,1]}|J_{n-1}(x)| \in ]0,+\infty[
     \qquad\text{et}\qquad
     \varepsilon_0 := \frac{1}{M}.
   \]
-  Pour $\varepsilon\in(0,\varepsilon_0)$, on définit la mesure de probabilité $\Lambda_{\varepsilon} \neq 
-    \Lambda_0$ sur $[0,1]$ par sa densité
+  Pour $\varepsilon\in]0,\varepsilon_0[ $, on définit la mesure de probabilité $\Lambda_{\varepsilon} \neq 
+    \Lambda_0^\alpha$ sur $[0,1]$ par sa densité
     
     \[
     f_\varepsilon(x)
-    =\bigl(1+\varepsilon Q_{n-1}(x)\bigr)\,w_\alpha(x),
+    =\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x),
     \qquad x\in[0,1],
     \]
 
@@ -570,46 +570,42 @@
     \]
 \end{proposition}
 \begin{proof}
-    Montrons que pour $\varepsilon$ assez petit
-    \textcolor{red}{hmm.. pouruqoi pas expliciter les valeurs possibles?},
-     $f_\varepsilon$ est bien une densité
-    de probabilité. \textcolor{red}{Plutot mettre "Montrons que f est une densité", je 
-    trouve ça plsu naturelle mais comme tu veux}
+    Soit $\varepsilon<1/M$, montrons que $f_\varepsilon$ est bien une densité.
     
-    En prenant $\varepsilon<1/M$, on a
-    \[
-        1+\varepsilon Q_{n-1}(x)\ge 1-\varepsilon M \ge 0,
-    \]
+    $$
+        1+\varepsilon J_{n-1}(x)\ge 1-\varepsilon M \ge 0,
+    $$
     donc $f_\varepsilon\ge 0$ sur $[0,1]$.
 
-    Par ailleurs, l’orthogonalité de $Q_{n-1}$ avec la constante $1$ donne
+    Par ailleurs, l’orthogonalité de $J_{n-1}$ avec la constante $1$ (comme $1$ est un polynôme de degré inférieur à $n-1$)
+     donne
     \[
-        \int_0^1 Q_{n-1}(x) w_\alpha(x)\,dx = 0,
+        \int_0^1 J_{n-1}(x) w_\alpha(x)\,dx = 0,
     \]
     d’où
     \[
         \int_0^1 f_\varepsilon(x)\,dx
         = \int_0^1 w_\alpha(x)\,dx
-          + \varepsilon \int_0^1 Q_{n-1}(x)w_\alpha(x)\,dx
+          + \varepsilon \int_0^1 J_{n-1}(x)w_\alpha(x)\,dx
         = 1 + \varepsilon\cdot 0 = 1.
     \]
-    Ainsi $f_\varepsilon$ est bien une densité de probabilité sur $[0,1]$.
+    Ainsi $f_\varepsilon$ est bien une densité sur $[0,1]$.
 
     Montrons à présent que les générateurs infinitésimaux de $\Lambda_0$ et
     $\Lambda_\varepsilon$ coïncident sur $\{1,\dots,n\}$.
     Soit $r \in \llbracket 0, n-2 \rrbracket$. Comme $x^r$ est un polynôme de degré
-    $\le n-2$, l’orthogonalité de $Q_{n-1}$ implique
+    $\le n-2$, l’orthogonalité de $J_{n-1}$ implique
     \[
-        \int_0^1 x^r Q_{n-1}(x) w_\alpha(x)\,dx = 0.
+        \int_0^1 x^r J_{n-1}(x) w_\alpha(x)\,dx = 0.
     \]
     Ainsi,
-    \[
+    $$
         m_r(\Lambda_\varepsilon)
         = \int_0^1 x^r f_\varepsilon(x)\,dx
         = \int_0^1 x^r w_\alpha(x)\,dx
-          + \varepsilon \int_0^1 x^r Q_{n-1}(x) w_\alpha(x)\,dx
+          + \varepsilon \int_0^1 x^r J_{n-1}(x) w_\alpha(x)\,dx
         = m_r(\Lambda_0).
-    \]
+    $$
 
    Les taux de fusions sont donc égaux entre ces mesures,
     d'où le résultat.
@@ -703,7 +699,7 @@
         \includesvg[width=\textwidth]{photo/plot_foret_pas_gde_beta}
         \caption{(a) \textit{Gauche}~: comparaison des densités remarquablement
         différentes
-        sur $[0,1]$, \(f_\varepsilon(x)=\bigl(1+\varepsilon Q_{n-1}(x)\bigr)\,w_\alpha(x)\),
+        sur $[0,1]$, \(f_\varepsilon(x)=\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x)\),
         pour $n=8$~: cas Beta($2-\alpha,\alpha$) $\varepsilon=0$ et perturbation de Jacobi $\varepsilon=0.5$
         (b) \textit{Droite}~: distribution empirique du TMRCA,
          issues de $n$ lignées, à partir
