@@ -798,6 +798,68 @@
     \end{figure}
 
 
+    \section{Application : Le Paradoxe de la Sardine Japonaise}
+
+    L'étude de Niwa et al. (2016) sur la sardine japonaise (\textit{Sardinops 
+    melanostictus}) constitue une démonstration empirique de la nécessité du 
+    $\Lambda$-coalescent. Elle met en lumière l'échec du modèle de Kingman pour
+     les espèces à stratégie de "Sweepstakes" ou "loterie reproductive" (haute 
+     fécondité, variance reproductive infinie), où quelques rares individus 
+     peuvent engendrer une fraction macroscopique de la génération suivante 
+     (fusions multiples). 
+
+    L'idée de cette sous-partie est d'analyser une possible application du 
+    modèle de $\Lambda$-coalescence sur la mesure Beta$(2-\alpha, \alpha)$ au 
+    monde réel.
+
+    \subsection{Le Conflit}
+
+    Chez les animaux à haute fécondité, l'analyse génétique révèle une contradiction 
+    flagrante si l'on reste dans le paradigme binaire classique (Wright-Fisher ou Kingman) :
+
+    On observe un excès massif de mutations uniques. Sous Kingman, cette 
+    observation est interprétée à tort comme une expansion démographique 
+    explosive et récente.
+
+    Si cette expansion était réelle, la distribution des distances par paires 
+    (mismatch distribution) devrait former une "vague" unimodale (loi de Poisson). 
+    Or, les données montrent une distribution en forme de "L" : un pic en zéro et 
+    une queue lourde.
+
+    \subsection{Résolution par le Beta-Coalescent et Simulation}
+
+    Le modèle Beta-coalescent (avec $\alpha \approx 1.3$) réconcilie ces deux signaux. 
+    Les fusions multiples fréquentes créent des groupes d'individus identiques (le pic à 
+    0), tout en laissant survivre des lignées très anciennes (queue lourde), sans recourir 
+    à l'hypothèse d'expansion.
+
+    Nous avons simulé cette distinction (Fig. \ref{fig:sardine_simu}) en comparant un 
+    modèle de Kingman avec expansion (l'artefact) et un modèle Beta stationnaire (la réalité).
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=\textwidth]{photosweep}
+        \caption{Distribution des discordances ($n=150$). \textbf{En bleu (Kingman + Expansion)} 
+        : Une "vague" créée par le phénomène de croissance démographique. \textbf{En rouge 
+        (Sardine $\alpha=1.3$)} : Un pic de clones (sweepstakes récents) et une queue de lignées 
+        persistantes (résultat attendu).}
+        \label{fig:sardine_simu}
+    \end{figure}
+
+    \subsection{Conséquence : Millions de sardines, même génome}
+
+    Ce résultat invalide la relation linéaire entre taille de recensement $N$ et 
+    taille efficace $N_e$. Sous le régime Beta-coalescent, la dérive génétique est régie par 
+    une loi de puissance :
+    $$ N_e \propto N^{\alpha - 1} $$
+    Pour la sardine ($\alpha \approx 1.3$), cela implique $N_e \propto N^{0.3}$. Cette 
+    relation explique pourquoi des populations marines gigantesques conservent une diversité 
+    génétique très faible et instable. Ce modèle permet non seulement d'expliquer un ancien 
+    paradoxe chez les animaux à haute fécondité mais sert en plus d'outil pour estimer la taille 
+    effective d'une population.
+
+
+
  
 \bibliographystyle{alpha}
 \bibliography{ref}
