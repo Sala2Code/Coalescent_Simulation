@@ -116,6 +116,6 @@ def distribution(n, n_simulations=1000):
     return np.array(total_times)
 n = 1000
 tree, root = simulate_coalescent(n, alpha = 1.5)
-plot_tree_optimized(tree, root, n, title=f"Arbre de coalescence  beta (n={n})")
+plot_tree_optimized(tree, root, n, title=f"Arbre de coalescence  beta (n={n})")#alpha = 2 alors kingman, alpha=  0.1 alors dirac en 0
 plt.show()
 #times = distribution(n/2, n_simulations=5000)
