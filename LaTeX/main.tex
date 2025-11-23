@@ -551,9 +551,9 @@
   \[
     M:=\sup_{x\in[0,1]}|J_{n-1}(x)| \in ]0,+\infty[
     \qquad\text{et}\qquad
-    \varepsilon_0 := \frac{1}{M}.
+    \varepsilon_n := \frac{1}{M}.
   \]
-  Pour $\varepsilon\in]0,\varepsilon_0[ $, on définit la mesure de probabilité $\Lambda_{\varepsilon} \neq 
+  Pour $\varepsilon\in]0,\varepsilon_n[ $, on définit la mesure de probabilité $\Lambda_{\varepsilon} \neq 
     \Lambda_0^\alpha$ sur $[0,1]$ par sa densité
     
     \[
@@ -562,7 +562,7 @@
     \qquad x\in[0,1],
     \]
 
-    Alors, pour tout $0<\varepsilon<\varepsilon_0$,
+    Alors, pour tout $0<\varepsilon<\varepsilon_n$,
     \[
     \tau_{\Lambda_\varepsilon,n}
     \overset{\mathcal{L}}{=}
@@ -696,18 +696,33 @@
 
     \begin{figure}[H]
         \centering
-        \includesvg[width=\textwidth]{photo/plot_foret_pas_gde_beta}
+        \includesvg[width=\textwidth]{photo/plot_foret_pas_grande_beta}
         \caption{(a) \textit{Gauche}~: comparaison des densités remarquablement
         différentes
         sur $[0,1]$, \(f_\varepsilon(x)=\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x)\),
-        pour $n=8$~: cas Beta($2-\alpha,\alpha$) $\varepsilon=0$ et perturbation de Jacobi $\varepsilon=0.5$
+        pour $n=8$~: cas Beta($2-\alpha,\alpha$) (avec $\alpha \in \{1,1.4\}$)$\varepsilon=0$ et perturbation de Jacobi $\varepsilon \in \{0.2,0.8\}$
         (b) \textit{Droite}~: distribution empirique du TMRCA,
          issues de $n$ lignées, à partir
         de 8000 simulations, avec superposition de la densité théorique
-        donnée par \eqref{eq:density-TMRCA}. Comme attendu les densités se
-        confondent.}
+        donnée par \eqref{eq:density-TMRCA}.}
     \end{figure}
-%\begin{figure}[H]
+
+    La figure met clairement en évidence le rôle crucial de la borne $\varepsilon_n$ , qui garantit que la densité perturbée $f_\varepsilon$ reste positive sur $[1,0]$
+    et définit bien une mesure de probabilité. Cette borne dépend directement du degré $n$ du polynôme de jacobi \cite{Szego1939}, 
+    $$\varepsilon_n\sim\;\frac{C(\alpha)}{n^{|\alpha-1|}}$$
+    où $C(\alpha)$ provient du comportement asymptotique des polynômes de Jacobi.
+    Dans le cas, $\alpha=1$, la mesure $\Lambda_0^1$ est uniforme est $\varepsilon_n$ ne depend plus de n, d'où sur la figure les histogrammes empiriques collent partout.
+    En revanche, pour $\alpha=1.4$,  $\varepsilon_n=0.392062$, et sur la figure on voit que si on prend $\varepsilon$ plus grand que $\varepsilon_n$ les histogrammes empiriques 
+    ne se superposent plus parfaitement. 
+
+
+
+
+
+
+
+
+    %\begin{figure}[H]
 %    \centering
 %    \includesvg[width=\textwidth]{photo/plot_foret_pas_gde_beta}
 %    \caption{(a) \textit{Gauche}~: comparaison des densités remarquablement
