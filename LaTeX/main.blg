@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: ref.bib
 Warning--empty journal in kluge2017exchangeable
-You've used 7 entries,
+You've used 8 entries,
             2543 wiz_defined-function locations,
-            607 strings with 5435 characters,
-and the built_in function-call counts, 2675 in all, are:
-= -- 270
-> -- 107
-< -- 4
-+ -- 38
-- -- 35
-* -- 200
-:= -- 451
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 40
-chr.to.int$ -- 7
-cite$ -- 8
-duplicate$ -- 102
-empty$ -- 199
-format.name$ -- 46
-if$ -- 527
+            615 strings with 5545 characters,
+and the built_in function-call counts, 2963 in all, are:
+= -- 294
+> -- 115
+< -- 6
++ -- 40
+- -- 37
+* -- 220
+:= -- 499
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 44
+chr.to.int$ -- 8
+cite$ -- 9
+duplicate$ -- 119
+empty$ -- 225
+format.name$ -- 50
+if$ -- 585
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 38
-num.names$ -- 21
-pop$ -- 33
+missing$ -- 10
+newline$ -- 43
+num.names$ -- 24
+pop$ -- 41
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 54
 quote$ -- 0
-skip$ -- 79
+skip$ -- 88
 stack$ -- 0
-substring$ -- 189
-swap$ -- 6
-text.length$ -- 4
-text.prefix$ -- 4
+substring$ -- 196
+swap$ -- 9
+text.length$ -- 6
+text.prefix$ -- 5
 top$ -- 0
-type$ -- 52
+type$ -- 56
 warning$ -- 1
-while$ -- 27
-width$ -- 10
-write$ -- 91
+while$ -- 29
+width$ -- 12
+write$ -- 104
 (There was 1 warning)
