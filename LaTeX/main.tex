@@ -414,7 +414,7 @@
 
     Dans la \autoref{fig:tmrca-extrema} nous utilisons des intervalles
     de confiances.
-    Soient $(T_i)_{1\leq i \leq M}$ collections de variables 
+    Soit $(T_i)_{1\leq i \leq M}$ une collection de variables 
     aléatoires i.i.d. de loi $\tau_\Lambda$. Posons la moyenne et
     l'estimateur de la variance
     \[
@@ -527,84 +527,90 @@
     deviennent indiscernables pour un processus considéré.
  
 \begin{proposition}\label{prop:beta_indiscernable}
-    Soit $n>1$ et $\Lambda_0^\alpha=\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
+    Soit $n>1$ et $\Lambda_0^\alpha \coloneq \mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
     de densité 
-    $$   
-     w_\alpha : x\in [0,1] \longmapsto
+    \[w_\alpha : x\in [0,1] \longmapsto
     \frac{1}{B(2-\alpha,\alpha)} x^{1-\alpha}(1-x)^{\alpha-1}
-    $$
+    \]
 
-    Soit $J_{n}$  un polynôme de Jacobi de degré $n$,
-    $$
-        J_{n}=P_{n}^{(\alpha-1,\,1-\alpha)}(2x-1)=\sum_{k=0}^{n}
-        \binom{n+\alpha-1}{\,n-k+1\,}
-        \binom{n-\alpha+1}{\,k\,}
-        x^{\,n-k}(x-1)^k
-    $$
-     $J_n$ est orthogonal à tous les polynômes de degré inférieur à $n-1$ \cite{nevai1994generalized}pour
-    le produit scalaire  
+    Soit $(J_{n})_{n\geq 0}$  les polynômes de Jacobi. 
+    Pour tout $n\geq 0,
+    J_{n}=\sum_{k=0}^{n}
+        \binom{n+\alpha-1}{n-k+1}
+        \binom{n-\alpha+1}{k}
+        x^{n-k}(x-1)^k$
+    est de degré $n$ et orthogonal à tous les polynômes de degré inférieur à $n-1$
+    pour
+    le produit scalaire 
+    \cite{nevai1994generalized} % j'arrive pas à le mettre quelque part de bien
+
     \[
-    \langle f,g\rangle_\alpha=\int_0^1 f(x)g(x) w_\alpha(x)\,dx 
+    \langle f,g\rangle_\alpha=\int_0^1 f(x)g(x) w_\alpha(x) dx 
     \]
 
       On pose
   \[
-    M:=\sup_{x\in[0,1]}|J_{n-1}(x)| \in ]0,+\infty[
+    M \coloneq \sup_{x\in[0,1]}|J_{n-1}(x)| \in ]0,+\infty[
     \qquad\text{et}\qquad
-    \varepsilon_n := \frac{1}{M}.
+    \varepsilon_n := \frac{1}{M}
   \]
-  Pour $\varepsilon\in]0,\varepsilon_n[ $, on définit la mesure de probabilité $\Lambda_{\varepsilon} \neq 
-    \Lambda_0^\alpha$ sur $[0,1]$ par sa densité
+
+  Et on définit pour $0<\varepsilon< \varepsilon_n$, la mesure de
+   probabilité $\Lambda_{\varepsilon}^\alpha \neq 
+    \Lambda_0^\alpha$ par sa densité
     
     \[
-    f_\varepsilon(x)
-    =\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x),
-    \qquad x\in[0,1],
+    f_\varepsilon^\alpha : x \in [0,1] \longmapsto 
+    \bigl(1+\varepsilon J_{n-1}(x)\bigr) w_\alpha(x)
     \]
 
     Alors, pour tout $0<\varepsilon<\varepsilon_n$,
     \[
-    \tau_{\Lambda_\varepsilon,n}
+    \tau_{\Lambda_{\varepsilon}^\alpha,n}
     \overset{\mathcal{L}}{=}
-    \tau_{\Lambda_0,n}
+    \tau_{\Lambda_{0}^\alpha,n}
     \]
 \end{proposition}
 \begin{proof}
     Soit $\varepsilon<1/M$, montrons que $f_\varepsilon$ est bien une densité.
-    
-    $$
-        1+\varepsilon J_{n-1}(x)\ge 1-\varepsilon M \ge 0,
-    $$
-    donc $f_\varepsilon\ge 0$ sur $[0,1]$.
+    Sur $[0,1]$,
+    $1+\varepsilon J_{n-1} \ge 1-\varepsilon M \ge 0$
+    donc par produit de termes positifs $f_\varepsilon^\alpha \ge 0$.
 
-    Par ailleurs, l’orthogonalité de $J_{n-1}$ avec la constante $1$ (comme $1$ est un polynôme de degré inférieur à $n-1$)
-     donne
-    \[
-        \int_0^1 J_{n-1}(x) w_\alpha(x)\,dx = 0,
-    \]
-    d’où
-    \[
-        \int_0^1 f_\varepsilon(x)\,dx
-        = \int_0^1 w_\alpha(x)\,dx
-          + \varepsilon \int_0^1 J_{n-1}(x)w_\alpha(x)\,dx
-        = 1 + \varepsilon\cdot 0 = 1.
-    \]
-    Ainsi $f_\varepsilon$ est bien une densité sur $[0,1]$.
+    Puis, par orthogonalité de $J_{n-1}$ avec la constante
+    $1 \in \mathbb{R}_{n-1}[X]$,
+    % (comme $1$ est un polynôme de degré inférieur à $n-1$)
 
-    Montrons à présent que les générateurs infinitésimaux de $\Lambda_0$ et
-    $\Lambda_\varepsilon$ coïncident sur $\{1,\dots,n\}$.
-    Soit $r \in \llbracket 0, n-2 \rrbracket$. Comme $x^r$ est un polynôme de degré
-    $\le n-2$, l’orthogonalité de $J_{n-1}$ implique
     \[
-        \int_0^1 x^r J_{n-1}(x) w_\alpha(x)\,dx = 0.
+        \int_0^1 J_{n-1}(x) w_\alpha(x) dx = 0
     \]
+
+    D'où,
+    \[
+        \int_0^1 f_\varepsilon^\alpha(x)dx
+        = \int_0^1 w_\alpha(x)dx
+          + \varepsilon \int_0^1 J_{n-1}(x)w_\alpha(x)dx
+        = 1 + \varepsilon\cdot 0 = 1
+    \]
+
+    Ainsi $f_\varepsilon^\alpha$ est bien une densité sur $[0,1]$.
+
+    Montrons à présent que les générateurs infinitésimaux de $\Lambda_0^\alpha$ et
+    $\Lambda_\varepsilon^\alpha$ coïncident.
+    Pour tout $r \in \llbracket 0, n-2 \rrbracket$, on a
+    $X^r \in \mathbb R_{r}[X] \subset \mathbb{R}_{n-1}[X]$, ainsi par 
+    orthogonalité de $J_{n-1}$,
+    \[
+        \int_0^1 x^r J_{n-1}(x) w_\alpha(x)\,dx = 0
+    \]
+
     Ainsi,
     $$
-        m_r(\Lambda_\varepsilon)
+        m_r(\Lambda_\varepsilon^\alpha)
         = \int_0^1 x^r f_\varepsilon(x)\,dx
         = \int_0^1 x^r w_\alpha(x)\,dx
           + \varepsilon \int_0^1 x^r J_{n-1}(x) w_\alpha(x)\,dx
-        = m_r(\Lambda_0).
+        = m_r(\Lambda_0^\alpha)
     $$
 
    Les taux de fusions sont donc égaux entre ces mesures,
@@ -664,39 +670,25 @@
     différentes qui induisent le même processus de coalescence.
     On s'attendait à obtenir une infinité d'arbres généalogiques
     différents mais ceux-ci sont identiques en loi.
+    Pour la construction nous utilisons les polynômes de Jacobi.
+    Toutefois au vu de la preuve, nous pouvons utiliser 
+    n'importe quelle familles de polynômes dits orthogonaux.
+    \textcolor{red}{C'est vrai ça pourquoi Jacobi et pas tchbeychev ou legendre ??
+    Pour avoir choisi ceux-là ? toruve une raison pratique,
+    j'ai pas internet pour chercher.}
 
-    \textcolor{red}{Une phrase pour expliquer tout ça? ou donner des idées.
-    Car là on a 2 paramètres donc ça peut embrouiller l'esprit, qu'est ce qui 
-    fait quoi, pourquoi avoir choisi alpha, 2-alpha alors que la loi beta est 
-    sur alpha,beta>0 ; pourquoi avoir ajouté un epsilon alors qu'on a déjà un parametre
-    qui bouge. Ca vaut la peine d'y consacrer un (petit) paragraphe. (Repond à 
-    cette question sans ChatGPT) }
+    \textcolor{red}{en admettant qu'on s'interesse à beta(alpha, 2-alpha),
+    ca sera motivé dans la derniere section, pourquoi ici on ne peut pas considerer
+    alpha entre 0 et 1 ?? Faut expliquer, donner une justification.
+    Sinon c'ewst pas très gave, on le mentionne pas e ton fait ocmme si rien n'était 
+    mais bizarre de pas prendre des plus petit alpha.}
 
-    % afficher iamge svg
 
-        \textcolor{red}{C'est cool la théorie marche mais les 2 premiers subplots sont pas 
-        si différents donc ils sont pas si convaicant. Prend des epsilon plus petit/grand
-        pareil pour les alpha car le premier et le deuxieme c'est les memes à moins
-        que t'aies une remarque à faire.}
-        
-        \textcolor{red}{Je préferais mon historgramme car la ca fait un seul histogramme 
-        marron vu que ça se condond. A moins que t'appréciais pas le mien (c'est possible,
-        on peut  discuter d'autres solution), donne mes codes à chatGPT pour qu'il te
-        fasse un histogramme plein (orange par exemple + alpha) et l'autre uniquement
-        sa bordure, c'est plus visuelle je trouve.
-        Il manque les labels sur les axes. Le troiseme plot je n'apprecie pas le ylim.
-        Il devrait être à (0.5,1.5) pour que ça soit centré. De plus, dans le caption 
-        tu peux dire que cette mesure c'est la loi uniforme (ou dans le parapgrahe avant
-        mais je pense c'est pertinent de dire que la loi beta représente pas mal de loi, 
-        après avoir selon les alphas possibles car ça restreint pas mal tout de meme)}
-
-        \textcolor{red}{dans les plots à droites, la legende devrait indiquer
-        "histogramme empirique" mais pas TMRCA car c'est déjà indiqué dans le titre.}
 
 
     \begin{figure}[H]
         \centering
-        \includesvg[width=\textwidth]{photo/plot_foret_pas_grande_beta}
+        \includesvg[width=\textwidth]{photo/plot_foret_pas_grande_beta_combined}
         \caption{(a) \textit{Gauche}~: comparaison des densités remarquablement
         différentes
         sur $[0,1]$, \(f_\varepsilon(x)=\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x)\),
@@ -707,6 +699,10 @@
         donnée par \eqref{eq:density-TMRCA}.}
     \end{figure}
 
+    \textcolor{red}{J'ai pas eu le temps (ni internet) pour reformuler cette partie comme
+    je souhaterai le faire (remarque WhatsApp) }
+    \textcolor{red}{Dire que beta a été simulé par trapeze ? montecarlo ? faire quelques
+    phrase dessus}
     La figure met clairement en évidence le rôle crucial de la borne $\varepsilon_n$ , qui garantit que la densité perturbée $f_\varepsilon$ reste positive sur $[1,0]$
     et définit bien une mesure de probabilité. Cette borne dépend directement du degré $n$ du polynôme de jacobi \cite{Szego1939}, 
     $$\varepsilon_n\sim\;\frac{C(\alpha)}{n^{|\alpha-1|}}$$
