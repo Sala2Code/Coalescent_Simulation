@@ -148,11 +148,12 @@ def run_sardine_study():
     plt.hist(mm_kingman, bins=bins, density=True, alpha=0.5, color='blue', label='Kingman + Expansion ', edgecolor='black')
     plt.hist(mm_sardine, bins=bins, density=True, alpha=0.5, color='red', label='Sardine (Beta-Coalescent)', edgecolor='darkred')
 
-    plt.axvline(np.mean(mm_kingman), color='blue', linestyle='--', alpha=0.5)
+    plt.axvline(np.mean(mm_kingman), color='blue', linestyle='--', alpha=0.5, label = "Nombre moyen de mutations")
     
     plt.title("La Preuve par la Discordance (Mismatch Distribution)\nLa 'Vague' (Bleu) vs La Réalité (Rouge)")
     plt.xlabel("Nombre de différences génétiques (Mutations)")
     plt.ylabel("Taux")
+    #plt.yscale('log')
     
     plt.legend()
     plt.tight_layout()
