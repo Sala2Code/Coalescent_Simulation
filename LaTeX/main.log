@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  24 NOV 2025 19:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  24 NOV 2025 22:56
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -500,7 +500,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 
 Package svg Warning: The option key `clean' can only
 (svg)                be used with package `svg-extract', but
-(svg)                you didn't load it on input line 22.
+(svg)                you didn't load it on input line 21.
 
 (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
@@ -541,7 +541,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 \c@definition=\count317
 \c@proposition=\count318
 \c@lemma=\count319
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 62.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 61.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -551,38 +551,38 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Info: Redefining \degres on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Info: Redefining \degres on input line 61.
 
 
 Package french.ldf Warning: Please load the "natbib" package
-(french.ldf)                BEFORE babel/french; reported on input line 62.
+(french.ldf)                BEFORE babel/french; reported on input line 61.
 
-LaTeX Info: Redefining \up on input line 62.
-LaTeX Info: Redefining \microtypecontext on input line 62.
-Package microtype Info: Applying patch `item' on input line 62.
-Package microtype Info: Applying patch `toc' on input line 62.
-Package microtype Info: Applying patch `eqnum' on input line 62.
-Package microtype Info: Applying patch `footnote' on input line 62.
-Package microtype Info: Applying patch `verbatim' on input line 62.
-LaTeX Info: Redefining \microtypesetup on input line 62.
+LaTeX Info: Redefining \up on input line 61.
+LaTeX Info: Redefining \microtypecontext on input line 61.
+Package microtype Info: Applying patch `item' on input line 61.
+Package microtype Info: Applying patch `toc' on input line 61.
+Package microtype Info: Applying patch `eqnum' on input line 61.
+Package microtype Info: Applying patch `footnote' on input line 61.
+Package microtype Info: Applying patch `verbatim' on input line 61.
+LaTeX Info: Redefining \microtypesetup on input line 61.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -653,72 +653,72 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 62.
+Package hyperref Info: Link coloring OFF on input line 61.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 65.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 65.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 65.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 65.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 65.
+(Font)              <20.74> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 65.
+(Font)              <14.4> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 65.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+(Font)              <12> on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 65.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 64.
  (C:\Users\Le R\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 65.
+(Font)              <10> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 65.
+(Font)              <7> on input line 64.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 67.
+(hyperref)                removing `math shift' on input line 66.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 67.
+(hyperref)                removing `\Lambda' on input line 66.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 67.
+(hyperref)                removing `math shift' on input line 66.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
+(Font)              <6> on input line 73.
 [1
 
 {C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [2]
-Package svg Info: Last page of `./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf' is 1 on input line 402.
+Package svg Info: Last page of `./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf' is 1 on input line 401.
  (svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf_tex
 <./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf, id=93, page=1, 867.24pt x 289.08pt>
 File: ./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf Graphic file (type pdf)
@@ -730,7 +730,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
  [3] [4 <./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf>] [5]
-Package svg Info: Last page of `./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf' is 1 on input line 691.
+Package svg Info: Last page of `./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf' is 1 on input line 714.
  (svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf_tex
 <./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf, id=501, page=1, 867.24pt x 578.16pt>
 File: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf Graphic file (type pdf)
@@ -738,7 +738,7 @@ File: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf Graphic fil
 Package pdftex.def Info: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 360.41397pt.
 ) [6 <./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 783.
+Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 806.
  (svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf_tex
 <./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, id=808, page=1, 650.43pt x 216.81pt>
 File: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf Graphic file (type pdf)
@@ -746,13 +746,13 @@ File: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 180.2136pt.
 ) [7 <./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/photosweep_svg-tex.pdf' is 1 on input line 837.
+Package svg Info: Last page of `./svg-inkscape/photosweep_svg-tex.pdf' is 1 on input line 894.
  (svg-inkscape/photosweep_svg-tex.pdf_tex
-<./svg-inkscape/photosweep_svg-tex.pdf, id=936, page=1, 760.34062pt x 486.31688pt>
+<./svg-inkscape/photosweep_svg-tex.pdf, id=936, page=1, 895.09406pt x 519.44063pt>
 File: ./svg-inkscape/photosweep_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/photosweep_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/photosweep_svg-tex.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 540.60239pt x 345.77716pt.
+(pdftex.def)             Requested size: 540.60239pt x 313.72754pt.
 ) [8] (main.bbl [9 <./svg-inkscape/photosweep_svg-tex.pdf>]) [10] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -762,15 +762,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DC30D0D3CBAB6BBBC76EB5905ED8755B;2169.
  ) 
 Here is how much of TeX's memory you used:
- 20101 strings out of 474485
- 347269 string characters out of 5744169
+ 20103 strings out of 474485
+ 347295 string characters out of 5744169
  1946542 words of memory out of 5000000
  41775 multiletter control sequences out of 15000+600000
- 647050 words of font info for 197 fonts, out of 8000000 for 9000
+ 647157 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,93p,1054b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,12n,93p,1054b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on main.pdf (10 pages, 684035 bytes).
+Output written on main.pdf (10 pages, 691411 bytes).
 PDF statistics:
  1043 PDF objects out of 1200 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)
