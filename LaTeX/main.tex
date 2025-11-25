@@ -693,13 +693,13 @@ Ainsi nous venons de construire une infinité de mesures différentes qui induis
 On s'attendait à obtenir une infinité d'arbres généalogiques différents mais ceux-ci sont identiques en loi. 
 
 Pour la construction nous utilisons les polynômes de Jacobi. Ce choix est motivé par la stucture de la mesure $\mathrm{Beta}(2-\alpha,\alpha)$ 
-et du fait que les polynômes de Jacobi sont  orthogonaux por le poids  de la forme $x^\beta(1-x)^\gamma$ 
-sur $[0,1]$ avec $\beta>1,\gamma>1$ (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
+et du fait que les polynômes de Jacobi sont  orthogonaux pour le poids de la forme $x^\beta(1-x)^\gamma$ 
+sur $[0,1]$ avec $\beta>1,\gamma>1$ \textcolor{red}{T'es sûr ? car pour les alpha on n'a pas du tout > 1...} (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
 de variable on se ramène sur $[0,1]$). 
 
 Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. 
 Pour $0<\alpha<1$, le $\mathrm{Beta}(2-\alpha,\alpha)$ coalescent admet une fraction positive des individus qui reste sous forme de singletons à tout 
-temps t>0\cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
+temps t>0 \cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
 Par conséquent, nous gardons $\alpha \in ]1,2[$.
 
 
@@ -718,25 +718,29 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
          issues de $n$ lignées, à partir
         de 8000 simulations, avec superposition de la densité théorique
         donnée par \eqref{eq:density-TMRCA}.}
+            \textcolor{red}{Dire que beta a été simulé par trapeze ? montecarlo ? faire quelques
+    phrase dessus} \label{fig:tmrca_foret}
     \end{figure}
 
-    \textcolor{red}{J'ai pas eu le temps (ni internet) pour reformuler cette partie comme
-    je souhaterai le faire (remarque WhatsApp) }
-    \textcolor{red}{Dire que beta a été simulé par trapeze ? montecarlo ? faire quelques
-    phrase dessus}
-    La figure met clairement en évidence le rôle crucial de la borne $\varepsilon_n$ , qui garantit que la densité perturbée $f_\varepsilon$ reste positive sur $[1,0]$
-    et définit bien une mesure de probabilité. Cette borne dépend directement du degré $n$ du polynôme de jacobi \cite{Szego1939}, 
-    $$\varepsilon_n\sim\;\frac{C(\alpha)}{n^{|\alpha-1|}}$$
-    où $C(\alpha)$ est une constante qui provient du comportement asymptotique des polynômes de Jacobi.
-    Dans le cas, $\alpha=1$, la mesure $\Lambda_0^1$ est uniforme est $\varepsilon_n$ ne depend plus de n, d'où sur la figure les histogrammes empiriques collent partout.
-    En revanche, pour $\alpha=1.4$,  $\varepsilon_n=0.392062$, et sur la figure on voit que si on prend $\varepsilon$ plus grand que $\varepsilon_n$ les histogrammes empiriques 
-    ne se superposent plus parfaitement. 
+    
 
+    La construction que nous proposons permet de jouer avec les densités selon 2 paramètres.
+    L'allure générale est dictée par $\alpha$ tandis que $\varepsilon$ intensifie l'amplitude des oscillations.
+    Le choix de $\varepsilon$ est contraint d'être inférieur à $\varepsilon_n$.
+    D'après \cite{Szego1939}, cette borne est assez restrictive,
+    \[
+    \varepsilon_n = \Theta_{n\to \infty}\Bigl(\frac{1}{n^{|\alpha-1|}}\Bigr)
+    \]
+    Dans la \autoref{fig:tmrca_foret} sur les graphiques du bas avec  $\alpha=1.4$,
+    nous avons pour $n=8$ que $\varepsilon_n = 0.392062$. On remarque alors 
+    que la distribution empirique vérifie bien la théorie pour $\varepsilon=0.2 < \varepsilon_n$
+    et que pour $\varepsilon=0.8>\varepsilon_n$ nous ne convergeons déjà plus en loi. 
 
-
-
-
-
+    Dans le cas $\alpha=1$, graphique du haut, nous obtenons la mesure uniforme et $\varepsilon_n$
+    ne depend plus de $n$. Cela nous permet d'avoir des densités drastiquement 
+    différentes pour une étude initiale de $n\gg 1$ lignées, comparées à une densité 
+    avec $\alpha \neq 1$. Le choix de $\varepsilon$ est tout de même borné par $1$ 
+    afin que notre densité soit positive, 
 
 
     %\begin{figure}[H]
@@ -758,7 +762,7 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
 
     \subsection{Silence, ça pousse}
     Précedemment nous avons brièvement parlé de la mesure uniforme en 
-    prenant \textcolor{red}{si tu peux finir la phrase selon les notations prises}.
+    prenant $\Lambda_0^\alpha$ avec $\alpha=1$.
     Ce modèle est connu sous le nom de Bolthausen-Sznitman
     et décèle un résultat incontournable.
     % \begin{theorem}[C. Goldschmidt \& J. B. Martin \cite{goldschmidt-martin-2005}]

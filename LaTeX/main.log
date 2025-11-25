@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  25 NOV 2025 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  25 NOV 2025 19:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -738,17 +738,17 @@ File: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf Graphic fil
 Package pdftex.def Info: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 360.41397pt.
 ) [6 <./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 804.
+Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 808.
  (svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf_tex
-<./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, id=811, page=1, 650.43pt x 216.81pt>
+<./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, id=812, page=1, 650.43pt x 216.81pt>
 File: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 180.2136pt.
 ) [7 <./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/photosweep_svg-tex.pdf' is 1 on input line 893.
+Package svg Info: Last page of `./svg-inkscape/photosweep_svg-tex.pdf' is 1 on input line 897.
  (svg-inkscape/photosweep_svg-tex.pdf_tex
-<./svg-inkscape/photosweep_svg-tex.pdf, id=938, page=1, 895.09406pt x 519.44063pt>
+<./svg-inkscape/photosweep_svg-tex.pdf, id=939, page=1, 895.09406pt x 519.44063pt>
 File: ./svg-inkscape/photosweep_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/photosweep_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/photosweep_svg-tex.pdf , page1 used on input line 56.
@@ -762,17 +762,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DC30D0D3CBAB6BBBC76EB5905ED8755B;2169.
  ) 
 Here is how much of TeX's memory you used:
- 20113 strings out of 474485
- 347446 string characters out of 5744169
+ 20104 strings out of 474485
+ 347357 string characters out of 5744169
  1947542 words of memory out of 5000000
- 41778 multiletter control sequences out of 15000+600000
- 647464 words of font info for 201 fonts, out of 8000000 for 9000
+ 41779 multiletter control sequences out of 15000+600000
+ 647017 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,93p,1054b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on main.pdf (10 pages, 694357 bytes).
+Output written on main.pdf (10 pages, 694841 bytes).
 PDF statistics:
- 1045 PDF objects out of 1200 (max. 8388607)
+ 1046 PDF objects out of 1200 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
  45197 words of extra memory for PDF output out of 51595 (max. 10000000)
 
