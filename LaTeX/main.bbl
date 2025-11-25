@@ -1,5 +1,11 @@
 \begin{thebibliography}{KLLS17}
 
+\bibitem[BBS08]{Berestycki_2008}
+Julien Berestycki, Nathanaël Berestycki, and Jason Schweinsberg.
+\newblock Small-time behavior of beta coalescents.
+\newblock {\em Annales de l’Institut Henri Poincaré, Probabilités et
+  Statistiques}, 44(2), April 2008.
+
 \bibitem[Fis30]{Fisher1930}
 Ronald~A. Fisher.
 \newblock {\em The Genetical Theory of Natural Selection}.

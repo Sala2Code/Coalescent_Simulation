@@ -665,10 +665,7 @@
 %d'où le résultat.
 %\end{proof}
 
-    Ainsi nous venons de construire une infinité de mesures 
-    différentes qui induisent le même processus de coalescence.
-    On s'attendait à obtenir une infinité d'arbres généalogiques
-    différents mais ceux-ci sont identiques en loi.
+
 
 
 % je sais pas d'où sort ce texte, je viens de le voir que maintenant : 24/11 22h36 - très chatGPT
@@ -690,19 +687,18 @@
 % $\Lambda$-coalescent jusqu’à $n$ lignées.
 
 
-Pour la construction nous utilisons les polynômes de Jacobi.
-    Toutefois au vu de la preuve, nous pouvons utiliser 
-    n'importe quelle familles de polynômes dits orthogonaux.
-    \textcolor{red}{C'est vrai ça pourquoi Jacobi et pas tchbeychev ou legendre ??
-    Pour avoir choisi ceux-là ? toruve une raison pratique,
-    j'ai pas internet pour chercher.}
+Ainsi nous venons de construire une infinité de mesures différentes qui induisent le même processus de coalescence. 
+On s'attendait à obtenir une infinité d'arbres généalogiques différents mais ceux-ci sont identiques en loi. 
 
-    \textcolor{red}{en admettant qu'on s'interesse à beta(alpha, 2-alpha),
-    ca sera motivé dans la derniere section, pourquoi ici on ne peut pas considerer
-    alpha entre 0 et 1 ?? Faut expliquer, donner une justification.
-    Sinon c'ewst pas très gave, on le mentionne pas e ton fait ocmme si rien n'était 
-    mais bizarre de pas prendre des plus petit alpha.}
+Pour la construction nous utilisons les polynômes de Jacobi. Ce choix est motivé par la stucture de la mesure $\mathrm{Beta}(2-\alpha,\alpha)$ 
+et du fait que les polynômes de Jacobi sont  orthogonaux por le poids  de la forme $x^\beta(1-x)^\gamma$ 
+sur $[0,1]$ avec $\beta>1,\gamma>1$ (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
+de variable on se ramène sur $[0,1]$). 
 
+Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. 
+Pour $0<\alpha<1$, le $\mathrm{Beta}(2-\alpha,\alpha)$ coalescent admet une fraction positive des individus qui reste sous forme de singletons à tout 
+temps t>0\cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
+Par conséquent, nous gardons $\alpha \in ]1,2[$.
 
 
 
@@ -729,7 +725,7 @@ Pour la construction nous utilisons les polynômes de Jacobi.
     La figure met clairement en évidence le rôle crucial de la borne $\varepsilon_n$ , qui garantit que la densité perturbée $f_\varepsilon$ reste positive sur $[1,0]$
     et définit bien une mesure de probabilité. Cette borne dépend directement du degré $n$ du polynôme de jacobi \cite{Szego1939}, 
     $$\varepsilon_n\sim\;\frac{C(\alpha)}{n^{|\alpha-1|}}$$
-    où $C(\alpha)$ provient du comportement asymptotique des polynômes de Jacobi.
+    où $C(\alpha)$ est une constante qui provient du comportement asymptotique des polynômes de Jacobi.
     Dans le cas, $\alpha=1$, la mesure $\Lambda_0^1$ est uniforme est $\varepsilon_n$ ne depend plus de n, d'où sur la figure les histogrammes empiriques collent partout.
     En revanche, pour $\alpha=1.4$,  $\varepsilon_n=0.392062$, et sur la figure on voit que si on prend $\varepsilon$ plus grand que $\varepsilon_n$ les histogrammes empiriques 
     ne se superposent plus parfaitement. 
