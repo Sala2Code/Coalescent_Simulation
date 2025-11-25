@@ -238,18 +238,18 @@
     \end{equation}
     
     
-    \textcolor{red}{
-        Là je propose donc (1 page grand max)
-        (le but n'est pas de faire une étude de Kingman mais de présenter les différents 
-        objets du modèle de manière simple et visuelles)
-        \begin{itemize}
-            \item  poser $\Lambda = \delta_0$, 
-            \item l'intuition du modèle : la masse est vers 0 donc
-            pas de grosse fusion. (Inteprétation du modele, du role des termes de l'intégrande)
-            \item Les calculs en 5 lignes maximum ($\lambda_{b,k}$, TMRCA si utile, $\dots$ )
-            \item Les notations : $n$, $N_t$, $(C_t^i)_{0<i<n}$, TMRCA, $T_k$
-        \end{itemize}
-    }
+    Nous illustrons ce résultat par une simulation pour $n=20$ lignées (Fig. \ref{fig:kingman_simu}). 
+    On observe bien que les fusions sont binaires et que le temps total de coalescence oscille autour de la valeur théorique $2(1 - 1/20) = 1.9$.
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=\textwidth]{kingmanplot}
+        \caption{Simulation de Kingman ($n=20$).
+        \textbf{Au centre} : La généalogie réalisée, ne montrant que des fusions par paires.
+        \textbf{À gauche} : La densité du TMRCA. La ligne pointillée grise indique l'espérance théorique (Eq. \ref{eq:tmrca-kingman}).
+        \textbf{À droite} : La courbe en escalier du nombre de lignées restantes.}
+        \label{fig:kingman_simu}
+    \end{figure}
     
 %\textcolor{red}{
 %    Subplots (kingman)
@@ -822,19 +822,15 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
 \section{Application : Le Paradoxe de la Sardine Japonaise}
 
 
-    \textcolor{blue}{Je propose une trame car celle actuelle je 
-    la trouve pas très intuitive par rapport au rapport. Les textes 
-    que j'écris en rouge c'est plus une indication qu'une vraie formulation (ou des remarques à completer)}
-
-    \textcolor{red}{[Précédemment nous avons introduit la loi
-    $Beta(2-\alpha, \alpha)$, celle-ci est largement utilisée en
-    biologique car TODO + citation]}
-    \textcolor{red}{En effet le modèle simple de Kingman n'est pas suffisant.
-    Les sardines japonaises \cite{Niwa2016} l'illustre bien.}
+    Nous avons précédemment introduit la loi Beta$(2-\alpha, \alpha)$. 
+    Celle-ci est cruciale en biologie des populations, car le modèle 
+    de Kingman est insuffisant pour décrire certaines espèces.
     
-    L'étude de Niwa et al.\ (2016) sur la sardine japonaise constitue une démonstration empirique de la
-    nécessité du $\Lambda$-coalescent. Elle illustre l'échec du modèle de Kingman pour les espèces à stratégie
-    dite de \textit{sweepstakes}, dans lesquelles seuls quelques individus parmi des millions réussissent à
+    L'exemple de la sardine japonaise, analysé par Niwa et al. \cite{Niwa2016}, 
+    illustre cette limite. Cette étude constitue une 
+    démonstration empirique de la nécessité du $\Lambda$-coalescent 
+    pour les espèces à stratégiedite de \textit{sweepstakes}, dans 
+    lesquelles seuls quelques individus parmi des millions réussissent à
     produire une descendance massive, tandis que la majorité n'en laisse aucune. 
 
     \textcolor{red}{Là j'ai du mal car $x$, $C$ ne sont pas défini. Pourquoi une queue lourde 
