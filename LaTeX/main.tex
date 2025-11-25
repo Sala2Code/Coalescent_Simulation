@@ -819,7 +819,7 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
     \end{figure}
 
 
-    \section{Application : Le Paradoxe de la Sardine Japonaise}
+\section{Application : Le Paradoxe de la Sardine Japonaise}
 
 
     \textcolor{blue}{Je propose une trame car celle actuelle je 
@@ -830,33 +830,32 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
     $Beta(2-\alpha, \alpha)$, celle-ci est largement utilisée en
     biologique car TODO + citation]}
     \textcolor{red}{En effet le modèle simple de Kingman n'est pas suffisant.
-    Les sardines japonaises [NIWA] [mettre la reference 
-    dans le .bib et faire un \\cite\{\} ] l'illustre bien.}
+    Les sardines japonaises \cite{Niwa2016} l'illustre bien.}
     
     L'étude de Niwa et al.\ (2016) sur la sardine japonaise constitue une démonstration empirique de la
-nécessité du $\Lambda$-coalescent. Elle illustre l'échec du modèle de Kingman pour les espèces à stratégie
-dite de \textit{sweepstakes}, dans lesquelles seuls quelques individus parmi des millions réussissent à
-produire une descendance massive, tandis que la majorité n'en laisse aucune. 
+    nécessité du $\Lambda$-coalescent. Elle illustre l'échec du modèle de Kingman pour les espèces à stratégie
+    dite de \textit{sweepstakes}, dans lesquelles seuls quelques individus parmi des millions réussissent à
+    produire une descendance massive, tandis que la majorité n'en laisse aucune. 
 
-\textcolor{red}{Là j'ai du mal car $x$, $C$ ne sont pas défini. Pourquoi une queue lourde 
-ça le modélise ? car si on veut que la sardine fasse beaucoup de bébés et d'autres de maniere négligeable
-il faudrait la masse vers 0 et une partie vers 1 mais en soit rien n'oblige à une "queue lourde", 
-peut-être il (me) manque un argument.}
-Mathématiquement, ce 
-comportement est modélisé par une distribution à queue lourde du nombre de descendants : l'article pose 
-explicitement que \textcolor{red}{pourquoi alpha n'a pas le droit d'etre en dessous de 1? peut-être
-cela viendra avec l'explication de la loi beta}
-\textcolor{red}{Vérifier du x->0 pour le Theta}
-\[
-\mathbb{P}(X \ge x) = \Theta_{x\to 0}( x^{-\alpha}), \qquad 1 < \alpha < 2,
-\]
-où $X$ désigne le nombre d'enfants produits par un individu. \textcolor{red}{Depuis le début 
-on parle de lignées et là on parle d'enfants. Donc il faut expliquer (en 4 mots, 1 phrases) 
-comment notre modèle de lignées permet de passer à cette interprétation}
- Dans cette plage de valeurs \textcolor{red}{Laquelle ?}, la loi possède 
-une variance infinie \textcolor{red}{var(X) ? si oui, à calculer.}, ce qui formalise 
-le caractère extrême des inégalités reproductives et traduit 
-rigoureusement le phénomène de \textit{sweepstakes}.
+    \textcolor{red}{Là j'ai du mal car $x$, $C$ ne sont pas défini. Pourquoi une queue lourde 
+    ça le modélise ? car si on veut que la sardine fasse beaucoup de bébés et d'autres de maniere négligeable
+    il faudrait la masse vers 0 et une partie vers 1 mais en soit rien n'oblige à une "queue lourde", 
+    peut-être il (me) manque un argument.}
+    Mathématiquement, ce 
+    comportement est modélisé par une distribution à queue lourde du nombre de descendants : l'article pose 
+    explicitement que \textcolor{red}{pourquoi alpha n'a pas le droit d'etre en dessous de 1? peut-être
+    cela viendra avec l'explication de la loi beta}
+    \textcolor{red}{Vérifier du x->0 pour le Theta}
+    \[
+    \mathbb{P}(X \ge x) = \Theta_{x\to 0}( x^{-\alpha}), \qquad 1 < \alpha < 2,
+    \]
+    où $X$ désigne le nombre d'enfants produits par un individu. \textcolor{red}{Depuis le début 
+    on parle de lignées et là on parle d'enfants. Donc il faut expliquer (en 4 mots, 1 phrases) 
+    comment notre modèle de lignées permet de passer à cette interprétation}
+    Dans cette plage de valeurs \textcolor{red}{Laquelle ?}, la loi possède 
+    une variance infinie \textcolor{red}{var(X) ? si oui, à calculer.}, ce qui formalise 
+    le caractère extrême des inégalités reproductives et traduit 
+    rigoureusement le phénomène de \textit{sweepstakes}.
 
 
     \subsection{Le Conflit}
@@ -899,11 +898,26 @@ rigoureusement le phénomène de \textit{sweepstakes}.
         \textbf{En bleu (Kingman + Expansion)} : Une ``vague'' 
         créée par le phénomène de croissance démographique. 
         \textbf{En rouge (Sardine $\alpha=1.3$)} : Un pic de 
-        clones et une queue de lignées 
-        persistantes (résultat attendu).}
+        clones et une queue de lignées persistantes 
+        (résultat attendu).}
         \label{fig:sardine_simu}
     \end{figure}
 
+    Pour valider cette simulation, nous la confrontons aux 
+    résultats empiriques originaux (Fig. \ref{fig:niwa_real}). 
+    On y retrouve exactement la dichotomie observée plus haut.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{photo/sardine.png}
+        \caption{Comparaison des ajustements sur données réelles 
+        (Source : Niwa et al., 2016). 
+        \textbf{(a)} L'approche classique (Kingman), échouant à suivre les points noirs (données empiriques). 
+        \textbf{(b)} Le modèle 
+        $\Lambda$-coalescent. (Voir l'article original pour 
+        les paramètres complets).}
+        \label{fig:niwa_real}
+    \end{figure}
     \subsection{Conséquence : Millions de sardines, même génome}
 
     Ce résultat invalide la relation linéaire entre taille de 
@@ -920,7 +934,6 @@ rigoureusement le phénomène de \textit{sweepstakes}.
     Ce modèle permet non seulement d'expliquer un ancien paradoxe 
     chez les animaux à haute fécondité, mais sert également 
     d'outil pour estimer la taille effective d'une population.
-
 
 
  
