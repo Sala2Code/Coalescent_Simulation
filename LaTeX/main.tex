@@ -154,7 +154,7 @@
     c'est-à-dire le plus petit temps tel que toutes les lignées
     ont fusionné en un ancêtre commun. Dans la suite du rapport, nous le notons
     \[
-    \tau_{\Lambda,n} = \inf \{ t\geq 0, N_t=1, N_0=n \}
+    \tau_{\Lambda,n} \coloneq \inf \{ t\geq 0, N_t=1 \} \mid \{N_0 = n\}
     \]
     Lorsque le contexte est clair sur $\Lambda$ ou $n$, ceux-ci seront omis 
     afin de rendre la lecture plus agréable.
@@ -162,7 +162,7 @@
     \begin{lemma}\label{lem:recurrence-TMRCA}
         % Notons le TMRCA d'un $\Lambda$-coalescent $\tau\coloneq \inf \{ t\geq 0, N_t=1 \}$.
         Soit $\Lambda$ une mesure de probabilité sur $[0,1]$. Notons
-        $H: b \in \mathbb N^* \longmapsto \mathbb{E}_\Lambda(\tau \mid N_0 = b)$.
+        $H: b \in \mathbb N^* \longmapsto \mathbb{E}(\tau_{\Lambda, b})$.
         Alors $H(1)=0$, $H(2)=1$ et pour $b\geq 3$,
         \[
         H(b) = \frac{1}{\lambda_b} \;+\; \sum_{k=2}^{b-1} p_{b,k}\, H(b-k+1)
@@ -170,41 +170,44 @@
     \end{lemma}
 
     \begin{proof}
+    Soit $\Lambda$ une mesure de probabilité sur $[0,1]$
+    dont nous omettons sa présence dans les notations.
     Pour $b=1$, $N_t=1$  donc $H(1)=0$.
     Pour $b=2$, le seul saut possible est de $2$ vers $1$ lignée
-    avec taux $\lambda_2=\binom{2}{2}\lambda_{2,2}=1$, d'où $\tau\sim \Exp(1)$ et $H(2)=1/1=1$.
+    avec taux $\lambda_2=\binom{2}{2}\lambda_{2,2}=1$, d'où $\tau_{2} \sim \Exp(1)$ et $H(2)=1/1=1$.
 
     Fixons $b\ge 3$. Définissons le temps de la première coalescence,
     \[
-    T_1:=\inf\{t\geq0, N_t\neq b\}
+    T_b^1:=\inf\{t\geq0, N_t\neq b\} \mid \{N_0 = b\}
     \]
 
     $(N_t)_{t\geq 0}$ est un processus de Markov avec un taux de saut $\lambda_b$,
-    donc $T_1\sim \Exp(\lambda_b)$
-    et donc $\mathbb{E}_\Lambda(T_1 \mid N_0 = b)=\frac{1}{\lambda_b}$.
-    De plus, si $K$ est la taille de la fusion au temps $T_1$, alors 
+    donc $T_b^1\sim \Exp(\lambda_b)$
+    et donc $\mathbb{E}(T_b^1)=\frac{1}{\lambda_b}$.
+    De plus, si $K$ est la taille de la fusion au temps $T_b^1$, alors 
     $
     K \sim \sum_{k=2}^{b} p_{b,k} \delta_k
     $
-    et $N_{T_1}=b-K+1$.
+    et $N_{T_b^1}=b-K+1$.
 
     Considérons la filtration naturelle $(\mathcal{F}_t)_{t\geq 0}$
-    de $(N_t)_{t\geq 0}$. Par la propriété de Markov forte au temps $T_1$ et
+    de $(N_t)_{t\geq 0}$. Par la propriété de Markov forte au temps $T_b^1$ et
     l'absence de mémoire,
     \[
-        \mathbb E_\Lambda(\tau-T_1\mid \mathcal F_{T_1}, N_0=b )
-        =\mathbb E_\Lambda(\tau \mid N_{T_1})
-        =H(N_{T_1})
+        \mathbb E(\tau_b-T_b^1\mid \mathcal F_{T_b^1})
+        =\mathbb E(\tau_{N_{T_b^1}})
+        =H(N_{T_b^1})
     \]
     
     Ainsi en conditionnant par $\mathcal{F}_{T_1}$,
     \begin{align*}
         H(b)
-        &=\mathbb E_\Lambda(\tau \mid N_0=b)
-        =\mathbb E_\Lambda(T_1 \mid N_0=b)+\mathbb E_\Lambda(\tau-T_1 \mid N_0=b)
+        &=\mathbb E(\tau_b)
+        =\mathbb E(T_b^1)+\mathbb E(\tau_b-T_b^1)
         % &=\mathbb E_b[T_1]+\mathbb E_b\!\big[\mathbb E_b[\tau-T_1\mid \mathcal F_{T_1}]\big]\\
-        =\frac{1}{\lambda_b}+\mathbb E_\Lambda(H(N_{T_1}) \mid N_0=b)\\
-        &=\frac{1}{\lambda_b}+\sum_{k=2}^{b}\mathbb P_b\big(N_{T_1}=b-k+1\big) H(b-k+1)
+        =\frac{1}{\lambda_b}+\mathbb E \bigl( \mathbb E(\tau_b-T_b^1\mid \mathcal F_{T_b^1})  \bigr)
+        =\frac{1}{\lambda_b}+\mathbb E(H(N_{T_b^1})) \\
+        &=\frac{1}{\lambda_b}+\sum_{k=2}^{b}\mathbb P\big(N_{T_b^1}=b-k+1\big) H(b-k+1)
         =\frac{1}{\lambda_b}+\sum_{k=2}^{b} p_{b,k} H(b-k+1)
     \end{align*}
 
@@ -311,16 +314,15 @@
     % \end{proof}
 
     \begin{proposition}
-        Soit $n$ le nombre de lignées. Notons le TMRCA d'un $\Lambda$-coalescent,
+        Soit $n$ le nombre de lignées. 
+        % Notons le TMRCA d'un $\Lambda$-coalescent,
+        % \[
+        % \tau\coloneq \inf \{ t\geq 0, N_t=1 \}
+        % \]
+        Alors, pour toute mesure de probabilité $\Lambda$ sur $[0,1]$, on a,
         \[
-        \tau\coloneq \inf \{ t\geq 0, N_t=1 \}
-        \]
-
-        Alors, pour toute mesure de probabilité $\Lambda$ sur $[0,1]$, on a
-        condtionnellement à $\{N_0 = n\}$,
-        \[
-        1 = \mathbb{E}_{\delta_1}(\tau) 
-        \leq \mathbb{E}_{\Lambda}(\tau)
+        1 = \mathbb{E}(\tau_{\delta_1,n}) 
+        \leq \mathbb{E}(\tau_{\Lambda,n})
         % \leq\mathbb{E}_{\delta_0}(\tau) = 2\left(1-\frac{1}{n}\right)
         \]
     \end{proposition}
@@ -328,10 +330,10 @@
     % L'égalité de droite a été montrée dans l'exemple de Kingman (voir \autoref{sec:kingman-example}).
     Prouvons l'égalité. Prenons $\Lambda = \delta_1$, nous avons $\lambda_{n,k} = \delta_{n,k}$ (symbole de Kronecker),
     donc $\lambda_n = \binom{n}{n} \lambda_{n,n} = 1$ donc
-    $\tau \sim \Exp(1)$ et donc $\mathbb{E}_{\delta_1}(\tau) = 1/1 = 1$.
+    $\tau_{\delta_1} \sim \Exp(1)$ et donc $\mathbb{E}(\tau_{\delta_1}) = 1/1 = 1$.
     
     Soit $\Lambda$ une mesure de probabilité sur $[0,1]$.
-    Notons $H(b) \coloneq \mathbb{E}_\Lambda(\tau \mid N_0 = b)$.
+    Notons $H(b) \coloneq \mathbb{E}(\tau_{\Lambda, b})$.
     % D'après \eqref{eq:lambda_b}, 
     % D'après la propriété de Markov et l'absence de mémoire de l'exponentielle,
     % \[
@@ -364,16 +366,16 @@
 
     \begin{proposition}\label{prop:surprise-TMRCA}
         Il existe $n>1$ et une mesure de probabilité $\Lambda$ sur $[0,1]$
-        telle que, conditionnellement à $\{N_0=n\}$,
+        telle que, 
         \[
-        \mathbb{E}_{\Lambda}(\tau)> \mathbb{E}_{\delta_0}(\tau)
+        \mathbb{E}(\tau_{\Lambda,n})> \mathbb{E}(\tau_{\delta_0,n})
         \]
     \end{proposition}
     \begin{proof}
         Soit $n=8$, dans l'exemple de Kingman (voir \autoref{sec:kingman-example}),
         nous avons une formule explicite.
         \[\
-        \mathbb E_{\delta_0}(\tau) = 2\left(1-\frac{1}{8}\right) = \frac{14}{8} = 1.75
+        \mathbb E(\tau_{\delta_0}) = 2\left(1-\frac{1}{8}\right) = \frac{14}{8} = 1.75
         \]
 
         Soit $\Lambda = \delta_{1/4}$, alors d'après \eqref{eq:lambda_b},
@@ -383,17 +385,17 @@
         \lambda_n = 16\left(1 -\left(\frac34\right)^n - \frac{n}{4}\left(\frac34\right)^{n-1}\right)
         \] 
         
-        Ainsi, en calculant nous obtenons,
+        Ainsi, en calculant nous obtenons, toujours pour $n=8$,
         \[ 
-        \mathbb{E}_{\delta_{1/4}}(\tau)
-        = \frac{1}{\lambda_n} + \sum_{k=2}^{n-1} \frac{\binom{n}{k} \lambda_{n,k}}{\lambda_n} \mathbb{E}_{\delta_{1/4}}(\tau \mid N_0 = n-k+1)
-        = \frac{19954284839411683}{11337879079537330} > 1.7599662 \dotsc > 1.75
+        \mathbb{E}(\tau_{\delta_{1/4},n})
+        = \frac{1}{\lambda_n} + \sum_{k=2}^{n-1} \frac{\binom{n}{k} \lambda_{n,k}}{\lambda_n} \mathbb{E}(\tau_{\delta_{1/4},n-k+1} )
+        = \frac{19954284839411683}{11337879079537330} \approx 1.7599662 \dotsc > 1.75
         \]
     \end{proof}
     Nous conjecturons que le théorème peut être étendu pour tout $n>6$.
     A notre connaissance l'étude ce phénomène n'est pas documenté pour $n$ fini.
     Seul un article de \cite{kluge2017exchangeable} s'intéresse
-    la croissance de $ \sup_\Lambda \mathbb{E}_\Lambda(\tau)$ lorsque $n\to\infty$.
+    la croissance de $ \sup_\Lambda \mathbb{E}(\tau_\Lambda)$ lorsque $n\to\infty$.
 
 
       \begin{figure}[H]
@@ -840,8 +842,9 @@ Mathématiquement, ce
 comportement est modélisé par une distribution à queue lourde du nombre de descendants : l'article pose 
 explicitement que \textcolor{red}{pourquoi alpha n'a pas le droit d'etre en dessous de 1? peut-être
 cela viendra avec l'explication de la loi beta}
+\textcolor{red}{Vérifier du x->0 pour le Theta}
 \[
-\mathbb{P}(X \ge x) \sim C\, x^{-\alpha}, \qquad 1 < \alpha < 2,
+\mathbb{P}(X \ge x) = \Theta_{x\to 0}( x^{-\alpha}), \qquad 1 < \alpha < 2,
 \]
 où $X$ désigne le nombre d'enfants produits par un individu. \textcolor{red}{Depuis le début 
 on parle de lignées et là on parle d'enfants. Donc il faut expliquer (en 4 mots, 1 phrases) 

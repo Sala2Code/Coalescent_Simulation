@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1764021212.45265 "main.aux" "main.bbl" "main" 1764021381.16686 0
-  "./ref.bib" 1763988363 3214 5c2158a0357fe8a7aa07f8c37ed1b339 ""
+["bibtex main"] 1764093001.96724 "main.aux" "main.bbl" "main" 1764093329.6288 0
+  "./ref.bib" 1764091199 3673 07dcf35eefdd09ec8d1c03dd52040674 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1764021379 6728 d85e2c32052739e7953e02fb8ef6e911 "pdflatex"
+  "main.aux" 1764093328 6800 05944286ec9192b6e3725b22769b265f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1764021373.83499 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764021381.16842 0
+["pdflatex"] 1764093326.4001 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764093329.62979 0
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763572257 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary6.tfm" 1761760250 848 068dd119e13b75777e62821af7d4f2a6 ""
@@ -183,11 +183,11 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764021373 37671 f5660360af106018b588c86df97b75a9 ""
-  "main.aux" 1764021379 6728 d85e2c32052739e7953e02fb8ef6e911 "pdflatex"
-  "main.bbl" 1764021213 1615 79d0876459d630892eb77db25c8afbe4 "bibtex main"
-  "main.out" 1764021379 2169 dc30d0d3cbab6bbbc76eb5905ed8755b "pdflatex"
-  "main.tex" 1764021373 37671 f5660360af106018b588c86df97b75a9 ""
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764093324 38037 800c91b7c6809670b4856e30b6e7bfe1 ""
+  "main.aux" 1764093328 6800 05944286ec9192b6e3725b22769b265f "pdflatex"
+  "main.bbl" 1764093002 1881 761a8cb3035adf4a2208adea5abe9c7a "bibtex main"
+  "main.out" 1764093328 2169 dc30d0d3cbab6bbbc76eb5905ed8755b "pdflatex"
+  "main.tex" 1764093324 38037 800c91b7c6809670b4856e30b6e7bfe1 ""
   "photo/photosweep.svg" 1764019629 67164 2e57a0b1389ff8748615eed3ae6f489d ""
   "photo/plot_foret_pas_grande_beta_combined.svg" 1764007303 128184 cc044c05a2ade5dd411faffc514dd7bf ""
   "photo/plot_silence_ca_pousse.svg" 1763489121 76128 61562e366c047d53e1ed7f03031e7cd0 ""
