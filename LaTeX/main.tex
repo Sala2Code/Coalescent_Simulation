@@ -48,7 +48,7 @@
 \newcommand{\Exp}{\mathrm{Exp}}
 
 \title{Analyse du $\Lambda$-coalescent : renouer avec ses racines. }
-\author{SALA Raphaël, MUGISHA Axcel, GARCIA Hugo, COLLIN Thibault}
+\author{SALA Raphaël, MUGISHA Axcel, GARCIA Hugo, COLIN Thibault}
 \makeatletter
 \newcommand{\monthandyear}{%
     \ifcase\month\or janvier\or février\or mars\or avril\or mai\or juin\or juillet\or août\or septembre\or octobre\or Novembre\or Décembre\fi\ \number\year}
@@ -241,15 +241,15 @@
     Nous illustrons ce résultat par une simulation pour $n=20$ lignées (Fig. \ref{fig:kingman_simu}). 
     On observe bien que les fusions sont binaires et que le temps total de coalescence oscille autour de la valeur théorique $2(1 - 1/20) = 1.9$.
 
-    \begin{figure}[H]
-        \centering
-        \includesvg[width=\textwidth]{kingmanplot}
-        \caption{Simulation de Kingman ($n=20$).
-        \textbf{Au centre} : La généalogie réalisée, ne montrant que des fusions par paires.
-        \textbf{À gauche} : La densité du TMRCA. La ligne pointillée grise indique l'espérance théorique (Eq. \ref{eq:tmrca-kingman}).
-        \textbf{À droite} : La courbe en escalier du nombre de lignées restantes.}
-        \label{fig:kingman_simu}
-    \end{figure}
+\begin{figure}[H]
+    \centering
+    \includesvg[width=\textwidth]{photo/kingmanplot}
+    \caption{Simulation de Kingman ($n=20$).
+    \textbf{À droite} : Une trajectoire du Kingman-coalescent.
+    \textbf{Au centre} : La généalogie réalisée, montrant les fusions par paires pour la trajectoire (à droite).
+    \textbf{À gauche} : La densité du TMRCA. La ligne pointillée grise indique le TMRCA de la trajectoire (à droite)(\ref{eq:tmrca-kingman})\textcolor{red}{et si à la place tu faisait une simulation et générer un histogramme et parler aussi un peu de la comment tu as simuler tous ça }.}
+    \label{fig:kingman_simu}
+\end{figure}
     
 %\textcolor{red}{
 %    Subplots (kingman)
@@ -694,7 +694,7 @@ On s'attendait à obtenir une infinité d'arbres généalogiques différents mai
 
 Pour la construction nous utilisons les polynômes de Jacobi. Ce choix est motivé par la stucture de la mesure $\mathrm{Beta}(2-\alpha,\alpha)$ 
 et du fait que les polynômes de Jacobi sont  orthogonaux pour le poids de la forme $x^\beta(1-x)^\gamma$ 
-sur $[0,1]$ avec $\beta>1,\gamma>1$ \textcolor{red}{T'es sûr ? car pour les alpha on n'a pas du tout > 1...} (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
+sur $[0,1]$ avec $\beta>-1,\gamma>-1$  (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
 de variable on se ramène sur $[0,1]$). 
 
 Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. 
