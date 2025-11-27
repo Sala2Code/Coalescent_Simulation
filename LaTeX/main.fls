@@ -326,6 +326,24 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT .\photo\plot_arbre_kingman.svg
+INPUT .\photo\plot_arbre_kingman.svg
+INPUT .\photo\plot_arbre_kingman.svg
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT svg-inkscape\plot_arbre_kingman_svg-tex.pdf_tex
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT .\svg-inkscape\plot_arbre_kingman_svg-tex.pdf
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
 INPUT .\photo\plot_tmrca_extrema_histograms.svg
 INPUT .\photo\plot_tmrca_extrema_histograms.svg
 INPUT .\photo\plot_tmrca_extrema_histograms.svg
@@ -342,7 +360,6 @@ INPUT svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf_tex
 INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
 INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
 INPUT .\svg-inkscape\plot_tmrca_extrema_histograms_svg-tex.pdf
-INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx8.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx6.tfm
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri8.tfm
@@ -363,6 +380,12 @@ INPUT svg-inkscape\plot_foret_pas_grande_beta_combined_svg-tex.pdf_tex
 INPUT .\svg-inkscape\plot_foret_pas_grande_beta_combined_svg-tex.pdf
 INPUT .\svg-inkscape\plot_foret_pas_grande_beta_combined_svg-tex.pdf
 INPUT .\svg-inkscape\plot_foret_pas_grande_beta_combined_svg-tex.pdf
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\Le R\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary5.tfm
 INPUT .\photo\plot_silence_ca_pousse.svg
 INPUT .\photo\plot_silence_ca_pousse.svg
 INPUT .\photo\plot_silence_ca_pousse.svg
@@ -395,6 +418,13 @@ INPUT svg-inkscape\photosweep_svg-tex.pdf_tex
 INPUT .\svg-inkscape\photosweep_svg-tex.pdf
 INPUT .\svg-inkscape\photosweep_svg-tex.pdf
 INPUT .\svg-inkscape\photosweep_svg-tex.pdf
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
+INPUT .\photo\sardine.png
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -407,12 +437,16 @@ INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
+INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Users\Le R\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb

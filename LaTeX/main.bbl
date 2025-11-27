@@ -1,11 +1,5 @@
 \begin{thebibliography}{KLLS17}
 
-\bibitem[BBS08]{Berestycki_2008}
-Julien Berestycki, Nathanaël Berestycki, and Jason Schweinsberg.
-\newblock Small-time behavior of beta coalescents.
-\newblock {\em Annales de l’Institut Henri Poincaré, Probabilités et
-  Statistiques}, 44(2), April 2008.
-
 \bibitem[Fis30]{Fisher1930}
 Ronald~A. Fisher.
 \newblock {\em The Genetical Theory of Natural Selection}.
@@ -48,10 +42,5 @@ G.~Szeg\H{o}.
 \newblock {\em Orthogonal Polynomials}, volume~23 of {\em Colloquium
   Publications}.
 \newblock American Mathematical Society, 1939.
-
-\bibitem[Niw16]{Niwa2016}
-H.-S.~Niwa, K.~Nashida, and T.~Yanagimoto.
-\newblock Reproductive skew in Japanese sardine inferred from DNA sequences.
-\newblock {\em Molecular Ecology}, 25(16):3831--3843, 2016.
 
 \end{thebibliography}

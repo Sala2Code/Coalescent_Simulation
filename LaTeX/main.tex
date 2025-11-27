@@ -238,16 +238,31 @@
     \end{equation}
     
     
-    Nous illustrons ce résultat par une simulation pour $n=20$ lignées (Fig. \ref{fig:kingman_simu}). 
-    On observe bien que les fusions sont binaires et que le temps total de coalescence oscille autour de la valeur théorique $2(1 - 1/20) = 1.9$.
+    Nous illustrons ce résultat par une simulation pour $n=20$ lignées (\autoref{fig:kingman_simu}). 
+    On observe bien que les fusions sont binaires. L'état $1$ est absorbant
+    et dans ce cas ci le TMRCA est supérieur à $\tau_{\delta_0,n}$.
+    La grande partie des coalescences se font dans les premiers instants.
+    En référence au lemme des réveils, le nombre de paire possible, et donc 
+    de réveils prêts à sonner et paramétrés de la même manière, sont plus nombreux 
+    au début qu'à la fin.
+    L'arbre a donc l'aspect d'un acacia de la savane \footnote{Référence au Vachellia tortilis, qui 
+    n'est plus considéré comme un acacia.}, dense et large en haut, fin en bas.
+    % Enfin, chaque paire de lignées a son propre réveil et celui 
+    % qui sonne en premier créé une coalescence, ainsi de par 
+    % le grand nombre de réveils au début le nombre de lignées 
+    % dimininue conséquemment. Cette décroissance est exponentielle
+    % dans ce le modèle de Kingman et cet aspect ne sera pas plus développé 
+    % dans la suite du rapport pour le cas des $\Lambda$-coalescent.
+    % et que le temps total de coalescence oscille autour de la valeur théorique $2(1 - 1/20) = 1.9$.
 
 \begin{figure}[H]
     \centering
-    \includesvg[width=\textwidth]{photo/kingmanplot}
-    \caption{Simulation de Kingman ($n=20$).
-    \textbf{À droite} : Une trajectoire du Kingman-coalescent.
-    \textbf{Au centre} : La généalogie réalisée, montrant les fusions par paires pour la trajectoire (à droite).
-    \textbf{À gauche} : La densité du TMRCA. La ligne pointillée grise indique le TMRCA de la trajectoire (à droite)(\ref{eq:tmrca-kingman})\textcolor{red}{et si à la place tu faisait une simulation et générer un histogramme et parler aussi un peu de la comment tu as simuler tous ça }.}
+    \includesvg[width=\textwidth]{photo/plot_arbre_kingman}
+\caption{Réalisation du coalescent de Kingman issu de $n=20$ lignées.
+À gauche, représentation de l'arbre généalogique et mesure du TMRCA comparé à la
+valeur théorique $\tau_{\delta_0,n}= 2(1-1/20)=1.9$.
+À droite, évolution du nombre de lignées $N_t$ jusqu'à l'état absorbant $N_t=1$ où 
+nous atteignons un plateau constant pour $t > TMRCA$.}
     \label{fig:kingman_simu}
 \end{figure}
     
@@ -439,12 +454,12 @@
 
     Dans la \autoref{fig:tmrca-extrema} 
     le zoom à droite montre les intervalles de confiance à $95\%$ disjoints
-    renforçant l'observation $\mathbb E(\tau_{\delta_0, 8}) \leq
+    renforçant l'observation $\mathbb E(\tau_{\delta_0, 8}) <
     \mathbb E(\tau_{\delta_{1/4}, 8})  $.
 
 
-   \textcolor{blue}{L'échelle de temps ici est en unités de $N$ générations, avec $N\gg n$ puisque
-    nous considérons un modèle asymptotique.}
+%    \textcolor{blue}{L'échelle de temps ici est en unités de $N$ générations, avec $N\gg n$ puisque
+%     nous considérons un modèle asymptotique.}
 
     % TODO : Reformuler !
     % Une suprise ... À notre connaissance,
@@ -528,7 +543,7 @@
     deviennent indiscernables pour un processus considéré.
  
 \begin{proposition}\label{prop:beta_indiscernable}
-    Soit $n>1$ et $\Lambda_0^\alpha \coloneq \mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]1,2[$,
+    Soit $n>1$ et $\Lambda_0^\alpha \coloneq \mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha \in ]0,2[$,
     de densité 
     \[w_\alpha : x\in [0,1] \longmapsto
     \frac{1}{B(2-\alpha,\alpha)} x^{1-\alpha}(1-x)^{\alpha-1}
@@ -690,39 +705,40 @@
 
 
 Ainsi nous venons de construire une infinité de mesures différentes qui induisent le même processus de coalescence. 
-On s'attendait à obtenir une infinité d'arbres généalogiques différents mais ceux-ci sont identiques en loi. 
+On s'attendait à obtenir une infinité d'arbres généalogiques différents, mais ceux-ci sont identiques en loi. 
 
 Pour la construction nous utilisons les polynômes de Jacobi. Ce choix est motivé par la stucture de la mesure $\mathrm{Beta}(2-\alpha,\alpha)$ 
 et du fait que les polynômes de Jacobi sont  orthogonaux pour le poids de la forme $x^\beta(1-x)^\gamma$ 
-sur $[0,1]$ avec $\beta>-1,\gamma>-1$  (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
-de variable on se ramène sur $[0,1]$). 
+sur $[0,1]$ avec $\beta, \gamma>-1$.  
+% (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
+% de variable on se ramène sur $[0,1]$). 
 
 Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. 
-Pour $0<\alpha<1$, le $\mathrm{Beta}(2-\alpha,\alpha)$ coalescent admet une fraction positive des individus qui reste sous forme de singletons à tout 
-temps t>0 \cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
-Par conséquent, nous gardons $\alpha \in ]1,2[$.
+% Pour $0<\alpha<1$, le $\mathrm{Beta}(2-\alpha,\alpha)$ coalescent admet une fraction positive des individus qui reste sous forme de singletons à tout 
+% temps t>0 \cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
+% Par conséquent, nous gardons $\alpha \in ]1,2[$.
 
 
 
     
-
-
     \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{photo/plot_foret_pas_grande_beta_combined}
-        \caption{(a) \textit{Gauche}~:\textcolor{red}{TODO} comparaison des densités remarquablement
-        différentes
-        sur $[0,1]$, \(f_\varepsilon(x)=\bigl(1+\varepsilon J_{n-1}(x)\bigr)\,w_\alpha(x)\),
-        pour $n=8$~: cas Beta($2-\alpha,\alpha$) (avec $\alpha \in \{1,1.4\}$)$\varepsilon=0$ et perturbation de Jacobi $\varepsilon \in \{0.2,0.8\}$
-        (b) \textit{Droite}~: distribution empirique du TMRCA,
-         issues de $n$ lignées, à partir
-        de 8000 simulations, avec superposition de la densité théorique
-        donnée par \eqref{eq:density-TMRCA}.}
-            \textcolor{red}{Dire que beta a été simulé par trapeze ? montecarlo ? faire quelques
-    phrase dessus} \label{fig:tmrca_foret}
+              \caption{(a) \textit{Gauche}~: Graphe des densités\protect\footnotemark
+$\Lambda^\alpha_\varepsilon(x)=(1+\varepsilon J_{n-1}(x))w_\alpha(x)$ 
+pour $n=8$ et $\varepsilon\in\{0,0.3,0.8\}$, dans les cas $\alpha=1$ (haut) 
+et $\alpha=0.6$ (bas). On voit que $\varepsilon$ contrôle l'amplitude des
+oscillations autour de la densité de référence $\varepsilon=0$. 
+(b) \textit{Droite}~: distributions empiriques du TMRCA issues de $8000$
+simulations de $n$ lignées, avec superposition de la densité théorique
+prise pour $\varepsilon=0$ donnée par \eqref{eq:density-TMRCA}. Malgré des
+densités $\Lambda^\alpha_\varepsilon$ très différentes, la loi du TMRCA est
+identique à celle du modèle de référence.}
+\label{fig:tmrca_foret}
     \end{figure}
 
-    
+    \footnotetext{Sauf pour $\alpha=0.6$ et $\varepsilon=0.8$ qui n'est pas une densité,
+    comme expliqué dans les paragraphes qui suivent.}
 
     La construction que nous proposons permet de jouer avec les densités selon 2 paramètres.
     L'allure générale est dictée par $\alpha$ tandis que $\varepsilon$ intensifie l'amplitude des oscillations.
@@ -731,16 +747,16 @@ Par conséquent, nous gardons $\alpha \in ]1,2[$.
     \[
     \varepsilon_n = \Theta_{n\to \infty}\Bigl(\frac{1}{n^{|\alpha-1|}}\Bigr)
     \]
-    Dans la \autoref{fig:tmrca_foret} sur les graphiques du bas avec  $\alpha=1.4$,
+    Dans la \autoref{fig:tmrca_foret} sur les graphiques du bas avec  $\alpha=0.6$,
     nous avons pour $n=8$ que $\varepsilon_n = 0.392062$. On remarque alors 
     que la distribution empirique vérifie bien la théorie pour $\varepsilon=0.2 < \varepsilon_n$
-    et que pour $\varepsilon=0.8>\varepsilon_n$ nous ne convergeons déjà plus en loi. 
+    mais aussi pour $\varepsilon=0.8>\varepsilon_n$. La contrainte sur $\varepsilon$
+    est seulement pour maintenir une densité positive. 
 
-    Dans le cas $\alpha=1$, graphique du haut, nous obtenons la mesure uniforme et $\varepsilon_n$
-    ne depend plus de $n$. Cela nous permet d'avoir des densités drastiquement 
-    différentes pour une étude initiale de $n\gg 1$ lignées, comparées à une densité 
-    avec $\alpha \neq 1$. Le choix de $\varepsilon$ est tout de même borné par $1$ 
-    afin que notre densité soit positive, 
+    Dans le cas $\alpha=1$, graphiques du haut, nous obtenons la mesure uniforme
+    et $\varepsilon_n$
+    ne depend plus de $n$. Toutefois, le choix de $\varepsilon$ est tout de même borné
+    par $1$ afin que notre densité reste positive.
 
 
     %\begin{figure}[H]
