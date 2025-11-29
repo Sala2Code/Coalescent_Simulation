@@ -859,8 +859,8 @@ identique à celle du modèle de référence.}
 
 \section{Discordances par paires chez la sardine japonaise}
 
-Afin de justifer le modèle du $\Lambda$-coalescent, comparé à 
-son prédécesseur le coalescent de Kingman,
+Afin de justifer le modèle du $\Lambda$-coalescent, n peut le comparer à 
+son prédécesseur, le coalescent de Kingman,
 nous présentons une application en biologie des populations.
 Nous nous appuyons sur \cite{Niwa2016} qui étudie la génétique
 des sardines japonaises.
@@ -871,9 +871,8 @@ $i\neq j$ leur discordance, noté $K_{ij}\in \mathbb N$, c'est le nombre
 de symboles différents lorsque l'on compare leur séquence ADN.
 Nous notons $T_{ij} \geq 0$ le plus petit temps tel 
 que la lignée $i$ et la lignée $j$ ont un ancêtre commun.
-Sous des hypothèses biologiques
-naturelles, nous avons que les mutations ne peuvent pas
-se produire sur le même site et que pour un paramètre 
+Sous des hypothèses biologiques standard, 
+on suppose qu'il y a au plus une mutation par site. Avec un paramètre 
 de mutation constant $\mu>0$, pour tout $t>0$ \cite{durrett2008pm4dna},
 
 \[
@@ -902,8 +901,8 @@ $K_{ij}$ à la distribution empirique observée.
 % de discordance. La mesure qui correspond au mieux aux données 
 % est chosie.
 
-Comme choix de mesure couramment utilisés en biologie est le 
-modèle de Kingman avec expansion. % source ?
+Le choix de mesure couramment utilisé en biologie est le 
+modèle de Kingman avec expansion.  % source ? gpt.com
 C'est-à-dire que l'intensité des coalescences varie 
 au cours du temps.
 Ce modèle permet d'expliquer des populations où le nombre
@@ -933,9 +932,9 @@ Et donc,
 Ensuite dans la précédente section, \autoref{sec:une-foret-pas-si-grande},
 nous avons introduit la loi Beta$(2-\alpha,\alpha)$.
 En partant des mêmes hypothèses que le \autoref{thm:pitman-sagitov}
-et supposons que notre population % introduire le lien avec queue lourde
+et supposons que notre population % introduire le lien avec queue lourde, c etait mieux expliqué avant cette queue lourde avant... mais bon
 a une reproduction à queue lourde, c'est-à-dire qu'un individu 
-peut être à l'origine d'une partie non négligeable de la population. % citation nécessaire ! car pourquoi une queue lourde ferait ça et pas autre chose?
+peut être à l'origine d'une partie non négligeable de la population. % citation nécessaire ! car pourquoi une queue lourde ferait ça et pas autre chose? déduit de l article de niwa Voila!
 % Cette dernière 
 % hypothèse représente le fait que certains individus
 % peuvent avoir un nombre de descendants très élevé
@@ -1051,7 +1050,7 @@ cela correspond à
     des discordances sous ce modèle coïncide avec la moyenne empirique.
     La courbe bleue correspond au coalescent de Kingman à deux époques,
     avec $(c_0,c_1,\theta) = (1.00,0.80,0.45)$. La bande bleue
-    indique l'intervalle de confiance à $95\%$.}
+    indique l'intervalle de confiance à $95\%$.} %ARTICLE NIWA ILS PRENNENT  tau de mutation = 3 comme j'ai mis dans mon code
     \label{fig:sardine_reel_val}
     \end{figure}
 
