@@ -874,8 +874,8 @@ que la lignée $i$ et la lignée $j$ ont un ancêtre commun.
 Sous des hypothèses biologiques
 naturelles, nous avons que les mutations ne peuvent pas
 se produire sur le même site et que pour un paramètre 
-de mutation constant $\mu>0$, pour tout $t>0$
-\textcolor{red}{une citation pour cette définition de Poisson et hypothese}
+de mutation constant $\mu>0$, pour tout $t>0$ \cite{durrett2008pm4dna},
+
 \[
 K_{ij} \mid T_{ij=t} \sim \mathrm{Poisson}(\mu t)
 \]
@@ -959,8 +959,22 @@ nous pouvons relier les paramètres des deux modèles par
 \eqref{eq:esperance-TK-beta}.
 \begin{figure}[H]
         \centering
-        \includesvg[width=\textwidth]{photo/plot_Kij_overlap_retry}
-        \caption{TODO: en gros on regarde et bah c'est pareil donc on peut rien déduire}
+        \includesvg[width=\textwidth]{photo/plot_Kij_overlap_retry_final}
+        \caption{Histogrammes
+        des discordances par paires $K_{ij}$ obtenues
+        à partir de $n=200$ lignées simulées
+        sous un $\Lambda_0^\alpha$-coalescent
+        (en rouge, $\alpha = 1.33$) et sous un coalescent de Kingman à deux époques
+        (en bleu, $(c_0, c_1, \tau) = (0.0141,0.306,7.2)$).
+        Ces paramètres ont été choisis pour minimiser la distance en variation totale
+        entre l'histogramme considéré et celui du $\Lambda_0^\alpha$-coalescent.
+        Dans les deux modèles, le taux de mutation $\mu$
+        est choisi de sorte que la moyenne des discordances soit fixée à
+        $d_*=10$. 
+        Les histogrammes sont construits à
+        partir de $120$ réalisations
+        indépendantes et montrent que les deux modèles produisent des
+        distributions de discordances pratiquement indiscernables.}
         \label{fig:Kij_overlap}
     \end{figure}
 
@@ -985,12 +999,38 @@ Toutefois, si on fixe le taux de mutation $\mu$
 pour les deux modèles alors à partir de données,
 nous pouvons déterminer les paramètres de nos modèles et
 regarder leur performance. 
-Pour l'expérience numérique nous prenons $\alpha=1.33$ comme dans
+Pour l'expérience numérique nous prenons $\alpha=1.3$ comme dans
 \cite{Niwa2016} qui a été choisi comme le paramètre 
 maximisant la vraisemblance. 
-Puis pour le modèle de Kingman avec expansion, nous 
-\textcolor{red}{AUCUNE IDEE DE QUELS PARAMETRES ON A PRIS ET POURQUOI : voir 
-le code + demander à chatGPT}
+Pour le modèle de Kingman avec expansion, ils considèrent
+un modèle à deux époques et estiment les paramètres démographiques
+$(u_0,u_1)$, ce sont les tailles
+effectives actuelles et ancestrales en unités de mutation. L'ajustement
+par maximum de vraisemblance basé sur la distribution des différences
+par paires donne $u_0 = 1$, $u_1 = 1.25$ et $\theta = 0.45$ \cite{Niwa2016}.
+Dans notre paramétrisation en termes de taux de coalescence,
+cela correspond à
+\[
+(c_0,c_1,\theta) = \Bigl(\frac{1}{u_0},\frac{1}{u_1},\theta\Bigr)
+= (1,0.8,0.45)
+\]
+
+
+% lutôt que de choisir arbitrairement les paramètres de ce dernier, nous reprenons
+% les estimations de \cite{Niwa2016} pour le modèle à deux époques ajusté aux mêmes
+% données. Dans leur notation, $(u_0,u_1,t)$ désignent les tailles efficaces
+% actuelle et ancestrale et la date de l'expansion, en unités de temps mutationnel,
+% et le taux de coalescence entre deux lignées vaut $1/u_0$ avant $t$ et $1/u_1$ après
+% $t$. En termes de notre fonction d'intensité $c$, cela revient à poser
+% \[
+% c_0 = \frac{1}{u_0},\qquad c_1 = \frac{1}{u_1},\qquad \theta = t,
+% \]
+% ce qui donne numériquement $(c_0,c_1,\theta) \approx (1{,}0,0{,}8,0{,}45)$ pour les
+% valeurs de maximum de vraisemblance. La figure~\ref{fig:XXX} compare alors la
+% distribution empirique de $K_{ij}$ aux bandes prédictives générées par ces deux
+% modèles calibrés.
+% \textcolor{red}{AUCUNE IDEE DE QUELS PARAMETRES ON A PRIS ET POURQUOI : voir 
+% le code + demander à chatGPT}
 
 %  afin que la distribution empirique
 % des discordances par paires corresponde au mieux. % c'est quoi la vraisemlance mathématiquement ? qu'ont-ils fait comme calcul ?
@@ -1002,33 +1042,63 @@ le code + demander à chatGPT}
   \begin{figure}[H]
         \centering
         \includesvg[width=\textwidth]{photo/plot_sardine_reel_val}
-        \caption{TODO }
+        \caption{Distribution empirique des discordances par paires chez la sardine japonaise
+    (points noirs) comparée aux prédictions des deux modèles considérés.
+    La courbe rouge correspond au $\Lambda_0^\alpha$-coalescent de loi
+    $\mathrm{Beta}(2-\alpha,\alpha)$ avec $\alpha = 1.3$, et un intervalle
+    de confiance à $95\%$ en rose obtenu par Monte Carlo ($300$ simulations).
+    Le taux de mutation $\mu$ est calibré de sorte que la moyenne théorique
+    des discordances sous ce modèle coïncide avec la moyenne empirique.
+    La courbe bleue correspond au coalescent de Kingman à deux époques,
+    avec $(c_0,c_1,\theta) = (1.00,0.80,0.45)$. La bande bleue
+    indique l'intervalle de confiance à $95\%$.}
+    \label{fig:sardine_reel_val}
     \end{figure}
 
-    \textcolor{red}{Parler un peu plus du plot,
-    de la construction de l'intervalle de confiance, de la simualtion,
-    de la déterminaition des paramètres}
+
     On remarque alors que le modèle de Kingman, même avec expansion, 
     ne permet pas d'expliquer la dynamique de ces sardines. Nous avons
     besoin d'utiliser un modèle permettant la coalescence de 
     multiples lignées à la fois, la mesure $\Lambda_0^\alpha$
-    le permet d'une bonne manière.
+    le permet d'une bonne manière et naturellement.
 
 
 
 \section{Conclusion}
-\textcolor{red}{Je mets en vrac, on verra plus tard}
-On aurait aimé s'appuyer un peu plus sur l'étude pour $n$ fixé sur le TMRCA.
-Etudier le modèle asymptotique à l'instar de "silence ça pousse".
-Etudier la vitesse de convergence.
-Généraliser par le $\Xi$-coalescent, permettant à un même instant
-de coalescer différentes lignées mais pas forcément
- ensemble comme actuellement (citer le pdf associé).
- Approfondir les mutations et développé le modèle en s'axant plus vers 
-des considérations biologiques.
-Dans la derniere section on a considérer 2 époques pour simplifier 
-l'analyse mais il s'agirait de développer plus le modèle,
-de poser plus formellement les limites biologiques et donc mathématiques, blabla.
+
+Dans ce rapport, nous avons étudié le $\Lambda$-coalescent,
+en particulier le comportement du TMRCA
+pour différentes mesures $\Lambda$ et une application aux
+discordances par paires chez la sardine japonaise.
+Nos simulations montrent que certains $\Lambda$-coalescents à
+coalescences multiples
+rendent mieux compte des données que le modèle de Kingman avec expansion.
+
+Nous aurions aimé étudier plus en profondeur pour $n$ fixé et $n\to \infty$ 
+des questions sur le TMRCA et la vitesse de convergence, un aspect qu'on a
+du délaisser par manque de temps et de place.
+De plus une autre piste intéressante et d'utiliser un $\Xi$-coalescent,
+un modèle plus général permettant la coalescence simultanée.
+
+\newpage
+
+% \textcolor{red}{Je mets en vrac, on verra plus tard}
+% On aurait aimé s'appuyer un peu plus sur l'étude pour $n$ fixé sur le TMRCA.
+% Etudier le modèle asymptotique à l'instar de "silence ça pousse".
+% Etudier la vitesse de convergence.
+% Généraliser par le $\Xi$-coalescent, permettant à un même instant
+% de coalescer différentes lignées mais pas forcément
+%  ensemble comme actuellement (citer le pdf associé).
+%  Approfondir les mutations et développé le modèle en s'axant plus vers 
+% des considérations biologiques.
+% Dans la derniere section on a considérer 2 époques pour simplifier 
+% l'analyse mais il s'agirait de développer plus le modèle,
+% de poser plus formellement les limites biologiques et donc mathématiques, blabla.
+% Etre plus précis sur certaines remarques.
+% Par exemple, calculer l'écart 
+% des histogrammes pour savoir à quel point ils sont semblables ou non.
+
+
 
 \bibliographystyle{alpha}
 \bibliography{ref}

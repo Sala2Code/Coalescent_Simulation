@@ -1,5 +1,11 @@
 \begin{thebibliography}{KLLS17}
 
+\bibitem[Dur08]{durrett2008pm4dna}
+Richard Durrett.
+\newblock {\em Probability Models for DNA Sequence Evolution}.
+\newblock Probability and Its Applications. Springer, New York, 2 edition,
+  2008.
+
 \bibitem[Fis30]{Fisher1930}
 Ronald~A. Fisher.
 \newblock {\em The Genetical Theory of Natural Selection}.

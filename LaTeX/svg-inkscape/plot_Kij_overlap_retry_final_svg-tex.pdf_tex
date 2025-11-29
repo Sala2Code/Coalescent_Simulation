@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.4.2 (f4327f4, 2025-05-13), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'plot_arbre_kingman_svg-tex.pdf' (pdf, eps, ps)
+%% Accompanies image file 'plot_Kij_overlap_retry_final_svg-tex.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{576bp}%
+    \setlength{\unitlength}{648bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,9 +50,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5)%
+  \begin{picture}(1,0.44444444)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{plot_arbre_kingman_svg-tex.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{plot_Kij_overlap_retry_final_svg-tex.pdf}}%
   \end{picture}%
 \endgroup%

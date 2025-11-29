@@ -6,45 +6,45 @@ The style file: alpha.bst
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 Database file #1: ref.bib
 Warning--empty journal in kluge2017exchangeable
-You've used 10 entries,
+You've used 11 entries,
             2543 wiz_defined-function locations,
-            631 strings with 5951 characters,
-and the built_in function-call counts, 3770 in all, are:
-= -- 380
-> -- 148
-< -- 7
-+ -- 51
-- -- 48
-* -- 282
-:= -- 634
-add.period$ -- 31
-call.type$ -- 10
-change.case$ -- 56
-chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 148
-empty$ -- 283
-format.name$ -- 64
-if$ -- 745
+            638 strings with 6080 characters,
+and the built_in function-call counts, 4062 in all, are:
+= -- 410
+> -- 156
+< -- 8
++ -- 53
+- -- 50
+* -- 299
+:= -- 684
+add.period$ -- 35
+call.type$ -- 11
+change.case$ -- 61
+chr.to.int$ -- 11
+cite$ -- 12
+duplicate$ -- 164
+empty$ -- 308
+format.name$ -- 68
+if$ -- 807
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 12
-newline$ -- 54
-num.names$ -- 30
-pop$ -- 47
+missing$ -- 14
+newline$ -- 59
+num.names$ -- 33
+pop$ -- 52
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 74
 quote$ -- 0
-skip$ -- 110
+skip$ -- 120
 stack$ -- 0
-substring$ -- 257
-swap$ -- 11
-text.length$ -- 7
-text.prefix$ -- 6
+substring$ -- 264
+swap$ -- 12
+text.length$ -- 8
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 1
-while$ -- 38
-width$ -- 15
-write$ -- 132
+while$ -- 40
+width$ -- 16
+write$ -- 147
 (There was 1 warning)
