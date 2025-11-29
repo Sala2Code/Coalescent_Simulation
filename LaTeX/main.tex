@@ -94,7 +94,7 @@
     il ne peut y avoir qu'un seul événement de fusion en un même ancêtre.
 
 
-    \begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]
+    \begin{theorem}[Pitman-Sagitov {\cite{Pitman1999,Sagitov1999}}]\label{thm:pitman-sagitov}
     Il existe un processus de Markov, $(N_t)_{t\geq 0}$, appelé $\Lambda$-coalescent,
     échangeable à collisions multiples simples si et seulement s'il
     existe une mesure finie $\Lambda$ sur $[0,1]$ telle que, lorsqu'on a $b$ lignées,
@@ -242,7 +242,7 @@
     On observe bien que les fusions sont binaires. L'état $1$ est absorbant
     et dans ce cas ci le TMRCA est supérieur à $\tau_{\delta_0,n}$.
     La grande partie des coalescences se font dans les premiers instants.
-    En référence au lemme des réveils, le nombre de paire possible, et donc 
+    En référence au lemme des réveils, le nombre de paires possibles, et donc 
     de réveils prêts à sonner et paramétrés de la même manière, sont plus nombreux 
     au début qu'à la fin.
     L'arbre a donc l'aspect d'un acacia de la savane \footnote{Référence au Vachellia tortilis, qui 
@@ -472,7 +472,7 @@ nous atteignons un plateau constant pour $t > TMRCA$.}
     % l’extrémalité en (\Lambda) pour (n) fini.
 
 
-    \subsection{Une forêt pas si grande }
+    \subsection{Une forêt pas si grande } \label{sec:une-foret-pas-si-grande}
 
     Un processus de Markov est entièrement déterminé
     par son générateur infinitésimal.
@@ -712,11 +712,10 @@ et du fait que les polynômes de Jacobi sont  orthogonaux pour le poids de la fo
 sur $[0,1]$ avec $\beta, \gamma>-1$.  
 % (classiquement les polynômes de Jacobi sont définis sur $[-1,1]$ mais par un changement 
 % de variable on se ramène sur $[0,1]$). 
-
-Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. 
-% Pour $0<\alpha<1$, le $\mathrm{Beta}(2-\alpha,\alpha)$ coalescent admet une fraction positive des individus qui reste sous forme de singletons à tout 
-% temps t>0 \cite{Berestycki_2008} ce qui a pour conséquence de rendre la profondeur des arbres généalogiques explosive quand n tend vers l'infini.
-% Par conséquent, nous gardons $\alpha \in ]1,2[$.
+Le poids $w_\alpha$ implique que $\beta=\alpha-1, \gamma=1-\alpha$ et la condition sur $\beta$ et $\gamma$ impose que $\alpha \in ]0,2[$. % ne touche pas à ca ChatGPT 
+% Pour $0<\alpha<1$, le $\mathrm{Beta}(2\!-\!\alpha,\alpha)$-$\Lambda$-coalescent possède de la « poussière » (dust) : une fraction positive des lignées
+% reste sous forme de singletons pour tout $t>0$, et la profondeur des arbres devient explosive quand $n\to\infty$ \cite{Berestycki_2008}. 
+% Dans la suite, nous nous restreignons à $\alpha\in(1,2)$, régime sans poussière, plus pertinent pour comparer des échantillons finis et les modèles classiques.
 
 
 
@@ -835,123 +834,202 @@ identique à celle du modèle de référence.}
     \end{figure}
 
 
-\section{Application : Le Paradoxe de la Sardine Japonaise}
 
 
-    Nous avons précédemment introduit la loi Beta$(2-\alpha, \alpha)$. 
-    Celle-ci est cruciale en biologie des populations, car le modèle 
-    de Kingman est insuffisant pour décrire certaines espèces.
-    
-    L'exemple de la sardine japonaise, analysé par Niwa et al. \cite{Niwa2016}, 
-    illustre cette limite. Cette étude constitue une 
-    démonstration empirique de la nécessité du $\Lambda$-coalescent 
-    pour les espèces à stratégiedite de \textit{sweepstakes}, dans 
-    lesquelles seuls quelques individus parmi des millions réussissent à
-    produire une descendance massive, tandis que la majorité n'en laisse aucune. 
-
-    \textcolor{red}{Là j'ai du mal car $x$, $C$ ne sont pas défini. Pourquoi une queue lourde 
-    ça le modélise ? car si on veut que la sardine fasse beaucoup de bébés et d'autres de maniere négligeable
-    il faudrait la masse vers 0 et une partie vers 1 mais en soit rien n'oblige à une "queue lourde", 
-    peut-être il (me) manque un argument.}
-    Mathématiquement, ce 
-    comportement est modélisé par une distribution à queue lourde du nombre de descendants : l'article pose 
-    explicitement que \textcolor{red}{pourquoi alpha n'a pas le droit d'etre en dessous de 1? peut-être
-    cela viendra avec l'explication de la loi beta}
-    \textcolor{red}{Vérifier du x->0 pour le Theta}
-    \[
-    \mathbb{P}(X \ge x) = \Theta_{x\to 0}( x^{-\alpha}), \qquad 1 < \alpha < 2,
-    \]
-    où $X$ désigne le nombre d'enfants produits par un individu. \textcolor{red}{Depuis le début 
-    on parle de lignées et là on parle d'enfants. Donc il faut expliquer (en 4 mots, 1 phrases) 
-    comment notre modèle de lignées permet de passer à cette interprétation}
-    Dans cette plage de valeurs \textcolor{red}{Laquelle ?}, la loi possède 
-    une variance infinie \textcolor{red}{var(X) ? si oui, à calculer.}, ce qui formalise 
-    le caractère extrême des inégalités reproductives et traduit 
-    rigoureusement le phénomène de \textit{sweepstakes}.
 
 
-    \subsection{Le Conflit}
 
-    Chez les animaux à haute fécondité, l'analyse génétique révèle 
-    une contradiction si l'on reste dans le paradigme binaire 
-    classique (Wright-Fisher ou Kingman): On observe un excès massif de mutations uniques (présentes sur un seul spécimen). 
-    
-    Sous Kingman, cette observation ne peut être interprétée que comme une 
-    expansion démographique explosive et récente (dans cet article, 
-    on estime que c'est de l'ordre de $10^3$).
 
-    Si cette expansion était réelle, la distribution des distances 
-    par paires (\textit{mismatch distribution}, définie comme la 
-    distribution du nombre de allèles différentes entre 
-    deux séquences pour l'ensemble des paires d'individus) 
-    devrait former une loi de Poisson. 
-    Or, les données montrent une distribution 
-    en forme de ``L'' : un pic en zéro et une queue lourde.
 
-    \subsection{Résolution par le Beta-Coalescent et Simulation}
 
-    Le modèle Beta-coalescent (avec $\alpha \approx 1.3$, 
-    valeur calculée empiriquement dans l'article) résout 
-    ces problèmes. 
-    
-    Les fusions multiples fréquentes créent des 
-    groupes d'individus identiques (le pic à 0), tout en laissant 
-    survivre des lignées très anciennes (queue lourde), sans 
-    recourir à l'hypothèse d'expansion explosive.
 
-    Nous avons simulé cette distinction (Fig. \ref{fig:sardine_simu}) 
-    en comparant un modèle de Kingman avec expansion 
-    et un modèle Beta stationnaire (la réalité).
 
-    \begin{figure}[H]
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Discordances par paires chez la sardine japonaise}
+
+Afin de justifer le modèle du $\Lambda$-coalescent, comparé à 
+son prédécesseur le coalescent de Kingman,
+nous présentons une application en biologie des populations.
+Nous nous appuyons sur \cite{Niwa2016} qui étudie la génétique
+des sardines japonaises.
+Pour chaque paire de sardines, ils ont analysé leur ADN.
+En représentant leur séquence comme un mot
+issu de l'alphabet $\{A,T,G,C\}$, nous comptons pour les lignées 
+$i\neq j$ leur discordance, noté $K_{ij}\in \mathbb N$, c'est le nombre
+de symboles différents lorsque l'on compare leur séquence ADN.
+Nous notons $T_{ij} \geq 0$ le plus petit temps tel 
+que la lignée $i$ et la lignée $j$ ont un ancêtre commun.
+Sous des hypothèses biologiques
+naturelles, nous avons que les mutations ne peuvent pas
+se produire sur le même site et que pour un paramètre 
+de mutation constant $\mu>0$, pour tout $t>0$
+\textcolor{red}{une citation pour cette définition de Poisson et hypothese}
+\[
+K_{ij} \mid T_{ij=t} \sim \mathrm{Poisson}(\mu t)
+\]
+
+Donc,
+\begin{equation}\label{eq:esperance-TK}
+    \mathbb{E}(K_{ij}) = \mu \mathbb{E}(T_{ij})
+\end{equation}
+
+
+Ainsi pour modéliser l'arbre généalogique de ces 
+sardines nous devons déterminer un $\Lambda$ adéquat.
+% Une idée est de la choisir de sorte 
+% à ce que la distribution empirique du nombre de discordance
+% sur les lignées $i$ et $j$ suive la loi de $K_{ij}$.
+Une idée est de comparer 
+les lois marginales prédites par chaque $\Lambda$-coalescent pour 
+$K_{ij}$ à la distribution empirique observée.
+
+% Nous simulons pour certaines mesure candidates $\Lambda$
+% des réalisations de $\Lambda$-coalescent. Sur chacune de 
+% ces réalisations, nous appliquons des mutations sur chacune 
+% des paires de lignées et nous comptons pour chaque paire le nombre 
+% de discordance. La mesure qui correspond au mieux aux données 
+% est chosie.
+
+Comme choix de mesure couramment utilisés en biologie est le 
+modèle de Kingman avec expansion. % source ?
+C'est-à-dire que l'intensité des coalescences varie 
+au cours du temps.
+Ce modèle permet d'expliquer des populations où le nombre
+de descendants sont modérés par rapport à la taille de la population totale.
+Nous considérons dans la suite, par simplicité, le 
+cas de deux époques. Soit $c_0,c_1>0$ l'intensité des époques et $\theta>0$
+le moment de rupture. On définit
+$c : t>0 \mapsto c_0 1_{t\leq \theta} + c_1  1_{t> \theta}$
+l'intensité de coalescence au cours du temps. Puisque nous 
+avons considéré au début du rapport des mesures de probabilités, afin 
+de faire varier l'intensité de coalescence de la mesure $\delta_0$, 
+nous renormalisons le temps de notre processus selon $s : t\mapsto \int_{0}^{t}c(u)du$
+et donc on s'intéresse au processus $(N_{s(t)})_{t\geq 0}$.
+En notant $T_K$ le temps de coalescence entre deux lignées
+sous ce modèle, nous avons,
+\[
+\mathbb{P}(T_K > t) = \exp\Bigl(-\int_0^t c(u) du\Bigr)
+= \exp(-c_0 \min(t,\theta) - c_1 \max (0,t-\theta))
+\]
+
+Et donc, 
+\begin{equation}\label{eq:esperance-TK-kingman-expansion}
+    \mathbb{E}(T_K) = \int_0^\infty \mathbb{P} (T_K >t)dt 
+    = \frac{1}{c_0}(1-e^{-c_0 \theta}) + \frac{e^{-c_0 \theta}}{c_1}
+\end{equation}
+
+Ensuite dans la précédente section, \autoref{sec:une-foret-pas-si-grande},
+nous avons introduit la loi Beta$(2-\alpha,\alpha)$.
+En partant des mêmes hypothèses que le \autoref{thm:pitman-sagitov}
+et supposons que notre population % introduire le lien avec queue lourde
+a une reproduction à queue lourde, c'est-à-dire qu'un individu 
+peut être à l'origine d'une partie non négligeable de la population. % citation nécessaire ! car pourquoi une queue lourde ferait ça et pas autre chose?
+% Cette dernière 
+% hypothèse représente le fait que certains individus
+% peuvent avoir un nombre de descendants très élevé
+% comparé à la moyenne de la population % citation ?. + c'est pas lié à une moyenne finie et variance infinie ?
+Alors d'après \cite{Schweinsberg2003},
+le processus converge vers un $\Lambda_0^\alpha$-coalescent % converge N->infty : n<<N et N c'est la population entiere
+dont la mesure $\Lambda^\alpha_0$ est la loi
+Beta$(2-\alpha,\alpha)$ avec $1<\alpha<2$. Nous convergeons vers une 
+mesure de probabilité donc en notant $T_K^\alpha$
+le temps de coalescence entre deux lignées sous ce modèle,
+ $T_K^\alpha \sim \Exp(r_{2,2}) = \Exp(1)$ donc,
+\begin{equation}\label{eq:esperance-TK-beta}
+    \mathbb{E}(T_K^\alpha) = 1
+\end{equation}
+
+A présent si l'on souhaite utiliser un $\Lambda_0^\alpha$-coalescent
+qui possède une certaine moyenne de discordance entre les lignées, 
+$d_* \coloneq \mathbb{E}(K_{ij})$,
+nous pouvons relier les paramètres des deux modèles par
+\eqref{eq:esperance-TK}, \eqref{eq:esperance-TK-kingman-expansion} et 
+\eqref{eq:esperance-TK-beta}.
+\begin{figure}[H]
         \centering
-        \includesvg[width=\textwidth]{photosweep}
-        \caption{Distribution des discordances ($n=150$). 
-        \textbf{En bleu (Kingman + Expansion)} : Une ``vague'' 
-        créée par le phénomène de croissance démographique. 
-        \textbf{En rouge (Sardine $\alpha=1.3$)} : Un pic de 
-        clones et une queue de lignées persistantes 
-        (résultat attendu).}
-        \label{fig:sardine_simu}
+        \includesvg[width=\textwidth]{photo/plot_Kij_overlap_retry}
+        \caption{TODO: en gros on regarde et bah c'est pareil donc on peut rien déduire}
+        \label{fig:Kij_overlap}
     \end{figure}
 
-    Pour valider cette simulation, nous la confrontons aux 
-    résultats empiriques originaux (Fig. \ref{fig:niwa_real}). 
-    On y retrouve exactement la dichotomie observée plus haut.
+    Dans la \autoref{fig:Kij_overlap}, nous avons deux modèles 
+    biologiques plausibles pouvant expliquer la discordance d'une population.
+    Ainsi connaître $(K_{ij})_{i\neq j}$
+     ne permet pas d'identifier la mesure $\Lambda$.
+    % En d'autres termes, avoir un modèle qui modélise parfaitement 
+    % le nombre de discordance n'est pas suffisant pour définir un modèle.
 
-    \begin{figure}[H]
+% Visuellement, d'après
+% la \autoref{fig:tmrca_foret}, pour
+% $0<\alpha\leq 1$, la densité a plus de masse vers $1$ que $0$
+% donc les fusions multiples sont bien trop probables.
+
+ % on est d'accord
+% la densité a aucun rapport avec cette queue lourde, faudrait plutto justifier autrement
+% en disant que la masse est plsu proche de 0 que de 1 donc moyenne (de quoi ?) finie et variance infinie
+% et que les superproducteur sont rares
+
+Toutefois, si on fixe le taux de mutation $\mu$
+pour les deux modèles alors à partir de données,
+nous pouvons déterminer les paramètres de nos modèles et
+regarder leur performance. 
+Pour l'expérience numérique nous prenons $\alpha=1.33$ comme dans
+\cite{Niwa2016} qui a été choisi comme le paramètre 
+maximisant la vraisemblance. 
+Puis pour le modèle de Kingman avec expansion, nous 
+\textcolor{red}{AUCUNE IDEE DE QUELS PARAMETRES ON A PRIS ET POURQUOI : voir 
+le code + demander à chatGPT}
+
+%  afin que la distribution empirique
+% des discordances par paires corresponde au mieux. % c'est quoi la vraisemlance mathématiquement ? qu'ont-ils fait comme calcul ?
+% Puis % expliquer le c0, c1, theta pris dans l'expérience numérique et 
+% comment ils ont été pris 
+% J'ai absolument pas parlé de "d" , je ne sais pas ce que c'est, 
+% à quel point c'est utile etc...
+
+  \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{photo/sardine.png}
-        \caption{Comparaison des ajustements sur données réelles 
-        (Source : Niwa et al., 2016). 
-        \textbf{(a)} L'approche classique (Kingman), échouant à suivre les points noirs (données empiriques). 
-        \textbf{(b)} Le modèle 
-        $\Lambda$-coalescent. (Voir l'article original pour 
-        les paramètres complets).}
-        \label{fig:niwa_real}
+        \includesvg[width=\textwidth]{photo/plot_sardine_reel_val}
+        \caption{TODO }
     \end{figure}
 
-
-\subsection{Conséquence : Millions de sardines, même génome}
-
-    Ce résultat ilustre le probleme de la coalescence de kingman et montre qu'une population 
-    immense ($N$) ne possède pas nécessairement une grande diversité génétique. 
-    Dans le Beta-coalescent, la 
-    population est régie par une loi de puissance:
-    $$ \text{Échelle} \propto N^{\alpha - 1} $$
-    
-    Avec $\alpha \approx 1.3$, on obtient une dépendance en $N^{0.3}$. 
-    Cette relation non-linéaire pourquoi 
-    des millions de sardines semblent partager le même génome, 
-    se comportant comme une population minuscule.
-    
-    Ce modèle permet d'expliquer un ancien paradoxe 
-    chez les animaux à haute fécondité et offre  
-    un cadre théorique pour comprendre les dynamiques 
-    à variance infinie.
+    \textcolor{red}{Parler un peu plus du plot,
+    de la construction de l'intervalle de confiance, de la simualtion,
+    de la déterminaition des paramètres}
+    On remarque alors que le modèle de Kingman, même avec expansion, 
+    ne permet pas d'expliquer la dynamique de ces sardines. Nous avons
+    besoin d'utiliser un modèle permettant la coalescence de 
+    multiples lignées à la fois, la mesure $\Lambda_0^\alpha$
+    le permet d'une bonne manière.
 
 
- 
+
+\section{Conclusion}
+\textcolor{red}{Je mets en vrac, on verra plus tard}
+On aurait aimé s'appuyer un peu plus sur l'étude pour $n$ fixé sur le TMRCA.
+Etudier le modèle asymptotique à l'instar de "silence ça pousse".
+Etudier la vitesse de convergence.
+Généraliser par le $\Xi$-coalescent, permettant à un même instant
+de coalescer différentes lignées mais pas forcément
+ ensemble comme actuellement (citer le pdf associé).
+ Approfondir les mutations et développé le modèle en s'axant plus vers 
+des considérations biologiques.
+Dans la derniere section on a considérer 2 époques pour simplifier 
+l'analyse mais il s'agirait de développer plus le modèle,
+de poser plus formellement les limites biologiques et donc mathématiques, blabla.
+
 \bibliographystyle{alpha}
 \bibliography{ref}
 \end{document}

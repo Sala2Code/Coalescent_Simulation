@@ -27,6 +27,11 @@ Paul Nevai, Tam{\'a}s Erd{\'e}lyi, and Alphonse~P Magnus.
   polynomials.
 \newblock {\em SIAM Journal on Mathematical Analysis}, 25(2):602--614, 1994.
 
+\bibitem[NNY16]{Niwa2016}
+Hiro-Sato Niwa, Kazuya Nashida, and Takashi Yanagimoto.
+\newblock Reproductive skew in japanese sardine inferred from dna sequences.
+\newblock {\em ICES Journal of Marine Science}, 73(9):2181--2189, 2016.
+
 \bibitem[Pit99]{Pitman1999}
 Jim Pitman.
 \newblock Coalescents with multiple collisions.
@@ -36,6 +41,14 @@ Jim Pitman.
 Serik Sagitov.
 \newblock The general coalescent with asynchronous mergers of ancestral lines.
 \newblock {\em Journal of Applied Probability}, 36(4):1116--1125, 1999.
+
+\bibitem[Sch04]{Schweinsberg2003}
+Jason Schweinsberg.
+\newblock Coalescent processes obtained from {Cannings} models of population
+  reproduction.
+\newblock {\em Electronic Journal of Probability}, 9:1--24, 2004.
+\newblock Preprint 2003; rigorous derivation of $\Lambda$-coalescents from
+  Cannings models.
 
 \bibitem[Sze39]{Szego1939}
 G.~Szeg\H{o}.

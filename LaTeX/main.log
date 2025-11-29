@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  27 NOV 2025 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.12)  29 NOV 2025 02:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -720,7 +720,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
 Package svg Info: Last page of `./svg-inkscape/plot_arbre_kingman_svg-tex.pdf' is 1 on input line 260.
  (svg-inkscape/plot_arbre_kingman_svg-tex.pdf_tex
-<./svg-inkscape/plot_arbre_kingman_svg-tex.pdf, id=82, page=1, 794.97pt x 433.62pt>
+<./svg-inkscape/plot_arbre_kingman_svg-tex.pdf, id=74, page=1, 794.97pt x 433.62pt>
 File: ./svg-inkscape/plot_arbre_kingman_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/plot_arbre_kingman_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/plot_arbre_kingman_svg-tex.pdf , page1 used on input line 56.
@@ -732,72 +732,66 @@ Package microtype Info: Character `029' is missing
  [2] [3 <./svg-inkscape/plot_arbre_kingman_svg-tex.pdf>]
 Package svg Info: Last page of `./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf' is 1 on input line 418.
  (svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf_tex
-<./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf, id=322, page=1, 867.24pt x 289.08pt>
+<./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf, id=314, page=1, 867.24pt x 289.08pt>
 File: ./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 180.20699pt.
 ) [4 <./svg-inkscape/plot_tmrca_extrema_histograms_svg-tex.pdf>] [5]
-Package svg Info: Last page of `./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf' is 1 on input line 726.
+Package svg Info: Last page of `./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf' is 1 on input line 725.
  (svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf_tex
-<./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf, id=724, page=1, 867.24pt x 578.16pt>
+<./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf, id=716, page=1, 867.24pt x 578.16pt>
 File: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 360.41397pt.
 ) [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 741.
+(Font)              <5> on input line 740.
  [7 <./svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 824.
+Package svg Info: Last page of `./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf' is 1 on input line 823.
  (svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf_tex
-<./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, id=1044, page=1, 650.43pt x 216.81pt>
+<./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, id=1036, page=1, 650.43pt x 216.81pt>
 File: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 540.60239pt x 180.2136pt.
+) [8 <./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf' is 1 on input line 962.
+ (svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf_tex
+<./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf, id=1168, page=1, 650.43pt x 289.08pt>
+File: ./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 540.60239pt x 240.28479pt.
 )
-
-Package natbib Warning: Citation `Niwa2016' on page 8 undefined on input line 845.
-
-[8 <./svg-inkscape/plot_silence_ca_pousse_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/photosweep_svg-tex.pdf' is 1 on input line 908.
- (svg-inkscape/photosweep_svg-tex.pdf_tex
-<./svg-inkscape/photosweep_svg-tex.pdf, id=1168, page=1, 895.09406pt x 519.44063pt>
-File: ./svg-inkscape/photosweep_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/photosweep_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/photosweep_svg-tex.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 540.60239pt x 313.72754pt.
-)
-<photo/sardine.png, id=1170, 1156.32pt x 363.3575pt>
-File: photo/sardine.png Graphic file (type png)
-<use photo/sardine.png>
-Package pdftex.def Info: photo/sardine.png  used on input line 924.
-(pdftex.def)             Requested size: 540.60239pt x 169.8743pt.
- [9 <./svg-inkscape/photosweep_svg-tex.pdf>] (main.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-[10 <./photo/sardine.png>] (main.aux)
+Package svg Info: Last page of `./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf' is 1 on input line 1004.
+ (svg-inkscape/plot_sardine_reel_val_svg-tex.pdf_tex
+<./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf, id=1172, page=1, 650.43pt x 289.08pt>
+File: ./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 540.60239pt x 240.28479pt.
+) [9 <./svg-inkscape/plot_Kij_overlap_retry_svg-tex.pdf>] (main.bbl [10 <./svg-inkscape/plot_sardine_reel_val_svg-tex.pdf>]) [11] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DC30D0D3CBAB6BBBC76EB5905ED8755B;2169.
+(rerunfilecheck)             Checksum: D410CCD36DC886E985DDE90B4CD73898;1518.
  ) 
 Here is how much of TeX's memory you used:
- 20172 strings out of 474485
- 348874 string characters out of 5744169
+ 20184 strings out of 474485
+ 349895 string characters out of 5744169
  1946542 words of memory out of 5000000
- 41812 multiletter control sequences out of 15000+600000
- 655109 words of font info for 214 fonts, out of 8000000 for 9000
+ 41825 multiletter control sequences out of 15000+600000
+ 654693 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,93p,1054b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Le R/AppData/Local/Programs/MiKTeX/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on main.pdf (10 pages, 896648 bytes).
+Output written on main.pdf (11 pages, 853847 bytes).
 PDF statistics:
- 1286 PDF objects out of 1440 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 49308 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1476 PDF objects out of 1728 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 49297 words of extra memory for PDF output out of 51595 (max. 10000000)
 
