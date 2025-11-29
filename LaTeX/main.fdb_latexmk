@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1764435953.79141 "main.aux" "main.bbl" "main" 1764435982.01716 0
+["bibtex main"] 1764437358.31814 "main.aux" "main.bbl" "main" 1764437363.11018 0
   "./ref.bib" 1764427557 4755 5721f1b6368fe5ee6f401279d1cfcf99 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1764435978 11498 844dfa752faafec03fef50df2eb6d41e "pdflatex"
+  "main.aux" 1764437361 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1764435974.91256 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764435982.01828 0
+["pdflatex"] 1764437358.88147 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764437363.11126 0
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763572257 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary5.tfm" 1763650135 848 e1bc58a31b9ed9c3729ffea165acfaac ""
@@ -192,19 +192,19 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764435977 46213 737b3a5fed095c04797bc77d503cc715 ""
-  "main.aux" 1764435978 11498 844dfa752faafec03fef50df2eb6d41e "pdflatex"
-  "main.bbl" 1764435954 2373 a64124076013d0fe6cb86940dc6fb0c6 "bibtex main"
-  "main.out" 1764435978 1518 d410ccd36dc886e985dde90b4cd73898 "pdflatex"
-  "main.tex" 1764435977 46213 737b3a5fed095c04797bc77d503cc715 ""
-  "photo/plot_Kij_overlap_retry_final.svg" 1764429646 57667 4a4a82af941b3eb3115aac8aaa201963 ""
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764437361 46215 0942ba9990f3590a9df740e212114747 ""
+  "main.aux" 1764437361 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
+  "main.bbl" 1764437358 2373 a64124076013d0fe6cb86940dc6fb0c6 "bibtex main"
+  "main.out" 1764437361 1518 d410ccd36dc886e985dde90b4cd73898 "pdflatex"
+  "main.tex" 1764437361 46215 0942ba9990f3590a9df740e212114747 ""
+  "photo/plot_Kij_overlap_retry_final.svg" 1764437112 59805 9fcdc5f5caeae86fcc36509d30917dbd ""
   "photo/plot_arbre_kingman.svg" 1764428745 45437 796b399a1b5890f09ab7358486fd7cf9 ""
   "photo/plot_foret_pas_grande_beta_combined.svg" 1764269667 126560 16f83e095f88f821bec80472776f138a ""
   "photo/plot_sardine_reel_val.svg" 1764435263 58449 736e8c1d315129a80722f1076e7a2aaf ""
   "photo/plot_silence_ca_pousse.svg" 1763489121 76128 61562e366c047d53e1ed7f03031e7cd0 ""
   "photo/plot_tmrca_extrema_histograms.svg" 1763571885 115252 31c80fbdfba1ac8d6eda0b360bb5e3dd ""
-  "svg-inkscape/plot_Kij_overlap_retry_final_svg-tex.pdf" 1764430476 75477 f57ce5e7e0c868c5d8381e12618d7301 ""
-  "svg-inkscape/plot_Kij_overlap_retry_final_svg-tex.pdf_tex" 1764430476 2116 4253d74cd374daf30e1da64ab9574273 ""
+  "svg-inkscape/plot_Kij_overlap_retry_final_svg-tex.pdf" 1764437118 75873 e33254c0debd2816fc1dda10687f900e ""
+  "svg-inkscape/plot_Kij_overlap_retry_final_svg-tex.pdf_tex" 1764437118 2116 4253d74cd374daf30e1da64ab9574273 ""
   "svg-inkscape/plot_arbre_kingman_svg-tex.pdf" 1764428746 52309 af655d73ef04e57cf77cf48aaaf9d5b8 ""
   "svg-inkscape/plot_arbre_kingman_svg-tex.pdf_tex" 1764428746 2089 7dfca7273ebf30a576ed2516d28f2dea ""
   "svg-inkscape/plot_foret_pas_grande_beta_combined_svg-tex.pdf" 1764270000 145907 00fb7b3ba6345ed7acf3d52f3e629a3e ""
