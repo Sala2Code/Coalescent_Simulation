@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1764437358.31814 "main.aux" "main.bbl" "main" 1764440168.89683 0
+["bibtex main"] 1764437358.31814 "main.aux" "main.bbl" "main" 1764441190.32431 0
   "./ref.bib" 1764427557 4755 5721f1b6368fe5ee6f401279d1cfcf99 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/alpha.bst" 1291864736 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1764440167 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
+  "main.aux" 1764441188 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1764440164.88083 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764440168.89783 0
+["pdflatex"] 1764441186.08864 "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" "main.pdf" "main" 1764441190.32531 0
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763572257 84150 14c6750ec702bb9af7486190a9393f8d ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1761760245 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/Le R/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary5.tfm" 1763650135 848 e1bc58a31b9ed9c3729ffea165acfaac ""
@@ -192,11 +192,11 @@
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Le R/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764440161 46383 024f4e89d13a6ee49c3c67244fa5b032 ""
-  "main.aux" 1764440167 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
+  "c:/Users/Le R/Desktop/Code/Python/Coalescent/LaTeX/main.tex" 1764441183 46390 42538f84410f9ddbf4745577a2e82d8a ""
+  "main.aux" 1764441188 11502 d3c8837ff16a3256a11d8a9567afb7e6 "pdflatex"
   "main.bbl" 1764437358 2373 a64124076013d0fe6cb86940dc6fb0c6 "bibtex main"
-  "main.out" 1764440167 1518 d410ccd36dc886e985dde90b4cd73898 "pdflatex"
-  "main.tex" 1764440161 46383 024f4e89d13a6ee49c3c67244fa5b032 ""
+  "main.out" 1764441188 1518 d410ccd36dc886e985dde90b4cd73898 "pdflatex"
+  "main.tex" 1764441183 46390 42538f84410f9ddbf4745577a2e82d8a ""
   "photo/plot_Kij_overlap_retry_final.svg" 1764437112 59805 9fcdc5f5caeae86fcc36509d30917dbd ""
   "photo/plot_arbre_kingman.svg" 1764428745 45437 796b399a1b5890f09ab7358486fd7cf9 ""
   "photo/plot_foret_pas_grande_beta_combined.svg" 1764269667 126560 16f83e095f88f821bec80472776f138a ""

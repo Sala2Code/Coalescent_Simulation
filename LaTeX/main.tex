@@ -71,7 +71,7 @@
 
     Historiquement,
     le modèle de Wright-Fisher étudie une population de taille finie $N$
-    où les individus d'une générations coalescent de manière uniforme entre 
+    où les individus d'une génération coalescent de manière uniforme entre 
     eux dans la génération précédente \cite{Fisher1930}.
     Ensuite, le modèle de Kingman \cite{Kingman1982} est le modèle
     limite de Wright-Fisher où l'on s'intéresse à $n<N$ lignées
@@ -105,7 +105,7 @@
     \]
     \end{theorem}
 
-    Nous ne définissons par formellement les conditions ici et donnons
+    Nous ne définissons pas formellement les conditions ici et donnons
     encore moins une preuve car cela est au-delà du cadre de ce rapport.
     Ce résultat montre que la dynamique de $(N_t)_{t\geq 0}$,
     indiquant le nombre de lignées à l'instant $t$, est entièrement caractérisée
@@ -148,7 +148,7 @@
     \end{cases}
     \]
 
-    Les coalescences se font que par paires. Une caractéristique intéressante
+    Les coalescences ne se font que par paires. Une caractéristique intéressante
     du $\Lambda$-coalescent
     est le TMRCA (Time to the Most Recent Common Ancestor),
     c'est-à-dire le plus petit temps tel que toutes les lignées
@@ -223,7 +223,7 @@
                = \binom{b}{2}
         $
     donc, d'après le \autoref{lem:recurrence-TMRCA}, la taille moyenne d'un arbre pour
-    le modèle de Kingman est donné par,
+    le modèle de Kingman est donnée par,
     \[
     H(b) = \frac{1}{\lambda_b} + p_{b,2}\,H(b-1)
     = \frac{1}{\binom{b}{2}} + H(b-1)
@@ -241,9 +241,9 @@
     Nous illustrons ce résultat par une simulation pour $n=20$ lignées (\autoref{fig:kingman_simu}). 
     On observe bien que les fusions sont binaires. L'état $1$ est absorbant
     et dans ce cas ci le TMRCA est supérieur à $\tau_{\delta_0,n}$.
-    La grande partie des coalescences se font dans les premiers instants.
+    La grande partie des coalescences se fait dans les premiers instants.
     En référence au lemme des réveils, le nombre de paires possibles, et donc 
-    de réveils prêts à sonner et paramétrés de la même manière, sont plus nombreux 
+    de réveils prêts à sonner et paramétrés de la même manière, est plus grand 
     au début qu'à la fin.
     L'arbre a donc l'aspect d'un acacia de la savane \footnote{Référence au Vachellia tortilis, qui 
     n'est plus considéré comme un acacia.}, dense et large en haut, fin en bas.
@@ -377,7 +377,7 @@ nous atteignons un plateau constant pour $t > TMRCA$.}
     est intuitive. Pour le problème inverse de maximisation du TMRCA nous
     souhaiterions déplacer la masse de $\Lambda$ vers 0. C'est-à-dire prouver que 
     le modèle de Kingman soit celui maximisant le temps moyen du TMRCA. 
-    Toutefois, voila une grande surprise : ce n'est pas le cas !
+    Toutefois, voilà une grande surprise : ce n'est pas le cas !
 
     \begin{proposition}\label{prop:surprise-TMRCA}
         Il existe $n>1$ et une mesure de probabilité $\Lambda$ sur $[0,1]$
@@ -438,7 +438,7 @@ nous atteignons un plateau constant pour $t > TMRCA$.}
         s_M^2 \coloneq \frac{1}{M-1}\sum_{i=1}^M (T_i - \overline T_M)^2
     \]
     
-    Les intervalles de confiances sont construits génériquement.
+    Les intervalles de confiance sont construits génériquement.
     D'après le théorème central limite et le lemme de Slutsky,
     \[
         \sqrt{M}\frac{\overline T_M -
@@ -739,7 +739,7 @@ identique à celle du modèle de référence.}
     \footnotetext{Sauf pour $\alpha=0.6$ et $\varepsilon=0.8$ qui n'est pas une densité,
     comme expliqué dans les paragraphes qui suivent.}
 
-    La construction que nous proposons permet de jouer avec les densités selon 2 paramètres.
+    La construction que nous proposons permet de jouer avec les densités selon deux paramètres.
     L'allure générale est dictée par $\alpha$ tandis que $\varepsilon$ intensifie l'amplitude des oscillations.
     Le choix de $\varepsilon$ est contraint d'être inférieur à $\varepsilon_n$.
     D'après \cite{Szego1939}, cette borne est assez restrictive,
@@ -754,7 +754,7 @@ identique à celle du modèle de référence.}
 
     Dans le cas $\alpha=1$, graphiques du haut, nous obtenons la mesure uniforme
     et $\varepsilon_n$
-    ne depend plus de $n$. Toutefois, le choix de $\varepsilon$ est tout de même borné
+    ne dépend plus de $n$. Toutefois, le choix de $\varepsilon$ est tout de même borné
     par $1$ afin que notre densité reste positive.
 
 
@@ -776,7 +776,7 @@ identique à celle du modèle de référence.}
    
 
     \subsection{Silence, ça pousse}
-    Précedemment nous avons brièvement parlé de la mesure uniforme en 
+    Précédemment nous avons brièvement parlé de la mesure uniforme en 
     prenant $\Lambda_0^\alpha$ avec $\alpha=1$.
     Ce modèle est connu sous le nom de Bolthausen-Sznitman
     et décèle un résultat incontournable.
@@ -795,7 +795,7 @@ identique à celle du modèle de référence.}
 
     \end{theorem}
     La preuve est omise car elle dépasse le cadre de ce rapport. Toutefois, 
-    ce théorème renforce l'intuition qu'on a pu commencé à avoir
+    ce théorème renforce l'intuition qu'on a pu commencer à avoir
     à la \autoref{prop:surprise-TMRCA} puisqu'on a que,
     \[
     \lim_{n\to \infty}\mathbb{E}(\tau_n)
@@ -809,7 +809,7 @@ identique à celle du modèle de référence.}
     surpassant la borne du modèle de Kingman $\eqref{eq:tmrca-kingman}$.
     Ainsi, la croissance de la hauteur des arbres généalogiques
     pour le modèle de Bolthausen-Sznitman est extrêmement lente 
-    mais permet d'obtenir des arbres aussi grand que l'on souhaite 
+    mais permet d'obtenir des arbres aussi grands que l'on souhaite 
     en moyenne.
     % Par exemple en se plaçant de la cadre asymptotique sur 
     % le nombre de lignées initiales $n$, 
@@ -859,7 +859,7 @@ identique à celle du modèle de référence.}
 
 \section{Discordances par paires chez la sardine japonaise}
 
-Afin de justifer le modèle du $\Lambda$-coalescent, on peut le comparer à 
+Afin de justifier le modèle du $\Lambda$-coalescent, on peut le comparer à 
 son prédécesseur, le coalescent de Kingman,
 nous présentons une application en biologie des populations.
 Nous nous appuyons sur \cite{Niwa2016} qui étudie la génétique
@@ -867,7 +867,7 @@ des sardines japonaises.
 Pour chaque paire de sardines, ils ont analysé leur ADN.
 En représentant leur séquence comme un mot
 issu de l'alphabet $\{A,T,G,C\}$, nous comptons pour les lignées 
-$i\neq j$ leur discordance, noté $K_{ij}\in \mathbb N$, c'est le nombre
+$i\neq j$ leur discordance, notée $K_{ij}\in \mathbb N$, c'est le nombre
 de symboles différents lorsque l'on compare leur séquence ADN.
 Nous notons $T_{ij} \geq 0$ le plus petit temps tel 
 que la lignée $i$ et la lignée $j$ ont un ancêtre commun.
@@ -906,7 +906,7 @@ modèle de Kingman avec expansion.  % source ? gpt.com
 C'est-à-dire que l'intensité des coalescences varie 
 au cours du temps.
 Ce modèle permet d'expliquer des populations où le nombre
-de descendants sont modérés par rapport à la taille de la population totale.
+de descendants est modéré par rapport à la taille de la population totale.
 Nous considérons dans la suite, par simplicité, le 
 cas de deux époques. Soit $c_0,c_1>0$ l'intensité des époques et $\theta>0$
 le moment de rupture. On définit
@@ -1075,8 +1075,8 @@ rendent mieux compte des données que le modèle de Kingman avec expansion.
 
 Nous aurions aimé étudier plus en profondeur pour $n$ fixé et $n\to \infty$ 
 des questions sur le TMRCA et la vitesse de convergence, un aspect qu'on a
-du délaisser par manque de temps et de place.
-De plus une autre piste intéressante et d'utiliser un $\Xi$-coalescent,
+dû délaisser par manque de temps et de place.
+De plus une autre piste intéressante est d'utiliser un $\Xi$-coalescent,
 un modèle plus général permettant la coalescence simultanée.
 
 \newpage
